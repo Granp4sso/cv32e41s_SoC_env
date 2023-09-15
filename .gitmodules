@@ -1,0 +1,6 @@
+[submodule "cv32e41s"]
+	path = cv32e41s
+	url = https://github.com/Granp4sso/cv32e41s
+[submodule "rtl/cv32e41s"]
+	path = rtl/cv32e41s
+	url = https://github.com/Granp4sso/cv32e41s

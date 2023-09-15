@@ -1,0 +1,127 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Jul 29 12:54:50 2023
+# Process ID: 228936
+# Current directory: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado
+# Command line: vivado
+# Log file: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/vivado.log
+# Journal file: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/vivado.jou
+# Running On: stefano-Victus-by-HP-Laptop-16-e0xxx, OS: Linux, CPU Frequency: 3548.437 MHz, CPU Physical cores: 16, Host memory: 16065 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+close_design
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+close_design
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+open_run impl_1
+report_utilization -name utilization_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+close_design
+open_run impl_1
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+close_design
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+refresh_design
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_design

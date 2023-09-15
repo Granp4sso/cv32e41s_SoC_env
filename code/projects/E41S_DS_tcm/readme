@@ -1,0 +1,101 @@
+This file is meant to explain how the CV32E41S internal bus, tcm and related demos works. 
+
+PROJECT GENERAL INFOS:
+
+The cv32e41s_core module has been changed into cv332e41s_incore and is wrapped in the file cv32e41s_core module.
+The core file instantiates:
+    1- The in-core
+    2- The internal bus
+    3- The Data TCM
+    4- The instruction tcm 
+The in-core generates memory operation from two different ports(using the OBI protocol):
+    1- The instruction port.
+    2- The memory port.
+For handling this two different ports the internal bus has two related ports; for each port the bus checks if the 
+requested address is in the Out region( for an address outside the internal core, which can be the ram or another peripheral) or in the related tcm
+( inst or data) region and redirects the request to the selected memory.
+In this way the presence of other devices/memories is completely trasparent to each processor that will simply make memory operations automatically
+redirected to the correct memory.
+In case the requested address is not in Tcm Data or Tcm Inst region then the request is redirected outside the Tcm ( this is automatically
+done by the bus itself because the " default" memory is always the "Out" memory).
+The bus can also accomodate other memories/devices for both datas and instructions by:
+    1-  Increasing the NrDataMems or NrInstMems localparameter
+    2-  Adding the Memory Name into the internal_bus_dev_e enum AFTER the last device, not changing the first One (Out).
+    3-  Inserting the internal memory/device starting address in data_mem_addr_base[The_Name_Inserted_In_The_Struct] and the 
+        data_mem_addr_mask[The_Name_Inserted_In_The_Struct] as done with the other.
+    4-  Instantiate the new memory routing the signals according to the OBI protocol, see how it is done with the Tcm Data, Tcm Inst
+    Note:   
+        It is possibile that the address space of the memory/device is different from the memory address space and must be "scaled", check 
+        TCM INFOS for more informations. 
+
+TCM INFOS:
+
+Each TCM is an OBI device that wraps a dual port ram, what it does is to implement the obi protocol( on two different ports) and send the request back to the internal ram. 
+The response will be available on che next clock cycle ( when the r_valid signal is high).
+The gnt signal of each OBI port is always high and the ready signal becomes high after 1 clock cycle after the rreq address.
+Each TCM implements two different OBI interface:
+    1- Instruction interface( b interface).
+    2- Data interface( a interface ).
+The address space of the Real memory is [ 0,TCM_SIZE-1 ], in processor's memory space this address is [ SELECTED_TCM_START,SELECTED_TCM_START+TCM_SIZE-1 ].
+In order to forward a request to the correct address in the TCM the requested address address must be scaled into the TCM address by subtracting
+SELECTED_TCM_START.
+In order to avoid instantiating a subtractor this operation is performed by taking only the last 4 LSB of the address (using 0xFFFF mask), for this reason 
+the size of a TCM can vary from  0x1000 (4096) bytes( included )  0x10000 (65536) bytes (excluded).
+If you want to change the address range then also the mask must be coherently changed.
+
+DATA DEMO:
+
+    In order to test the data memory port a demo program has been written.
+    1-  All bytes equal to 1 are written into all the tcm memory area ( so it will have TCM_SIZE bytes equals to 1)
+        using a pointer to the area; many of these ops are non aligned ( because we're writing at byte level using an uint8_t* pointer).
+    2-  All the bytes in the TCM Region are added, in case the previous writing has been completed then the sum result will be TCM_SIZE
+    In case TCM is not present the result will be :
+        1- SUM OK ( equal to TCM_SIZE)
+        2- The bytes in the TCM Region ( present in RAM) are all 1 ( since the TCM is not present all the writing were directed to ram)
+     In case TCM is present the result will be :
+        1- SUM OK
+        2- The bytes in the TCM Region ( present in RAM) are in their default value ( since the TCM is not present all the write and read ops  were directed to TCM)
+
+INSTR TCM WRITING:
+
+    There are two ways of writing the code into the TCM memory:
+        1-  Custom Bootloader
+            Use a custom bootloader (without the debug infrastructure):
+            If the binary is written in memory using a bootloader that copies it using simple memory operation then a new TCM_REGION in the linker script
+            can be created and the bootloader will simply copy the data into the tcm.
+            This works because all the memory operations, in this case, are performed using the INTERNAL data bus that will simply redirect the write ops to the instruction tcm.
+        2-  TCM Region
+            Declare a tcm_region in the linker script, this region should be placed in the RAM memory address space and will simply contain all the routine that must 
+            be copied into the tcm.
+            The first routine executed by the main will copy the content of this region into the real tcm region.
+            This is done in case there is no custom bootloader that copies the binary in memory.
+            All routines written in TCM in this case must AVOID indirect memory operations like function calls, this is because the indirect jumps are 
+            calculated using the TCM_REGION present in RAM ( the one declared in the linker script and used in ram).
+        3-  Use the default debug interface
+            As the first solution a programmer could declare the REAL tcm region in the linker script and simply put the TCM routines in this area.
+            A normal bootloader, using the actual debug infrastructure should simply place all the function in the specific tcm area.
+            Unfortunately the debug infrastructure is an outcore element capable of writing data in a specific memory slave using a bus 
+            OUTSIDE the core, this bus has no knowledge of the tcm addresses or of the tcm existance.
+            When the debug infrastructure will try to write data into the TCM address region all this memory operation will be redirected to the ram 
+            or to a random peripheral ( sinche the tcm addresses are in an isolated memory area) causing an undefined behaviour since it is asked to a peripheral/
+            memory to write data in a random address.
+            The first solution ( custom bootloader ) implies that the bootloader firmware is already loaded into the processor and for this it automatically uses the 
+            internal bus of the in-core (capable of writing into the tcm because they're an incore element) .
+            A possible solution to this could be to export only the tcm Inst OBI pins OUTSIDE the incore in the OUTCORE. 
+            After this the tcm should be attached to the external bus as a peripheral; now the " out " bus, having knowledge and access to the in-bus should
+            be capable of redirecting the debug infrastructure writings into the tcm ( that remains always an incore element).
+
+INSTR DEMO:
+
+    INSTR_2
+        This demo shows how the second solution can be handled:
+            1-  The linker script contains a tcm_fn region, this region is placed in RAM and will contain all the tcm functions.
+            2-  The main.c will declare a function in this region using __attribute__((section)). 
+            3-  This routine will be copied in the REAL tcm area and then called using a function pointer.
+            4-  If the TCM is present and works the output will be the value copied into x 0xa2fe.
+    INSTR_3
+        This demo demonstrates how both TCM_DATA and TCM_INST can be used
+            1- A routine is placed in the TCM INST using the same approach used in INSTR_2.
+            2- The main function will copy all 128 uint8_t equals to 1 in the first 128 addresses TCM_DATA.
+            3- The routine in TCM_INST WILL BE copied and sum the first 128 element of the TCM_DATA area.
+            4- If both the tcm works the value will be equal to 128 (0x80).

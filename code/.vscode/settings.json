@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "demo_system.h": "c",
+        "dev_access.h": "c"
+    }
+}

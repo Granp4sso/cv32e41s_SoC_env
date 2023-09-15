@@ -1,0 +1,2327 @@
+/*
+
+Xilinx Vivado v2022.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3671981 on Fri Oct 14 04:59:54 MDT 2022
+IP Build: 3669848 on Fri Oct 14 08:30:02 MDT 2022
+
+Process ID (PID): 12887
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sat Jul 29 10:46:05 CEST 2023
+Time zone: 	Central European Standard Time (Europe/Rome)
+
+OS: Ubuntu
+OS Version: 5.19.0-50-generic
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: 1
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	stefano
+User home directory: /home/stefano
+User working directory: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2022.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: /home/stefano/.Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: /home/stefano/.Xilinx/Vivado/2022.2/
+Vivado layouts directory: /home/stefano/.Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/vivado.log
+Vivado journal file: 	/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-12887-stefano-Victus-by-HP-Laptop-16-e0xxx
+
+Xilinx Environment Variables
+----------------------------
+RDI_APPROOT: /tools/Xilinx/Vivado/2022.2
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2022.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2022.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vitis/2022.2/bin:/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/vivado
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2022.2/tps/lnx64
+RDI_USE_JDK11: True
+XILINX: /tools/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2022.2
+XILINX_SDK: /tools/Xilinx/Vitis/2022.2
+XILINX_VITIS: /tools/Xilinx/Vitis/2022.2
+XILINX_VIVADO: /tools/Xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2022.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,555 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,558 MB. GUI used memory: 58 MB. Current time: 7/29/23, 10:46:06 AM CEST
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // u
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.xpr");
+// [GUI Memory]: 75 MB (+76043kb) [00:00:21]
+// [Engine Memory]: 1,590 MB (+1515829kb) [00:00:21]
+// Opening Vivado Project: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.xpr. Version: Vivado v2022.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 103 MB (+25682kb) [00:00:23]
+// [Engine Memory]: 1,693 MB (+24615kb) [00:00:23]
+// WARNING: HEventQueue.dispatchEvent() is taking  1553 ms.
+// Tcl Message: open_project /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc' since last save. INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'. 
+// [GUI Memory]: 129 MB (+21457kb) [00:00:24]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,726 MB. GUI used memory: 68 MB. Current time: 7/29/23, 10:46:21 AM CEST
+// Project name: cv32e41s_soc; location: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc; part: xc7a50ticsg324-1L
+dismissDialog("Open Project"); // bq
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,782 MB (+4449kb) [00:01:33]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,782 MB. GUI used memory: 68 MB. Current time: 7/29/23, 10:47:31 AM CEST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,808 MB. GUI used memory: 68 MB. Current time: 7/29/23, 10:48:21 AM CEST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 128 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv)]", 5); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv)]", 6); // D
+// Elapsed time: 22 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv)]", 7); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv)]", 9); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv)]", 9); // D
+// Elapsed time: 26 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv)]", 9); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_int_bus : xil_defaultlib.cv32e41s_int_bus]", 10, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_int_bus : xil_defaultlib.cv32e41s_int_bus]", 10, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_int_bus : xil_defaultlib.cv32e41s_int_bus]", 10, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ao
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_int_bus : xil_defaultlib.cv32e41s_int_bus]", 10, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+// HMemoryUtils.trashcanNow. Engine heap size: 1,852 MB. GUI used memory: 69 MB. Current time: 7/29/23, 10:49:46 AM CEST
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 2); // g
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // g
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 45 seconds
+String[] filenames31467 = {"/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_incore.sv", "/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_int_bus.sv", "/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_tcm.sv"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 55 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_int_bus.sv /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_tcm.sv /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_incore.sv} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,872 MB (+766kb) [00:04:57]
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,872 MB. GUI used memory: 72 MB. Current time: 7/29/23, 10:50:56 AM CEST
+// Elapsed time: 10 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+setFileChooser("/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_rpm.sv");
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_rpm.sv 
+// [GUI Memory]: 138 MB (+2856kb) [00:05:14]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,906 MB. GUI used memory: 73 MB. Current time: 7/29/23, 10:51:16 AM CEST
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_incore : cv32e41s_incore (cv32e41s_incore.sv)]", 11); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_incore : cv32e41s_incore (cv32e41s_incore.sv)]", 11); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), rpm_gen.rpm : cv32e41s_rpm (cv32e41s_rpm.sv)]", 14); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), rpm_gen.rpm : cv32e41s_rpm (cv32e41s_rpm.sv)]", 14); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_incore : cv32e41s_incore (cv32e41s_incore.sv)]", 11); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_incore : cv32e41s_incore (cv32e41s_incore.sv), load_store_unit_i : cv32e41s_load_store_unit (cv32e41s_load_store_unit.sv)]", 17); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_incore : cv32e41s_incore (cv32e41s_incore.sv), load_store_unit_i : cv32e41s_load_store_unit (cv32e41s_load_store_unit.sv), mpu_i : xil_defaultlib.cv32e41s_mpu_test]", 18, false); // D
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 32 seconds
+String[] filenames16706 = {"/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_mpu_test.sv", "/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv", "/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_ram_struct.sv", "/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_xpmp.sv"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 36 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_ram_struct.sv /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_mpu_test.sv /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_xpmp.sv} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,932 MB. GUI used memory: 74 MB. Current time: 7/29/23, 10:52:21 AM CEST
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cv32e41s_mpu (cv32e41s_mpu.sv)]", 41); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cv32e41s_mpu (cv32e41s_mpu.sv)]", 41); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cv32e41s_mpu (cv32e41s_mpu.sv)]", 41, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cv32e41s_mpu (cv32e41s_mpu.sv)]", 41, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", true); // f: TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'c' command handler elapsed time: 6 seconds
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_mpu.sv] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_mpu.sv 
+// Tcl Message: file delete -force /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_mpu.sv 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,958 MB. GUI used memory: 75 MB. Current time: 7/29/23, 10:52:41 AM CEST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cv32e41s_popcnt (cv32e41s_popcnt.sv)]", 42, false); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Unknown]", 45); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Unknown]", 45); // D
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "2"); // g
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-1206] Syntax error near ''0' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_controller_fsm.sv:396]. ]", 2, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_controller_fsm.sv;-;;-;16;-;line;-;396;-;;-;16;-;"); // u.d
+// [Engine Memory]: 1,969 MB (+3530kb) [00:07:01]
+// Elapsed time: 1244 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, prim_generic_clock_inv (prim_generic_clock_inv.sv)]", 42); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, prim_generic_clock_inv (prim_generic_clock_inv.sv)]", 42); // D
+selectCodeEditor("cv32e41s_controller_fsm.sv", 559, 205); // ac
+selectCodeEditor("cv32e41s_controller_fsm.sv", 502, 283); // ac
+selectCodeEditor("cv32e41s_controller_fsm.sv", 503, 248); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("cv32e41s_controller_fsm.sv", 506, 246); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,979 MB. GUI used memory: 76 MB. Current time: 7/29/23, 11:14:11 AM CEST
+selectCodeEditor("cv32e41s_controller_fsm.sv", 406, 186); // ac
+selectCodeEditor("cv32e41s_controller_fsm.sv", 447, 139); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("cv32e41s_controller_fsm.sv", 505, 192); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("cv32e41s_controller_fsm.sv", 527, 366); // ac
+selectCodeEditor("cv32e41s_controller_fsm.sv", 519, 294); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,004 MB. GUI used memory: 75 MB. Current time: 7/29/23, 11:14:36 AM CEST
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "2"); // g
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3756] overwriting previous definition of package 'cv32e41s_pkg' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv:29]. ]", 2, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv;-;;-;16;-;line;-;29;-;;-;16;-;"); // u.d
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-3756] overwriting previous definition of package 'cv32e41s_pkg' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv:29]. ]", 4, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv;-;;-;16;-;line;-;29;-;;-;16;-;"); // u.d
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3756] overwriting previous definition of package 'cv32e41s_pkg' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv:29]. ]", 2, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv;-;;-;16;-;line;-;29;-;;-;16;-;"); // u.d
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Synthesis"); // u
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/synth_1/top_nexys7.dcp with file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Sat Jul 29 11:15:12 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+selectCodeEditor("cv32e41s_pkg.sv", 450, 416); // ac
+selectCodeEditor("cv32e41s_pkg.sv", 426, 437); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,032 MB. GUI used memory: 77 MB. Current time: 7/29/23, 11:15:26 AM CEST
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 22 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // S.a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9873] overwriting previous definition of package 'cv32e41s_pkg' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv:2156]. ]", 1, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv;-;;-;16;-;line;-;2156;-;;-;16;-;"); // u.d
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9263] cannot open include file 'dm_pkg.sv' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:7]. ]", 2); // u.d
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9263] cannot open include file 'dm_pkg.sv' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:7]. ]", 2, true); // u.d - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv;-;;-;16;-;line;-;7;-;;-;16;-;"); // u.d
+// Elapsed time: 23 seconds
+selectCodeEditor("cv32e41s_demo_system.sv", 169, 112); // ac
+selectCodeEditor("cv32e41s_demo_system.sv", 134, 291); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Sat Jul 29 11:16:21 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 13 seconds
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, true); // f: TRUE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // S.a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9263] cannot open include file 'dm_pkg.sv' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:7]. ]", 2, true); // u.d - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv;-;;-;16;-;line;-;7;-;;-;16;-;"); // u.d
+selectCodeEditor("cv32e41s_demo_system_memless.sv", 121, 263); // ac
+selectCodeEditor("cv32e41s_demo_system_memless.sv", 68, 119); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 39 seconds
+selectCodeEditor("cv32e41s_demo_system_memless.sv", 487, 188); // ac
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Sat Jul 29 11:17:45 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 30 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // S.a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9263] cannot open include file 'cv32e41s_pkg.sv' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_incore.sv:34]. ]", 2, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_incore.sv;-;;-;16;-;line;-;34;-;;-;16;-;"); // u.d
+selectCodeEditor("cv32e41s_incore.sv", 82, 274); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 145 MB (+584kb) [00:32:34]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Sat Jul 29 11:18:35 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log 
+// 'i' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bq
+// HMemoryUtils.trashcanNow. Engine heap size: 2,052 MB. GUI used memory: 77 MB. Current time: 7/29/23, 11:18:36 AM CEST
+// TclEventType: RUN_STATUS_CHANGE
+// [Engine Memory]: 2,068 MB (+395kb) [00:32:41]
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 29 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // S.a
+// Elapsed time: 13 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+// Elapsed time: 41 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-9123] an enum variable may only be assigned the same enum typed variable or one of its values [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:156]. ]", 2, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv;-;;-;16;-;line;-;156;-;;-;16;-;"); // u.d
+// Elapsed time: 60 seconds
+selectCodeEditor("cv32e41s_pmp_walker_64.sv", 174, 339); // ac
+selectCodeEditor("cv32e41s_pmp_walker_64.sv", 174, 339); // ac
+typeControlKey((HResource) null, "cv32e41s_pmp_walker_64.sv", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,086 MB. GUI used memory: 77 MB. Current time: 7/29/23, 11:21:06 AM CEST
+// Elapsed time: 15 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Sat Jul 29 11:21:22 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 299 seconds
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, true); // f: TRUE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, true); // f: TRUE
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a50ticsg324-1L 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,258 MB. GUI used memory: 82 MB. Current time: 7/29/23, 11:26:31 AM CEST
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,541 MB. GUI used memory: 82 MB. Current time: 7/29/23, 11:26:34 AM CEST
+// [Engine Memory]: 2,541 MB (+387798kb) [00:40:37]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 2,707 MB (+40611kb) [00:40:38]
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1131 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a50ticsg324-1L 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.16 . Memory (MB): peak = 7590.172 ; gain = 0.000 ; free physical = 2300 ; free virtual = 9539 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1673 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] Finished Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7762.570 ; gain = 0.000 ; free physical = 2149 ; free virtual = 9385 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// Device view-level: 0.0
+// Tcl Message: open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 8018.270 ; gain = 702.312 ; free physical = 2031 ; free virtual = 9274 
+// 'dD' command handler elapsed time: 7 seconds
+dismissDialog("Open Synthesized Design"); // bq
+// RouteApi::initDelayMediator elapsed time: 4.1s
+// [GUI Memory]: 157 MB (+4846kb) [00:40:43]
+// [Engine Memory]: 3,041 MB (+208075kb) [00:40:43]
+// RouteApi: Init Delay Mediator Swing Worker Finished
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// [GUI Memory]: 166 MB (+773kb) [00:40:47]
+// Tcl Message: report_utilization -name utilization_1 
+// [GUI Memory]: 175 MB (+374kb) [00:40:48]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,127 MB. GUI used memory: 127 MB. Current time: 7/29/23, 11:26:46 AM CEST
+dismissDialog("Report Utilization"); // bq
+// [GUI Memory]: 191 MB (+8010kb) [00:40:52]
+expandTreeTable((HResource) null, "u_ucup_top (uCup_top) ; 12532 ; 7188 ; 739 ; 244 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2); // w
+expandTreeTable((HResource) null, "u_soc (cv32e41s_demo_system) ; 12532 ; 7188 ; 739 ; 244 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 3); // w
+expandTreeTable((HResource) null, "u_core (cv32e41s_core) ; 10361 ; 3874 ; 459 ; 116 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+expandTreeTable((HResource) null, "u_incore (cv32e41s_incore) ; 10275 ; 3866 ; 459 ; 116 ; 0 ; 3 ; 0 ; 0 ; 0 ; 0", 10); // w
+expandTreeTable((HResource) null, "cs_registers_i (cv32e41s_cs_registers) ; 3916 ; 1700 ; 147 ; 43 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 12); // w
+// Elapsed time: 29 seconds
+collapseTreeTable((HResource) null, "u_incore (cv32e41s_incore) ; 10275 ; 3866 ; 459 ; 116 ; 0 ; 3 ; 0 ; 0 ; 0 ; 0", 10); // w
+// Elapsed time: 15 seconds
+expandTreeTable((HResource) null, "rpm_gen.rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9); // w
+// Elapsed time: 35 seconds
+collapseTreeTable((HResource) null, "rpm_gen.rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9); // w
+expandTreeTable((HResource) null, "u_incore (cv32e41s_incore) ; 10275 ; 3866 ; 459 ; 116 ; 0 ; 3 ; 0 ; 0 ; 0 ; 0", 10); // w
+collapseTreeTable((HResource) null, "cs_registers_i (cv32e41s_cs_registers) ; 3916 ; 1700 ; 147 ; 43 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 12); // w
+expandTreeTable((HResource) null, "load_store_unit_i (cv32e41s_load_store_unit) ; 1947 ; 148 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 17); // w
+expandTreeTable((HResource) null, "mpu_i (cv32e41s_mpu_test__parameterized0) ; 1730 ; 108 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 19); // w
+expandTreeTable((HResource) null, "xpmp.xpmp_i (cv32e41s_xpmp__parameterized0) ; 1718 ; 105 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 20); // w
+// Elapsed time: 15 seconds
+collapseTreeTable((HResource) null, "load_store_unit_i (cv32e41s_load_store_unit) ; 1947 ; 148 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 17); // w
+// Elapsed time: 20 seconds
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "u_core (cv32e41s_core) ; 10361 ; 3874 ; 459 ; 116 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6, "u_core (cv32e41s_core)", 0, true); // w - Node
+collapseTreeTable((HResource) null, "u_core (cv32e41s_core) ; 10361 ; 3874 ; 459 ; 116 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+// Elapsed time: 15 seconds
+expandTreeTable((HResource) null, "u_core (cv32e41s_core) ; 10361 ; 3874 ; 459 ; 116 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+expandTreeTable((HResource) null, "rpm_gen.rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm_bank_one (cv32e41s_tcm) ; 33 ; 1 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 10, "rpm_bank_one (cv32e41s_tcm)", 0, false); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm_bank_zero (cv32e41s_tcm_883) ; 1 ; 1 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 11, "rpm_bank_zero (cv32e41s_tcm_883)", 0, true); // w - Node
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm_bank_one (cv32e41s_tcm) ; 33 ; 1 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 10, "rpm_bank_one (cv32e41s_tcm)", 0, false); // w
+// Elapsed time: 41 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), clkgen : clkgen_xil7series (clkgen_xil7series.sv)]", 51, false); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv)]", 6); // D
+// HMemoryUtils.trashcanNow. Engine heap size: 3,185 MB. GUI used memory: 142 MB. Current time: 7/29/23, 11:30:46 AM CEST
+// Elapsed time: 11 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv)]", 6); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_incore : cv32e41s_incore (cv32e41s_incore.sv)]", 10); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), rpm_gen.rpm : cv32e41s_rpm (cv32e41s_rpm.sv)]", 13); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), rpm_gen.rpm : cv32e41s_rpm (cv32e41s_rpm.sv)]", 13, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), rpm_gen.rpm : cv32e41s_rpm (cv32e41s_rpm.sv)]", 13, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 29, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: INFO: [Timing 38-480] Writing timing data to binary archive. 
+// Tcl Message: Writing XDEF routing. Writing XDEF routing logical nets. Writing XDEF routing special nets. 
+// Tcl Message: Write XDEF Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.04 . Memory (MB): peak = 8372.137 ; gain = 0.000 ; free physical = 1495 ; free virtual = 8751 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [Engine Memory]: 3,226 MB (+35057kb) [00:45:16]
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Sat Jul 29 11:31:13 2023] Launched impl_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,226 MB. GUI used memory: 130 MB. Current time: 7/29/23, 11:31:16 AM CEST
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 584 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+selectButton(PAResourceAtoD.ClosePlanner_YES, "Yes"); // a
+dismissDialog("Close Design"); // a.a
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,228 MB. GUI used memory: 110 MB. Current time: 7/29/23, 11:41:01 AM CEST
+// Engine heap size: 3,229 MB. GUI used memory: 111 MB. Current time: 7/29/23, 11:41:02 AM CEST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bq
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,281 MB. GUI used memory: 87 MB. Current time: 7/29/23, 11:41:06 AM CEST
+// TclEventType: DESIGN_NEW
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 8412.156 ; gain = 0.000 ; free physical = 2663 ; free virtual = 9358 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1673 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 8426.164 ; gain = 5.000 ; free physical = 2483 ; free virtual = 9174 
+// Tcl Message: Restored from archive | CPU: 1.300000 secs | Memory: 24.612656 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 8426.164 ; gain = 5.000 ; free physical = 2483 ; free virtual = 9174 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8426.164 ; gain = 0.000 ; free physical = 2483 ; free virtual = 9174 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// [Engine Memory]: 3,451 MB (+67194kb) [00:55:10]
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.4s
+// TclEventType: METHODOLOGY_ADDED
+// Device view-level: 0.0
+// TclEventType: POWER_UPDATED
+// [GUI Memory]: 201 MB (+485kb) [00:55:13]
+// [GUI Memory]: 212 MB (+334kb) [00:55:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  2749 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dD' command handler elapsed time: 14 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Open Implemented Design"); // bq
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // F
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Methodology Violations"); // aO
+// Device view-level: 0.0
+// HMemoryUtils.trashcanNow. Engine heap size: 3,540 MB. GUI used memory: 226 MB. Current time: 7/29/23, 11:41:20 AM CEST
+// [GUI Memory]: 231 MB (+8790kb) [00:55:37]
+// Elapsed time: 24 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Clock Summary]", 3, false); // a
+// Elapsed time: 13 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Design Timing Summary]", 2, false); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Clock Summary]", 3, false); // a
+// Elapsed time: 12 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Methodology Summary]", 4, false); // a
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths]", 6); // a
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, clk_50_unbuf]", 7); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, clk_50_unbuf, Setup -3.824 ns]", 8, false); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, clk_50_unbuf, Setup -3.824 ns]", 8, false, false, false, false, false, true); // a - Double Click
+// PAPropertyPanels.initPanels (Path 1) elapsed time: 0.3s
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 1 ; -3.8241446 ; 32 ; 151 ; u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C ; u_ucup_top/u_soc/u_uart/u_tx_fifo/gen_normal_fifo.gen_depth_gt1.storage_reg[21][4]/CE ; 24.842003 ; 5.2559986 ; 19.585997 ; 24.5 ; clk_50_unbuf ; clk_50_unbuf ;  ; 0.08773455", 0, "u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C", 4); // e.b
+// HMemoryUtils.trashcanNow. Engine heap size: 3,597 MB. GUI used memory: 154 MB. Current time: 7/29/23, 11:42:36 AM CEST
+// [Engine Memory]: 3,690 MB (+68934kb) [00:56:42]
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 10 ; -3.6522608 ; 32 ; 151 ; u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C ; u_ucup_top/u_soc/u_uart/u_tx_fifo/gen_normal_fifo.gen_depth_gt1.storage_reg[118][7]/CE ; 24.705118 ; 5.2559986 ; 19.449112 ; 24.5 ; clk_50_unbuf ; clk_50_unbuf ;  ; 0.08773455", 9, "-3.6522608", 1); // e.b
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 9 ; -3.6522608 ; 32 ; 151 ; u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C ; u_ucup_top/u_soc/u_uart/u_tx_fifo/gen_normal_fifo.gen_depth_gt1.storage_reg[118][5]/CE ; 24.705118 ; 5.2559986 ; 19.449112 ; 24.5 ; clk_50_unbuf ; clk_50_unbuf ;  ; 0.08773455", 8, "-3.6522608", 1); // e.b
+// HMemoryUtils.trashcanNow. Engine heap size: 3,690 MB. GUI used memory: 157 MB. Current time: 7/29/23, 11:42:41 AM CEST
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 8 ; -3.6522608 ; 32 ; 151 ; u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C ; u_ucup_top/u_soc/u_uart/u_tx_fifo/gen_normal_fifo.gen_depth_gt1.storage_reg[118][3]/CE ; 24.705118 ; 5.2559986 ; 19.449112 ; 24.5 ; clk_50_unbuf ; clk_50_unbuf ;  ; 0.08773455", 7, "-3.6522608", 1); // e.b
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 6 ; -3.6812596 ; 32 ; 151 ; u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C ; u_ucup_top/u_soc/u_uart/u_tx_fifo/gen_normal_fifo.gen_depth_gt1.storage_reg[118][4]/CE ; 24.699118 ; 5.2559986 ; 19.443111 ; 24.5 ; clk_50_unbuf ; clk_50_unbuf ;  ; 0.08773455", 5, "-3.6812596", 1); // e.b
+// HMemoryUtils.trashcanNow. Engine heap size: 3,691 MB. GUI used memory: 181 MB. Current time: 7/29/23, 11:42:44 AM CEST
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 4 ; -3.7198582 ; 32 ; 151 ; u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C ; u_ucup_top/u_soc/u_uart/u_tx_fifo/gen_normal_fifo.gen_depth_gt1.storage_reg[12][7]/CE ; 24.774714 ; 5.2559986 ; 19.51871 ; 24.5 ; clk_50_unbuf ; clk_50_unbuf ;  ; 0.08773455", 3, "-3.7198582", 1); // e.b
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 5 ; -3.7119622 ; 32 ; 151 ; u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C ; u_ucup_top/u_soc/u_uart/u_tx_fifo/gen_normal_fifo.gen_depth_gt1.storage_reg[92][6]/CE ; 24.833818 ; 5.2559986 ; 19.577812 ; 24.5 ; clk_50_unbuf ; clk_50_unbuf ;  ; 0.08773455", 4, "-3.7119622", 1); // e.b
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 3 ; -3.7459724 ; 32 ; 151 ; u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C ; u_ucup_top/u_soc/u_uart/u_tx_fifo/gen_normal_fifo.gen_depth_gt1.storage_reg[21][5]/CE ; 24.83183 ; 5.2559986 ; 19.575823 ; 24.5 ; clk_50_unbuf ; clk_50_unbuf ;  ; 0.08773455", 2, "-3.7459724", 1); // e.b
+// HMemoryUtils.trashcanNow. Engine heap size: 3,692 MB. GUI used memory: 164 MB. Current time: 7/29/23, 11:42:46 AM CEST
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 2 ; -3.7712216 ; 32 ; 151 ; u_ucup_top/u_soc/u_core/u_incore/gen_basic_interrupt.int_controller_i/irq_q_reg[25]/C ; u_ucup_top/u_soc/u_uart/u_tx_fifo/gen_normal_fifo.gen_depth_gt1.storage_reg[43][0]/CE ; 24.78908 ; 5.2559986 ; 19.533073 ; 24.5 ; clk_50_unbuf ; clk_50_unbuf ;  ; 0.08773455", 1, "-3.7712216", 1); // e.b
+// Elapsed time: 16 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Clock Summary]", 3, false); // a
+// HMemoryUtils.trashcanNow. Engine heap size: 3,704 MB. GUI used memory: 157 MB. Current time: 7/29/23, 11:43:11 AM CEST
+// Elapsed time: 13 seconds
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, clk_fb_unbuf]", 11); // a
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, sys_clk_pin]", 13); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, sys_clk_pin, Pulse Width 2.000 ns]", 14, false); // a
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // f
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a50ticsg324-1L 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,782 MB. GUI used memory: 153 MB. Current time: 7/29/23, 11:43:36 AM CEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 8619.855 ; gain = 0.000 ; free physical = 2190 ; free virtual = 8856 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1673 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] Finished Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8683.820 ; gain = 0.000 ; free physical = 2106 ; free virtual = 8772 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// Tcl Message: report_utilization -name utilization_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,897 MB. GUI used memory: 187 MB. Current time: 7/29/23, 11:43:40 AM CEST
+// [Engine Memory]: 3,897 MB (+23821kb) [00:57:43]
+dismissDialog("Report Utilization"); // bq
+// [GUI Memory]: 243 MB (+534kb) [00:57:47]
+expandTreeTable((HResource) null, "u_ucup_top (uCup_top) ; 12532 ; 7188 ; 739 ; 244 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2); // w
+expandTreeTable((HResource) null, "u_soc (cv32e41s_demo_system) ; 12532 ; 7188 ; 739 ; 244 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 3); // w
+expandTreeTable((HResource) null, "u_core (cv32e41s_core) ; 10361 ; 3874 ; 459 ; 116 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm_gen.rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9, "rpm_gen.rpm (cv32e41s_rpm)", 0, true); // w - Node
+// Device view-level: 0.0
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // f
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 41 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859, true, false, false, false, false, true); // aF - Double Click - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859, true); // aF - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859, true, false, false, false, false, true); // aF - Double Click - Node
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9), ram (cv32e41s_ram_struct__parameterized0)]", 862, false); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), rpm_gen.rpm (cv32e41s_rpm)]", 863); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), rpm_gen.rpm (cv32e41s_rpm), rpm_bank_one (cv32e41s_tcm)]", 865); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), rpm_gen.rpm (cv32e41s_rpm), rpm_bank_zero (cv32e41s_tcm_883)]", 868); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859, true); // aF - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859, true, false, false, false, false, true); // aF - Double Click - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859, true); // aF - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859, true, false, false, false, false, true); // aF - Double Click - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9), ram (cv32e41s_ram_struct__parameterized0)]", 862, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9), ram (cv32e41s_ram_struct__parameterized0)]", 862, true, false, false, false, false, true); // aF - Double Click - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9), ram (cv32e41s_ram_struct__parameterized0)]", 862, true); // aF - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9), ram (cv32e41s_ram_struct__parameterized0)]", 862, true, false, false, false, false, true); // aF - Double Click - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9), Nets (161)]", 860, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), inst_tcm (cv32e41s_tcm__parameterized0_9)]", 859, true); // aF - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // f
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 23 seconds
+expandTreeTable((HResource) null, "rpm_gen.rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 10); // w
+// [GUI Memory]: 257 MB (+2349kb) [00:59:36]
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm_bank_one (cv32e41s_tcm) ; 33 ; 1 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 11, "rpm_bank_one (cv32e41s_tcm)", 0, true); // w - Node
+expandTreeTable((HResource) null, "rpm_bank_one (cv32e41s_tcm) ; 33 ; 1 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 11); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm_bank_one (cv32e41s_tcm) ; 33 ; 1 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 11, "rpm_bank_one (cv32e41s_tcm)", 0, true, false, false, false, false, true); // w - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_demo_system.sv", 4); // o
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // j
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core)]", 856, true); // aF - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core)]", 856, true, false, false, false, false, true); // aF - Double Click - Node
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv)]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv)]", 8, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("cv32e41s_core.sv", 538, 351); // ac
+// Elapsed time: 28 seconds
+selectCodeEditor("cv32e41s_core.sv", 292, 306); // ac
+selectCodeEditor("cv32e41s_core.sv", 292, 306, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("cv32e41s_core.sv", 13, 131); // ac
+selectCodeEditor("cv32e41s_core.sv", 11, 411); // ac
+selectCodeEditor("cv32e41s_core.sv", 376, 408); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 53 seconds
+selectCodeEditor("cv32e41s_core.sv", 189, 239); // ac
+typeControlKey((HResource) null, "cv32e41s_core.sv", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources,  (cv32e41s_pkg.sv)]", 20, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources,  (cv32e41s_pkg.sv)]", 20, false, false, false, false, false, true); // D - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,929 MB. GUI used memory: 183 MB. Current time: 7/29/23, 11:47:51 AM CEST
+// Elapsed time: 14 seconds
+selectCodeEditor("cv32e41s_pkg.sv (2)", 548, 317); // ac
+// Elapsed time: 10 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "xpmp"); // d.c
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources,  (cv32e41s_pkg.sv)]", 20, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources,  (cv32e41s_pkg.sv)]", 20, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources,  (prim_fifo_sync.sv)]", 21, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources,  (cv32e41s_pkg.sv)]", 20, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources,  (cv32e41s_pkg.sv)]", 20, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'c' command handler elapsed time: 3 seconds
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/include/cv32e41s_pkg.sv] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/include/cv32e41s_pkg.sv 
+// Tcl Message: file delete -force /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/include/cv32e41s_pkg.sv 
+// Elapsed time: 16 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectCodeEditor("cv32e41s_core.sv", 402, 274); // ac
+selectCodeEditor("cv32e41s_core.sv", 241, 235); // ac
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv)]", 8, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ao
+// HMemoryUtils.trashcanNow. Engine heap size: 3,954 MB. GUI used memory: 183 MB. Current time: 7/29/23, 11:49:06 AM CEST
+selectCodeEditor("cv32e41s_core.sv", 622, 199); // ac
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv)]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv)]", 8, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("cv32e41s_core.sv", 610, 256); // ac
+selectCodeEditor("cv32e41s_core.sv", 541, 333); // ac
+selectCodeEditor("cv32e41s_core.sv", 266, 248); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Synthesis"); // u
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/synth_1/top_nexys7.dcp with file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Sat Jul 29 11:49:35 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log 
+// 'i' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bq
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // g
+// TclEventType: DESIGN_CLOSE
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,971 MB. GUI used memory: 166 MB. Current time: 7/29/23, 11:49:37 AM CEST
+// Engine heap size: 3,971 MB. GUI used memory: 166 MB. Current time: 7/29/23, 11:49:37 AM CEST
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bq
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // g
+// HMemoryUtils.trashcanNow. Engine heap size: 3,861 MB. GUI used memory: 119 MB. Current time: 7/29/23, 11:49:40 AM CEST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,861 MB. GUI used memory: 120 MB. Current time: 7/29/23, 11:49:40 AM CEST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bq
+// Elapsed time: 53 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_demo_system.sv", 3); // o
+selectCodeEditor("cv32e41s_demo_system.sv", 490, 114); // ac
+// Elapsed time: 52 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv)]", 5, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv)]", 4); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, prim_generic_clock_inv (prim_generic_clock_inv.sv)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, prim_generic_clock_inv (prim_generic_clock_inv.sv)]", 7, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 30 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, prim_generic_clock_inv (prim_generic_clock_inv.sv)]", 7); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), clkgen : clkgen_xil7series (clkgen_xil7series.sv)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), clkgen : clkgen_xil7series (clkgen_xil7series.sv)]", 6, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "prim_generic_clock_inv.sv", 8); // o
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv)]", 5); // D
+// Elapsed time: 11 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv)]", 8); // D
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 90 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a50ticsg324-1L 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,760 MB. GUI used memory: 99 MB. Current time: 7/29/23, 11:54:55 AM CEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 8895.684 ; gain = 0.000 ; free physical = 2553 ; free virtual = 9160 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1673 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] Finished Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8895.684 ; gain = 0.000 ; free physical = 2475 ; free virtual = 9083 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// 'dD' command handler elapsed time: 3 seconds
+dismissDialog("Open Synthesized Design"); // bq
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // f: FALSE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-10644] design element 'prim_util_pkg' is previously defined; ignoring this definition [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_pkg.sv:98]. ]", 1, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_pkg.sv;-;;-;16;-;line;-;98;-;;-;16;-;"); // u.d
+// Elapsed time: 15 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6858] multi-driven net nptr_offset_cmp_w[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:341]. ]", 3); // u.d
+// Elapsed time: 14 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6858] multi-driven net nptr_offset_cmp_w[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:341]. ]", 3); // u.d
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, true); // f: TRUE
+// Elapsed time: 16 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-8895] 'mpu_if_trie_fault' is already implicitly declared on line 278 [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_if_stage.sv:288]. ]", 4, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_if_stage.sv;-;;-;16;-;line;-;288;-;;-;16;-;"); // u.d
+selectCodeEditor("cv32e41s_if_stage.sv", 206, 446); // ac
+selectCodeEditor("cv32e41s_if_stage.sv", 198, 427); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("cv32e41s_if_stage.sv", 305, 260); // ac
+typeControlKey((HResource) null, "cv32e41s_if_stage.sv", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("cv32e41s_if_stage.sv", 28, 273); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // f: FALSE
+// Elapsed time: 40 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// Tcl Message: report_utilization -name utilization_1 
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,827 MB. GUI used memory: 153 MB. Current time: 7/29/23, 11:57:16 AM CEST
+dismissDialog("Report Utilization"); // bq
+expandTreeTable((HResource) null, "u_ucup_top (uCup_top) ; 12535 ; 7188 ; 739 ; 244 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2); // w
+expandTreeTable((HResource) null, "u_soc (cv32e41s_demo_system) ; 12535 ; 7188 ; 739 ; 244 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 3); // w
+expandTreeTable((HResource) null, "u_core (cv32e41s_core) ; 10349 ; 3874 ; 459 ; 116 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+expandTreeTable((HResource) null, "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9); // w
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uCup_top.sv", 7); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_nexys7.sv", 8); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "prim_generic_clock_inv.sv", 9); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clkgen_xil7series.sv", 10); // o
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), u_incore : cv32e41s_incore (cv32e41s_incore.sv)]", 13); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), rpm : cv32e41s_rpm (cv32e41s_rpm.sv)]", 16, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv), genblk1.u_soc : cv32e41s_demo_system (cv32e41s_demo_system.sv), u_core : cv32e41s_core (cv32e41s_core.sv), rpm : cv32e41s_rpm (cv32e41s_rpm.sv), rpm_bank_one : cv32e41s_tcm (cv32e41s_tcm.sv)]", 18, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_core.sv", 6); // o
+selectCodeEditor("cv32e41s_core.sv", 294, 397); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/synth_1/top_nexys7.dcp with file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "16", 15); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 16 
+// Tcl Message: [Sat Jul 29 11:59:02 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log 
+// 'i' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // g
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,852 MB. GUI used memory: 128 MB. Current time: 7/29/23, 11:59:05 AM CEST
+// Engine heap size: 3,852 MB. GUI used memory: 129 MB. Current time: 7/29/23, 11:59:05 AM CEST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bq
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 285 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a50ticsg324-1L 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,852 MB. GUI used memory: 108 MB. Current time: 7/29/23, 12:03:54 PM CEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.19 . Memory (MB): peak = 8988.609 ; gain = 0.000 ; free physical = 2616 ; free virtual = 9228 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1673 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] Finished Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8988.609 ; gain = 0.000 ; free physical = 2511 ; free virtual = 9124 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// 'dD' command handler elapsed time: 3 seconds
+dismissDialog("Open Synthesized Design"); // bq
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// Tcl Message: report_utilization -name utilization_1 
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,860 MB. GUI used memory: 159 MB. Current time: 7/29/23, 12:04:04 PM CEST
+dismissDialog("Report Utilization"); // bq
+expandTreeTable((HResource) null, "u_ucup_top (uCup_top) ; 12565 ; 7187 ; 739 ; 244 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2); // w
+expandTreeTable((HResource) null, "u_soc (cv32e41s_demo_system) ; 12565 ; 7187 ; 739 ; 244 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 3); // w
+// Elapsed time: 20 seconds
+expandTreeTable((HResource) null, "u_core (cv32e41s_core) ; 10456 ; 3874 ; 459 ; 116 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+expandTreeTable((HResource) null, "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9, "rpm (cv32e41s_rpm)", 0, true); // w - Node
+collapseTreeTable((HResource) null, "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9, "rpm (cv32e41s_rpm)", 0, true, false, false, false, false, true); // w - Double Click - Node
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9, "rpm (cv32e41s_rpm)", 0, true); // w - Node
+expandTreeTable((HResource) null, "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9, "rpm (cv32e41s_rpm)", 0, true, false, false, false, false, true); // w - Double Click - Node
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, true); // f: TRUE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin nptr_offset_cmp_w[3] with 1st driver pin 'xpmp.xpmp_ii_0/pmp_trie.pmp_walker_i/hint_sum_w0_inferred/hint_sum_w027_out[3]' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:341]. ]", 16, true); // u.d - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin nptr_offset_cmp_w[3] with 1st driver pin 'xpmp.xpmp_ii_0/pmp_trie.pmp_walker_i/hint_sum_w0_inferred/hint_sum_w027_out[3]' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:341]. , [Synth 8-6859] multi-driven net on pin p_0_in25_in[3] with 2nd driver pin 'GND' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:332]. ]", 25, false, false, false, false, false, true); // u.d - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin nptr_offset_cmp_w[3] with 1st driver pin 'xpmp.xpmp_ii_0/pmp_trie.pmp_walker_i/hint_sum_w0_inferred/hint_sum_w027_out[3]' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:341]. ]", 16, true); // u.d - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv;-;;-;16;-;line;-;341;-;;-;16;-;"); // u.d
+// Elapsed time: 11 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_nexys7.sv", 8); // o
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uCup_top.sv", 7); // o
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_core.sv", 6); // o
+selectCodeEditor("cv32e41s_core.sv", 298, 400); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_pmp_walker_64.sv", 10); // o
+// Elapsed time: 21 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin nptr_offset_cmp_w[3] with 1st driver pin 'xpmp.xpmp_ii_0/pmp_trie.pmp_walker_i/hint_sum_w0_inferred/hint_sum_w027_out[3]' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:341]. ]", 16, true); // u.d - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv;-;;-;16;-;line;-;341;-;;-;16;-;"); // u.d
+// Elapsed time: 45 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin nptr_offset_cmp_w[3] with 1st driver pin 'xpmp.xpmp_ii_0/pmp_trie.pmp_walker_i/hint_sum_w0_inferred/hint_sum_w027_out[3]' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:341]. , [Synth 8-6859] multi-driven net on pin p_1_in4_in[0] with 1st driver pin 'xpmp.xpmp_ii_0/pmp_trie.pmp_walker_i/masked_hint_w_inferred/masked_hint_w[4]' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:186]. ]", 110, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv;-;;-;16;-;line;-;186;-;;-;16;-;"); // u.d
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin nptr_offset_cmp_w[3] with 1st driver pin 'xpmp.xpmp_ii_0/pmp_trie.pmp_walker_i/hint_sum_w0_inferred/hint_sum_w027_out[3]' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv:341]. ]", 16, true); // u.d - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv;-;;-;16;-;line;-;341;-;;-;16;-;"); // u.d
+// Elapsed time: 58 seconds
+selectCodeEditor("cv32e41s_pmp_walker_64.sv", 166, 263); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/synth_1/top_nexys7.dcp with file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 16 
+// Tcl Message: [Sat Jul 29 12:08:03 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // g
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,921 MB. GUI used memory: 137 MB. Current time: 7/29/23, 12:08:05 PM CEST
+// Engine heap size: 3,921 MB. GUI used memory: 138 MB. Current time: 7/29/23, 12:08:05 PM CEST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Closing"); // bq
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 277 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a50ticsg324-1L 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,897 MB. GUI used memory: 113 MB. Current time: 7/29/23, 12:12:46 PM CEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.2 . Memory (MB): peak = 9067.648 ; gain = 0.000 ; free physical = 2463 ; free virtual = 9048 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1672 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] Finished Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9067.648 ; gain = 0.000 ; free physical = 2467 ; free virtual = 9044 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// Device view-level: 0.0
+// 'dD' command handler elapsed time: 3 seconds
+// RouteApi: Init Delay Mediator Swing Worker Finished
+dismissDialog("Open Synthesized Design"); // bq
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// Tcl Message: report_utilization -name utilization_1 
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,907 MB. GUI used memory: 166 MB. Current time: 7/29/23, 12:12:50 PM CEST
+dismissDialog("Report Utilization"); // bq
+expandTreeTable((HResource) null, "u_ucup_top (uCup_top) ; 12546 ; 7185 ; 737 ; 245 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2); // w
+expandTreeTable((HResource) null, "u_soc (cv32e41s_demo_system) ; 12546 ; 7185 ; 737 ; 245 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 3); // w
+expandTreeTable((HResource) null, "u_core (cv32e41s_core) ; 10353 ; 3871 ; 457 ; 117 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9, "rpm (cv32e41s_rpm)", 0, true); // w - Node
+collapseTreeTable((HResource) null, "u_core (cv32e41s_core) ; 10353 ; 3871 ; 457 ; 117 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+expandTreeTable((HResource) null, "u_gpio (gpio) ; 97 ; 123 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 7); // w
+collapseTreeTable((HResource) null, "u_gpio (gpio) ; 97 ; 123 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 7); // w
+// Elapsed time: 14 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // f: FALSE
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, true); // f: TRUE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-10644] design element 'prim_util_pkg' is previously defined; ignoring this definition [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_pkg.sv:98]. ]", 4, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_pkg.sv;-;;-;16;-;line;-;98;-;;-;16;-;"); // u.d
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 29, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// Tcl Message: launch_runs impl_1 -jobs 16 
+// Tcl Message: INFO: [Timing 38-480] Writing timing data to binary archive. 
+// Tcl Message: Writing XDEF routing. Writing XDEF routing logical nets. Writing XDEF routing special nets. 
+// Tcl Message: Write XDEF Complete: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9067.648 ; gain = 0.000 ; free physical = 2428 ; free virtual = 9008 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Sat Jul 29 12:13:46 2023] Launched impl_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 269 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+selectButton(PAResourceAtoD.ClosePlanner_YES, "Yes"); // a
+dismissDialog("Close Design"); // a.a
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,902 MB. GUI used memory: 144 MB. Current time: 7/29/23, 12:18:18 PM CEST
+// Engine heap size: 3,902 MB. GUI used memory: 144 MB. Current time: 7/29/23, 12:18:18 PM CEST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bq
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,944 MB. GUI used memory: 173 MB. Current time: 7/29/23, 12:18:22 PM CEST
+// TclEventType: DESIGN_NEW
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Device view-level: 0.0
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.18 . Memory (MB): peak = 9067.648 ; gain = 0.000 ; free physical = 2759 ; free virtual = 9135 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1672 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 9067.648 ; gain = 0.000 ; free physical = 2660 ; free virtual = 9036 
+// Tcl Message: Restored from archive | CPU: 1.300000 secs | Memory: 22.148048 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 9067.648 ; gain = 0.000 ; free physical = 2660 ; free virtual = 9036 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9067.648 ; gain = 0.000 ; free physical = 2660 ; free virtual = 9036 
+// TclEventType: DRC_ADDED
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.4s
+// Device view-level: 0.0
+// TclEventType: POWER_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2536 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dD' command handler elapsed time: 11 seconds
+dismissDialog("Open Implemented Design"); // bq
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // F
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Methodology Violations"); // aO
+// Elapsed time: 22 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Methodology Summary]", 4, false); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Design Timing Summary]", 2, false); // a
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Report Utilization]", 39, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// Tcl Message: report_utilization -name utilization_1 
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// [GUI Memory]: 271 MB (+942kb) [01:33:27]
+// [GUI Memory]: 284 MB (+57kb) [01:33:28]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,047 MB. GUI used memory: 215 MB. Current time: 7/29/23, 12:19:26 PM CEST
+dismissDialog("Report Utilization"); // bq
+expandTreeTable((HResource) null, "u_ucup_top (uCup_top) ; 12624 ; 7200 ; 737 ; 245 ; 4299 ; 12572 ; 52 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2); // w
+expandTreeTable((HResource) null, "u_soc (cv32e41s_demo_system) ; 12624 ; 7200 ; 737 ; 245 ; 4299 ; 12572 ; 52 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 3); // w
+// [Engine Memory]: 4,146 MB (+57017kb) [01:33:36]
+collapseTreeTable((HResource) null, "u_ucup_top (uCup_top) ; 12624 ; 7200 ; 737 ; 245 ; 4299 ; 12572 ; 52 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "u_ucup_top (uCup_top) ; 12624 ; 7200 ; 737 ; 245 ; 4299 ; 12572 ; 52 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2, "24", 8, false); // w
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "top_nexys7 ; 12625 ; 7266 ; 737 ; 245 ; 4301 ; 12573 ; 52 ; 26 ; 3 ; 28 ; 12 ; 1 ; 2", 0, "26", 8, true); // w - Node
+expandTreeTable((HResource) null, "u_ucup_top (uCup_top) ; 12624 ; 7200 ; 737 ; 245 ; 4299 ; 12572 ; 52 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2); // w
+expandTreeTable((HResource) null, "u_core (cv32e41s_core) ; 10373 ; 3871 ; 457 ; 117 ; 3348 ; 10373 ; 0 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+// Device view-level: 0.0
+// HMemoryUtils.trashcanNow. Engine heap size: 4,147 MB. GUI used memory: 249 MB. Current time: 7/29/23, 12:20:15 PM CEST
+// Elapsed time: 28 seconds
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "rpm (cv32e41s_rpm) ; 34 ; 2 ; 0 ; 0 ; 19 ; 34 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 9, "rpm (cv32e41s_rpm)", 0, true); // w - Node
+expandTreeTable((HResource) null, "u_incore (cv32e41s_incore) ; 10288 ; 3863 ; 457 ; 117 ; 3326 ; 10288 ; 0 ; 0 ; 3 ; 0 ; 0 ; 0 ; 0", 10); // w
+expandTreeTable((HResource) null, "load_store_unit_i (cv32e41s_load_store_unit) ; 1790 ; 148 ; 4 ; 0 ; 965 ; 1790 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 17); // w
+expandTreeTable((HResource) null, "mpu_i (cv32e41s_mpu_test__parameterized0) ; 1574 ; 108 ; 4 ; 0 ; 887 ; 1574 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 19); // w
+expandTreeTable((HResource) null, "xpmp.xpmp_i (cv32e41s_xpmp__parameterized0) ; 1565 ; 105 ; 4 ; 0 ; 881 ; 1565 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 20); // w
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_controller_fsm.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_demo_system.sv", 4); // o
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_core.sv", 6); // o
+selectCodeEditor("cv32e41s_core.sv", 21, 113); // ac
+selectCodeEditor("cv32e41s_core.sv", 80, 259); // ac
+selectCodeEditor("cv32e41s_core.sv", 30, 259); // ac
+selectCodeEditor("cv32e41s_core.sv", 85, 260); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("cv32e41s_core.sv", 821, 191); // ac
+selectCodeEditor("cv32e41s_core.sv", 533, 291); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,171 MB. GUI used memory: 207 MB. Current time: 7/29/23, 12:21:51 PM CEST
+// Elapsed time: 26 seconds
+selectCodeEditor("cv32e41s_core.sv", 425, 340); // ac
+selectCodeEditor("cv32e41s_core.sv", 425, 340, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("cv32e41s_core.sv", 580, 292); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_demo_system.sv", 4); // o
+selectCodeEditor("cv32e41s_demo_system.sv", 1155, 302); // ac
+selectCodeEditor("cv32e41s_demo_system.sv", 1065, 287); // ac
+// Elapsed time: 25 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv)]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_nexys7 (top_nexys7.sv), u_ucup_top : uCup_top (uCup_top.sv)]", 8, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("uCup_top.sv", 276, 359); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,200 MB. GUI used memory: 206 MB. Current time: 7/29/23, 12:23:01 PM CEST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 29, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/synth_1/top_nexys7.dcp with file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 16 
+// Tcl Message: [Sat Jul 29 12:23:05 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log [Sat Jul 29 12:23:05 2023] Launched impl_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // g
+// TclEventType: DESIGN_CLOSE
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,156 MB. GUI used memory: 154 MB. Current time: 7/29/23, 12:23:07 PM CEST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 4,156 MB. GUI used memory: 154 MB. Current time: 7/29/23, 12:23:07 PM CEST
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bq
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 286 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // S.a
+// Elapsed time: 14 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_unit_i/prefetcher_i/B2[0] has multiple drivers: u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_unit_i/prefetcher_i/trans_addr_q[1]_i_1/O, and u_ucup_top/u_soc/u_core/u_incore/if_stage_i/mpu_i/xpmp.xpmp_i/pmp_tab.pmp_i/reloc_address_reg[1]/Q.. ]", 8); // u.d
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_unit_i/prefetcher_i/B2[0] has multiple drivers: u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_unit_i/prefetcher_i/trans_addr_q[1]_i_1/O, and u_ucup_top/u_soc/u_core/u_incore/if_stage_i/mpu_i/xpmp.xpmp_i/pmp_tab.pmp_i/reloc_address_reg[1]/Q.. ]", 8); // u.d
+// Elapsed time: 101 seconds
+selectCheckBox(PAResourceItoN.MsgView_ERROR_MESSAGES, (String) null, false); // f: FALSE
+// Elapsed time: 16 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_trans_addr[31] with 1st driver pin 'trans_addr_q[31]_i_1/O' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv:128]. ]", 2, true); // u.d - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv;-;;-;16;-;line;-;128;-;;-;16;-;"); // u.d
+// Elapsed time: 20 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_trans_addr[31] with 1st driver pin 'trans_addr_q[31]_i_1/O' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv:128]. ]", 2); // u.d
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_trans_addr[31] with 1st driver pin 'trans_addr_q[31]_i_1/O' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv:128]. , [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/load_store_unit_i/mpu_trans[addr][28] with 1st driver pin 'i___3_i_1/O' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_data_obi_interface.sv:125]. ]", 70, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_data_obi_interface.sv;-;;-;16;-;line;-;125;-;;-;16;-;"); // u.d
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_pmp_walker_64.sv", 9); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_if_stage.sv", 8); // o
+// Elapsed time: 18 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_trans_addr[31] with 1st driver pin 'trans_addr_q[31]_i_1/O' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv:128]. ]", 2); // u.d
+// Elapsed time: 49 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 26, false); // f
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a50ticsg324-1L 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 4,012 MB. GUI used memory: 129 MB. Current time: 7/29/23, 12:32:03 PM CEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.2 . Memory (MB): peak = 9120.672 ; gain = 0.000 ; free physical = 2699 ; free virtual = 9076 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1846 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] Finished Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9120.672 ; gain = 0.000 ; free physical = 2632 ; free virtual = 9007 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// Device view-level: 0.0
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// RouteApi: Init Delay Mediator Swing Worker Finished
+dismissDialog("Open Synthesized Design"); // bq
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top)]", 4); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system)]", 6); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core)]", 11); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore)]", 15); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit)]", 24); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit)]", 24, true); // aF - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // f
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+// Elapsed time: 17 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_trans_addr[31] with 1st driver pin 'trans_addr_q[31]_i_1/O' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv:128]. ]", 2); // u.d
+// Elapsed time: 35 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_trans_addr[31] with 1st driver pin 'trans_addr_q[31]_i_1/O' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv:128]. , [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/load_store_unit_i/mpu_trans[addr][31] with 2nd driver pin 'u_ucup_top/u_soc/u_core/u_incore/load_store_unit_i/mpu_i/xpmp.xpmp_i/pmp_tab.pmp_i/reloc_address_reg[31]/Q' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp.sv:253]. ]", 65, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp.sv;-;;-;16;-;line;-;253;-;;-;16;-;"); // u.d
+// Elapsed time: 39 seconds
+selectCodeEditor("cv32e41s_pmp.sv", 315, 385); // ac
+// Elapsed time: 21 seconds
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0)]", 28); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0)]", 31); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp)]", 33, false); // aF
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // f
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+dismissDialog("Generate Schematic"); // w
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 10 seconds
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764)]", 34); // aF
+// Elapsed time: 23 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[31]_i_9_n_2]", 2462, false); // aF
+// Elapsed time: 15 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[29]_i_1__0]", 2461, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[29]_i_1__0]", 2461, false, false, false, false, false, true); // aF - Double Click
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[31]_i_9_n_2]", 2462, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[31]_i_9_n_2]", 2462, false, false, false, false, false, true); // aF - Double Click
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[31]_i_9_n_2]", 2462, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[31]_i_9_n_2]", 2462, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[31]_i_9_n_2]", 2462, false, false, false, false, false, true); // aF - Double Click
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[31]_i_9_n_2]", 2462, false, false, false, false, true, false); // aF - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SELECT_DRIVER_PIN, "Select Driver Pin"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SELECT_DRIVER_PIN
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[28]_i_1__0_2]", 2458, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[28]_i_1__0_2]", 2458, false, false, false, false, false, true); // aF - Double Click
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[28]_i_1__0_2]", 2458, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[28]_i_1__0_2]", 2458, false); // aF
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[31]_i_26_n_1]", 2486, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Nets (4764), reloc_address_reg[31]_i_26_n_1]", 2486, false, false, false, false, false, true); // aF - Double Click
+// Elapsed time: 21 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Leaf Cells (1205), reloc_address_reg[31] (LDCE)]", 3682, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Leaf Cells (1205), reloc_address_reg[31] (LDCE)]", 3682, false, false, false, false, false, true); // aF - Double Click
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Elapsed time: 27 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "Schematic_zoom_out"); // B
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/if_stage_i/prefetch_trans_addr[31] with 1st driver pin 'trans_addr_q[31]_i_1/O' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv:128]. , [Synth 8-6859] multi-driven net on pin u_ucup_top/u_soc/u_core/u_incore/load_store_unit_i/mpu_trans[addr][31] with 2nd driver pin 'u_ucup_top/u_soc/u_core/u_incore/load_store_unit_i/mpu_i/xpmp.xpmp_i/pmp_tab.pmp_i/reloc_address_reg[31]/Q' [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp.sv:253]. ]", 65, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp.sv;-;;-;16;-;line;-;253;-;;-;16;-;"); // u.d
+// Elapsed time: 132 seconds
+selectCodeEditor("cv32e41s_pmp.sv", 650, 228); // ac
+typeControlKey((HResource) null, "cv32e41s_pmp.sv", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/synth_1/top_nexys7.dcp with file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 16 
+// Tcl Message: [Sat Jul 29 12:40:00 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // g
+// TclEventType: DESIGN_CLOSE
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,020 MB. GUI used memory: 158 MB. Current time: 7/29/23, 12:40:02 PM CEST
+// Engine heap size: 4,020 MB. GUI used memory: 158 MB. Current time: 7/29/23, 12:40:02 PM CEST
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bq
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 287 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a50ticsg324-1L 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 4,020 MB. GUI used memory: 134 MB. Current time: 7/29/23, 12:44:53 PM CEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.2 . Memory (MB): peak = 9120.672 ; gain = 0.000 ; free physical = 2699 ; free virtual = 8848 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1846 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] Finished Parsing XDC File [/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9120.672 ; gain = 0.000 ; free physical = 2690 ; free virtual = 8836 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// 'dD' command handler elapsed time: 3 seconds
+dismissDialog("Open Synthesized Design"); // bq
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // f
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// Tcl Message: report_utilization -name utilization_1 
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 4,031 MB. GUI used memory: 188 MB. Current time: 7/29/23, 12:45:05 PM CEST
+dismissDialog("Report Utilization"); // bq
+// Elapsed time: 11 seconds
+expandTreeTable((HResource) null, "u_ucup_top (uCup_top) ; 13230 ; 7079 ; 755 ; 235 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 2); // w
+expandTreeTable((HResource) null, "u_soc (cv32e41s_demo_system) ; 13230 ; 7079 ; 755 ; 235 ; 24 ; 3 ; 0 ; 0 ; 0 ; 2", 3); // w
+expandTreeTable((HResource) null, "u_core (cv32e41s_core) ; 11078 ; 3765 ; 475 ; 107 ; 8 ; 3 ; 0 ; 0 ; 0 ; 0", 6); // w
+expandTreeTable((HResource) null, "u_incore (cv32e41s_incore) ; 11016 ; 3759 ; 475 ; 107 ; 0 ; 3 ; 0 ; 0 ; 0 ; 0", 9); // w
+// Elapsed time: 10 seconds
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "load_store_unit_i (cv32e41s_load_store_unit) ; 1895 ; 76 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 16, "load_store_unit_i (cv32e41s_load_store_unit)", 0, true); // w - Node
+expandTreeTable((HResource) null, "load_store_unit_i (cv32e41s_load_store_unit) ; 1895 ; 76 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 16); // w
+expandTreeTable((HResource) null, "mpu_i (cv32e41s_mpu_test__parameterized0) ; 1727 ; 35 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 18); // w
+expandTreeTable((HResource) null, "xpmp.xpmp_i (cv32e41s_xpmp__parameterized0) ; 1717 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 19); // w
+// Elapsed time: 14 seconds
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "pmp_tab.pmp_i (cv32e41s_pmp) ; 1717 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 20, "pmp_tab.pmp_i (cv32e41s_pmp)", 0, false); // w
+// Elapsed time: 15 seconds
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp)]", 33); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Leaf Cells (2132)]", 35); // aF
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp), Leaf Cells (2132)]", 35); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[top_nexys7, u_ucup_top (uCup_top), u_soc (cv32e41s_demo_system), u_core (cv32e41s_core), u_incore (cv32e41s_incore), load_store_unit_i (cv32e41s_load_store_unit), mpu_i (cv32e41s_mpu_test__parameterized0), xpmp.xpmp_i (cv32e41s_xpmp__parameterized0), pmp_tab.pmp_i (cv32e41s_pmp)]", 33, true); // aF - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 27, false); // f
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+dismissDialog("Generate Schematic"); // w
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 29, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// Tcl Message: launch_runs impl_1 -jobs 16 
+// Tcl Message: INFO: [Timing 38-480] Writing timing data to binary archive. 
+// Tcl Message: Writing XDEF routing. Writing XDEF routing logical nets. Writing XDEF routing special nets. 
+// Tcl Message: Write XDEF Complete: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.04 . Memory (MB): peak = 9120.676 ; gain = 0.000 ; free physical = 2685 ; free virtual = 8822 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Sat Jul 29 12:46:35 2023] Launched impl_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+// TclEventType: RUN_STATUS_CHANGE
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, true); // f: TRUE
+// Elapsed time: 13 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-7129] Port timer_addr_i[31] in module timer is either unconnected or has no load. ]", 11); // u.d
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 45 seconds
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // f: FALSE
+// Elapsed time: 116 seconds
+selectTab((HResource) null, (HResource) null, "Utilization", 5); // aa
+selectTreeTable("PAResourceTtoZ.UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)", "cs_registers_i (cv32e41s_cs_registers) ; 4705 ; 1700 ; 146 ; 43 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 11, "cs_registers_i (cv32e41s_cs_registers)", 0, true); // w - Node
+expandTreeTable((HResource) null, "cs_registers_i (cv32e41s_cs_registers) ; 4705 ; 1700 ; 146 ; 43 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0", 11); // w
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_pmp_walker_64.sv", 10); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uCup_top.sv", 11); // o
+selectCodeEditor("uCup_top.sv", 280, 219); // ac
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 41 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+selectButton(PAResourceAtoD.ClosePlanner_YES, "Yes"); // a
+dismissDialog("Close Design"); // a.a
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,034 MB. GUI used memory: 169 MB. Current time: 7/29/23, 12:51:01 PM CEST
+// Engine heap size: 4,034 MB. GUI used memory: 169 MB. Current time: 7/29/23, 12:51:01 PM CEST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bq
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 4,084 MB. GUI used memory: 144 MB. Current time: 7/29/23, 12:51:06 PM CEST
+// TclEventType: DESIGN_NEW
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.2 . Memory (MB): peak = 9120.676 ; gain = 0.000 ; free physical = 2832 ; free virtual = 8927 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 1846 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 9120.676 ; gain = 0.000 ; free physical = 2746 ; free virtual = 8838 
+// Tcl Message: Restored from archive | CPU: 1.350000 secs | Memory: 25.840431 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 9120.676 ; gain = 0.000 ; free physical = 2746 ; free virtual = 8838 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9120.676 ; gain = 0.000 ; free physical = 2746 ; free virtual = 8837 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 13 instances  
+// Device view-level: 0.0
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.3s
+// Device view-level: 0.0
+// TclEventType: POWER_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2549 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  1554 ms.
+// 'dD' command handler elapsed time: 19 seconds
+// Elapsed time: 12 seconds
+dismissDialog("Open Implemented Design"); // bq
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // F
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Methodology Violations"); // aO
+// Device view-level: 0.0
+// HMemoryUtils.trashcanNow. Engine heap size: 4,103 MB. GUI used memory: 252 MB. Current time: 7/29/23, 12:51:22 PM CEST
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing]", 5); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_clock]", 6, false); // a
+selectTreeTableHeader(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "Severity", 1); // h.a
+selectTreeTableHeader(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "Name", 0); // h.a
+// [GUI Memory]: 303 MB (+4602kb) [02:05:39]
+// Elapsed time: 20 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, unconstrained_internal_endpoints]", 9, false); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_input_delay]", 10, false); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_output_delay]", 11, false); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_input_delay]", 10, false); // a
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Design Timing Summary]", 2, false); // a
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_controller_fsm.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_controller_fsm.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_pkg.sv", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_demo_system.sv", 4); // o
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uCup_top.sv", 3); // o
+selectCodeEditor("uCup_top.sv", 285, 177); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cv32e41s_core.sv", 2); // o
+selectCodeEditor("cv32e41s_core.sv", 478, 94); // ac
+selectCodeEditor("cv32e41s_core.sv", 451, 88); // ac
+selectCodeEditor("cv32e41s_core.sv", 500, 103); // ac
+selectCodeEditor("cv32e41s_core.sv", 498, 96); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 29, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/synth_1/top_nexys7.dcp with file /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 16 
+// Tcl Message: [Sat Jul 29 12:53:17 2023] Launched synth_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/runme.log [Sat Jul 29 12:53:17 2023] Launched impl_1... Run output will be captured here: /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform_x/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq

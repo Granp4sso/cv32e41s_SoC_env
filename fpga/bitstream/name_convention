@@ -1,0 +1,19 @@
+
+cv32e41s_<string>_<date>_<target>
+
+string - Describes the supported features for that bitstream
+	Mxxx	- Memory size in KB
+	Txx 	- TCMs, x are sizes in KB
+	Pxx	- PMP with number of entries
+	R	- Relocation
+	G	- Guarded Radix Trie supported
+	S	- Supervisor mode supported
+	Fxxx	- Working Frequency
+	
+date - Describes the day, month and year
+target - Describes the target FPGA
+
+e.g.
+bitstream for the nexys 50T supporting 64KB of RAM, TCMs of 4Kb, 4 entries of PMP, no relocation nor trie, nor supervisor mode.
+cv32e41s_M064T04P04_29072023_50T
+	

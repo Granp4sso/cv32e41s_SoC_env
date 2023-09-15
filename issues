@@ -1,0 +1,6 @@
+
+
+[ CSRs ] 
+	mstatus with shadowcopy doesn't allow set operations. Without shadowcopy it works but it doesn't reset properly.
+	It might happen for other CSRs as well. For now I am using no shadow copy and manually setting the reset value in .s file
+

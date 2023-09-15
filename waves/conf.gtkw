@@ -1,0 +1,141 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Mon Aug 14 09:39:19 2023
+[*]
+[dumpfile] "/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/waves/trace.vcd"
+[dumpfile_mtime] "Mon Aug 14 09:36:40 2023"
+[dumpfile_size] 71368634
+[savefile] "/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/waves/conf.gtkw"
+[timestart] 25202
+[size] 1920 1043
+[pos] 1846 0
+*-8.567416 26190 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.uCup_top.
+[treeopen] TOP.uCup_top.genblk1.
+[treeopen] TOP.uCup_top.genblk1.u_soc.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_bus.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.controller_i.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.cs_registers_i.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.cs_registers_i.basic_mode_csrs.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.cs_registers_i.basic_mode_csrs.mie_csr_i.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.cs_registers_i.mstatus_csr_i.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.xpmp.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.xpmp.xpmp_i.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_core.u_incore.register_file_wrapper_i.
+[treeopen] TOP.uCup_top.genblk1.u_soc.u_uart.
+[sst_width] 540
+[signals_width] 288
+[sst_expanded] 1
+[sst_vpaned_height] 588
+@28
+TOP.clk_sys_i
+@22
+TOP.uCup_top.genblk1.u_soc.mem_addr_o(1)[31:0]
+TOP.uCup_top.genblk1.u_soc.mem_rdata_i(1)[31:0]
+TOP.gp_o[15:0]
+TOP.uCup_top.genblk1.u_soc.mem_wdata_o(0)[31:0]
+@28
+TOP.uCup_top.mem_req_o(1)
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.prefetch_valid
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.instr_valid
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.bus_trans_valid
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.bus_trans_ready
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.bus_resp_valid
+TOP.uCup_top.mem_rvalid_i(1)
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.instr_rvalid_i
+TOP.uCup_top.genblk1.u_soc.core_instr_gnt
+TOP.uCup_top.uart_tx_o
+TOP.uCup_top.genblk1.u_soc.u_uart.device_req_i
+TOP.uCup_top.genblk1.u_soc.mem_we_o(0)
+TOP.uCup_top.genblk1.u_soc.mem_req_o(0)
+TOP.uCup_top.genblk1.u_soc.mem_rvalid_i(0)
+@22
+TOP.uCup_top.genblk1.u_soc.mem_rdata_i(0)[31:0]
+TOP.uCup_top.genblk1.u_soc.mem_be_o(0)[3:0]
+TOP.uCup_top.genblk1.u_soc.mem_addr_o(0)[31:0]
+TOP.uCup_top.genblk1.u_soc.u_bus.device_addr_o(4)[31:0]
+TOP.uCup_top.genblk1.u_soc.u_timer.mtime_d[63:0]
+TOP.uCup_top.genblk1.u_soc.u_timer.mtimecmp_d[63:0]
+TOP.uCup_top.genblk1.u_soc.u_timer.mtime_inc[63:0]
+TOP.uCup_top.genblk1.u_soc.u_timer.timer_rdata_o[31:0]
+@28
+TOP.uCup_top.genblk1.u_soc.u_timer.interrupt_q
+@23
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.cs_registers_i.mtvec_q[31:0]
+@28
+[color] 3
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.core_trans_valid_i
+[color] 3
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.core_resp_valid_o
+[color] 3
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.core_trans_ready_o
+[color] 3
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.core_trans_we
+[color] 3
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.core_trans_pushpop_i
+@22
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.cs_registers_i.mie_q[31:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.cs_registers_i.mstatus_q[31:0]
+@28
+[color] 6
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.bus_trans_valid_o
+[color] 6
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.bus_resp_valid_i
+[color] 6
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.bus_trans_ready_i
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_trans_valid
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.filter_trans_valid
+@22
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.cs_registers_i.mstatus_csr_i.rdata_q[31:0]
+@28
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.buffer_trans_valid
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.bus_trans_valid
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.data_req_o
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.busy_o
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.filter_resp_busy
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.mpu_block_bus
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.mpu_block_core
+@22
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.xpmp.xpmp_i.xpmpcfg[6:0]
+@28
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.mpu_err
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.state_n[2:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.state_q[2:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.core_one_txn_pend_n
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.mpu_status[1:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.mpu_i.mpu_block_bus
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.mpu_i.mpu_block_core
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.cnt_is_one_next
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.next_cnt[1:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.trans_valid
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.trans_ready
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.resp_valid
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.cnt_q[1:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.mpu_err
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.pmp_err
+@22
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.register_file_wrapper_i.register_file_i.mem(1)[37:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.register_file_wrapper_i.register_file_i.mem(2)[37:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.register_file_wrapper_i.register_file_i.mem(10)[37:0]
+@28
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.pmp_busy
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.mpu_block_bus
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.mpu_block_core
+@22
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.load_store_unit_i.mpu_i.pmr_reloc_address[31:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.mpu_i.pmp_req_addr[33:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.mpu_i.pmr_reloc_address[31:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.prefetch_trans_addr[31:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.branch_addr_n[31:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.pc_if_o[31:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.controller_i.controller_fsm_i.dummy[3:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.if_stage_i.jump_target_id_i[31:0]
+TOP.uCup_top.genblk1.u_soc.u_core.u_incore.register_file_wrapper_i.register_file_i.mem(1)[37:0]
+[pattern_trace] 1
+[pattern_trace] 0
