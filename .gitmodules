@@ -4,3 +4,6 @@
 [submodule "rtl/cv32e41s"]
 	path = rtl/cv32e41s
 	url = https://github.com/Granp4sso/cv32e41s
+[submodule "code/XPMP_experiments"]
+	path = code/XPMP_experiments
+	url = https://github.com/DanieleOttaviano/XPMP_experiments
