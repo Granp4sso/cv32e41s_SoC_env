@@ -96,9 +96,11 @@ Remember that using the serial as a programming medium comes with limitations. F
 Even using the masimum standard value (921600), would be too high for the nexys. So change the UART parameter clock and baudrate accordingly.
     
 ## Known Bugs:
+```
 --  Flasher script only works with a 40Mhz implementation at the moment (no XPMP). An XPMP based configuration
             lowers the frequency which in turns lowers the baudrate and requires some tuning that I have not done yet
 --  FPGA synthesis will just block when trying to access PMP CSRs, using MRET or ECALL. Probably accessing other CSRs
             might provide the same weird behaviour. I still have had no time to further investigate, but it is probably related 
             to some generic primitives replacement
 --  For some unclear reasons, RPM is not synthetized 
+```
