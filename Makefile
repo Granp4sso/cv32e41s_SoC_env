@@ -45,3 +45,7 @@ clean:
 	rm -r $(ROOT_TOP)/obj_dir
 	rm $(FILENAME)_run
 	rm $(TRACE_DIR)/trace.vcd
+	
+git:
+	git submodule update --remote --merge					# Update submodules
+	
