@@ -1,18 +1,19 @@
-                                               
-    #################################################
-    #      ____  _________    ____  __  _________   #
-    #     / __ \/ ____/   |  / __ \/  |/  / ____/   #
-    #    / /_/ / __/ / /| | / / / / /|_/ / __/      #
-    #   / _, _/ /___/ ___ |/ /_/ / /  / / /___      #
-    #  /_/ |_/_____/_/  |_/_____/_/  /_/_____/      #   
-    #                                               #
-    #################################################
+# CV32E41S SoC Environment                                           
 
-    #########################################################################
-    #                                                                       #
-    #   Engineer:       Stefano Mercogliano, stefano.mercogliano@unina.it   #
-    #                                                                       #
-    #########################################################################
+**This repository is meant to provide a way to simulate or deploy an environment to run the cv32e41s processor**
+
+> **Engineers:** 
+> > Stefano Mercogliano ([stefano.mercogliano@unina.it](mailto:stefano.mercogliano@unina.it))
+> 
+> > Daniele Ottaviano ([daniele.ottaviano@unina.it](mailto:daniele.ottaviano@unina.it)) 
+>
+> **University:** University of Naples, Federico II
+>
+>  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Napoli_university_logo.svg" alt="University Logo" width="50"/>
+
+> [!WARNING]
+> This repository is intended to work with the cv32e41s project [Granp4sso/cv32e41s](https://github.com/Granp4sso/cv32e41s).
+> Also, XPMP tests are freely available at [DanieleOttaviano/XPMP\_experiments] (https://github.com/DanieleOttaviano/XPMP_experiments).
 
     This project repository is meant to allow you to easly modify CV32E41S core, emulate or run test applications on it.
     CV32E41S is compatible with Verilator and doest not assume you to have any license with other simulators.
