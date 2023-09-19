@@ -16,9 +16,22 @@
 >
 > Also, XPMP tests are freely available at https://github.com/DanieleOttaviano/XPMP_experiments.
 
+
 This project repository is meant to allow you to easly modify CV32E41S core, emulate or run test applications on it.
 CV32E41S is compatible with Verilator and doest not assume you to have any license with other simulators.
-Just run make to compile all the content of the rtl folder.
+
+If you want to clone the directory, just use
+```
+git clone --recursive https://github.com/Granp4sso/cv32e41s_SoC_env.git
+```
+Then, in order to sync submodules, run
+```
+make git
+```
+If you want to modify the RTL, add new sv files, or modify the simulator, just use
+```
+make
+```
 The RTL folder is organized as follows:
 
 ```
