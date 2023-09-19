@@ -48,4 +48,7 @@ clean:
 	
 git:
 	git submodule update --remote --merge					# Update submodules
+	mv rtl/cv32e41s_core/rtl rtl/cv32e41s
+	rm -r rtl/cv32e41s_core
+	mv rtl/cv32e41s rtl/cv32e41s_core
 	
