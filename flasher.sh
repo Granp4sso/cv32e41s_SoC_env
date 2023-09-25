@@ -1,5 +1,5 @@
 
-file=../../code/projects/E41S_DS_prova/bin/prova.bin
+file=code/projects/E41S_DS_prova/bin/prova.bin
 dev=/dev/ttyUSB1
 entry=00100080
 
