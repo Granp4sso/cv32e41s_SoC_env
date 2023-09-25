@@ -19,6 +19,7 @@
 
 This project repository is meant to allow you to easly modify CV32E41S core, emulate or run test applications on it.
 CV32E41S is compatible with Verilator and doest not assume you to have any license with other simulators.
+In order to do so, install Verilator and compile the risc-v toolchain: https://github.com/riscv-collab/riscv-gnu-toolchain.
 
 If you want to clone the directory, just use
 ```
