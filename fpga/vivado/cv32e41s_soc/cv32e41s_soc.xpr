@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.xpr">
+<Project Version="7" Minor="61" Path="/home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="af4debb0fbf44068918d0fcb539c1058"/>
@@ -100,7 +100,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/nexys/clkgen_xil7series.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../RISC-V/wSoC/demo-platform-2/FPGA/cv32e40p_Demo_System_Xilinx/nexys/clkgen_xil7series.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../RISC-V/wSoC/demo-platform-2/FPGA/cv32e40p_Demo_System_Xilinx/nexys/clkgen_xil7series.sv"/>
           <Attr Name="ImportTime" Val="1679237611"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -694,15 +694,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert_sec_cm.svh">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_assert_sec_cm.svh"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-          <Attr Name="IsVisible" Val="1"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_flop_macros.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_flop_macros.sv"/>
@@ -710,6 +701,15 @@
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert_sec_cm.svh">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_assert_sec_cm.svh"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="IsVisible" Val="1"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert_dummy_macros.svh">
@@ -946,7 +946,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/nexys/top_nexys7.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../RISC-V/wSoC/demo-platform-2/FPGA/cv32e40p_Demo_System_Xilinx/nexys/top_nexys7.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../RISC-V/wSoC/demo-platform-2/FPGA/cv32e40p_Demo_System_Xilinx/nexys/top_nexys7.sv"/>
           <Attr Name="ImportTime" Val="1681974566"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1033,7 +1033,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mem/blank.vmem">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../RISC-V/wSoC/demo-platform-2/FPGA/cv32e40p_Demo_System_Xilinx/mem/blank.vmem"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../RISC-V/wSoC/demo-platform-2/FPGA/cv32e40p_Demo_System_Xilinx/mem/blank.vmem"/>
           <Attr Name="ImportTime" Val="1680349117"/>
         </FileInfo>
       </File>
@@ -1047,7 +1047,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/constraints/pins_nexys7.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../RISC-V/wSoC/demo-platform-2/VIVADO/CV32E40P_Demo_System_Nexys_A7/CV32E40P_Demo_System_Nexys_A7.srcs/constrs_1/imports/constraints/pins_nexys7.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../RISC-V/wSoC/demo-platform-2/VIVADO/CV32E40P_Demo_System_Nexys_A7/CV32E40P_Demo_System_Nexys_A7.srcs/constrs_1/imports/constraints/pins_nexys7.xdc"/>
           <Attr Name="ImportTime" Val="1682087930"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

@@ -1,33 +1,59 @@
-
-
-_start_of_ddr = ORIGIN(DDR);
-_vectors_start = 0x00100000;
-_bss_start = 0x00100000;
-_bss_end = 0x00100000;
-_stack_start =  ORIGIN(DDR) + LENGTH(DDR);
-
+OUTPUT_ARCH("riscv")
 
 /* Entry Point */
 ENTRY(reset_handler)
 
-/* Highest address of the user mode stack */
-_estack = ORIGIN(DDR) + LENGTH(DDR);	/* end of "RAM" Ram type memory */
-
 /* Memories definition */
 MEMORY
 {
-  DDR	(xrw)	: ORIGIN = 0x00100000,	LENGTH = 64K
+  DDR	(xrw)	: ORIGIN = 0x00100000,	LENGTH = 128K
 }
 
 /* Sections */
 SECTIONS
-{
-  /* The startup code into "ROM" Rom type memory */
+{ 
+
   .isr_vector :
   {
-    . = ALIGN(32);
-    KEEP(*(.isr_vector)) /* Startup code */
+    KEEP(*(.isr_vector))  
     . = ALIGN(32);
   } >DDR
 
+  .text :
+  { 
+	  *(.init)
+    *(.text)
+	  *(.text.*)
+	  *(.fini)
+	  *(.rodata)
+	  *(.rodata.*)
+	  . = ALIGN(32);
+	  _etext = .;
+  }> DDR
+  
+  .data :
+  {
+    *(.data)
+    *(.data.*)
+    . = ALIGN(32);
+  }> DDR
+  
+  .bss :
+  {
+	  *(.bss)
+	  *(.bss.*)
+	  *(COMMON)
+	  . = ALIGN(32);
+	  end = .;
+	  __end__ = .;
+  }> DDR 
+
+  PROVIDE( _vectors_start = ADDR(.isr_vector));  
+  PROVIDE( _start_of_ddr = ORIGIN(DDR) );
+  PROVIDE( _stack_start = ORIGIN(DDR) + LENGTH(DDR) );
+  PROVIDE( _estack = ORIGIN(DDR) + LENGTH(DDR) );    /* TO CHECK*/
+  PROVIDE( _bss_start = ADDR(.bss) );
+  PROVIDE( _bss_end = ADDR(.bss) + SIZEOF(.bss) );
+  PROVIDE( _data_start = ADDR(.data) );
+  PROVIDE( _data_end = ADDR(.data) + SIZEOF(.data) );
 }

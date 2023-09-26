@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.tcl"
+  variable script "/home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.tcl"
   variable category "vivado_synth"
 }
 
@@ -77,119 +77,119 @@ create_project -in_memory -part xc7a50ticsg324-1L
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.cache/wt [current_project]
-set_property parent.project_path /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.xpr [current_project]
+set_property webtalk.parent_dir /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.cache/wt [current_project]
+set_property parent.project_path /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys-a7-50t:part0:1.3 [current_project]
-set_property ip_output_repo /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.cache/ip [current_project]
+set_property ip_output_repo /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog {
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert_sec_cm.svh
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert_dummy_macros.svh
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_memload.svh
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert_sec_cm.svh
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert_dummy_macros.svh
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_memload.svh
 }
-set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert_sec_cm.svh]
-set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert_dummy_macros.svh]
-set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_memload.svh]
+set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert_sec_cm.svh]
+set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert_dummy_macros.svh]
+set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_memload.svh]
 read_verilog -library xil_defaultlib -sv {
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/bus.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/nexys/clkgen_xil7series.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e40p_clock_gate.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alert.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alu.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alu_b_cpop.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_b_decoder.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_clic_int_controller.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_compressed_decoder.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_controller.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_controller_bypass.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_controller_fsm.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_core.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_cs_registers.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_csr.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_data_obi_interface.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_debug_triggers.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_decoder.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dm_pkg.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_div.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_dummy_instr.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_ex_stage.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_ff_one.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_i_decoder.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_id_stage.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_if_stage.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_incore.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_instr_obi_interface.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_int_bus.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_int_controller.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_lfsr.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_load_store_unit.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_lsu_response_filter.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_m_decoder.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_mpu_test.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_mult.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_obi_integrity_fifo.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pc_check.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pc_target.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pma.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_prefetch_unit.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_prefetcher.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_ram_struct.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_rchk_check.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_register_file.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_register_file_ecc.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_register_file_wrapper.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_rpm.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_sequencer.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/bhv/cv32e41s_sffr.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/bhv/cv32e41s_sffs.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_sleep_unit.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_tcm.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_wb_stage.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_wpt.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_write_buffer.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_xpmp.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/debounce.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/debug_rom.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/debug_rom_one_scratch.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dm_csrs.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dm_mem.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dm_sba.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_flop_macros.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/dm_top.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/new/dmi_bscane_tap.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dmi_cdc.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dmi_jtag.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/gpio.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_count.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_fifo_async.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_pkg.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_fifo_sync.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_fifo_sync_cnt.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_flop.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_flop_2sync.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim_generic/prim_generic_flop.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_ram_2p_pkg.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim_generic/prim_generic_ram_2p.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/pwm.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/pwm_wrapper.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/ram_2p.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/spi_host.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/spi_top.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/timer.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/uCup_top.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/uart.sv
-  /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/nexys/top_nexys7.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/bus.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/nexys/clkgen_xil7series.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e40p_clock_gate.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alert.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alignment_buffer.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alu.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_alu_b_cpop.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_b_decoder.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_clic_int_controller.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_compressed_decoder.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_controller.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_controller_bypass.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_controller_fsm.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_core.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_cs_registers.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_csr.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_data_obi_interface.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_debug_triggers.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_decoder.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dm_pkg.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_div.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_dummy_instr.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_ex_stage.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_ff_one.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_i_decoder.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_id_stage.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_if_stage.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_incore.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_instr_obi_interface.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_int_bus.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_int_controller.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_lfsr.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_load_store_unit.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_lsu_response_filter.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_m_decoder.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_mpu_test.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_mult.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_obi_integrity_fifo.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pc_check.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pc_target.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pma.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_prefetch_unit.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_prefetcher.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_ram_struct.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_rchk_check.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_register_file.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_register_file_ecc.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_register_file_wrapper.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_rpm.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_sequencer.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/bhv/cv32e41s_sffr.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/bhv/cv32e41s_sffs.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_sleep_unit.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_tcm.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_wb_stage.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_wpt.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_write_buffer.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/cv32e41s_core/cv32e41s_xpmp.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/debounce.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/debug_rom.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/debug_rom_one_scratch.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dm_csrs.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dm_mem.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dm_sba.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_flop_macros.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_assert.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/dm_top.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/new/dmi_bscane_tap.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dmi_cdc.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/dm/dmi_jtag.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/gpio.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_count.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_fifo_async.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_util_pkg.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_fifo_sync.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_fifo_sync_cnt.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_flop.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_flop_2sync.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim_generic/prim_generic_flop.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim/prim_ram_2p_pkg.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/prim_generic/prim_generic_ram_2p.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/pwm.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/pwm_wrapper.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/ram_2p.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/spi_host.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/spi_top.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/timer.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/uCup_top.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/demo_system/uart.sv
+  /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/sources_1/imports/nexys/top_nexys7.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -200,12 +200,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc
-set_property used_in_implementation false [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc]
+read_xdc /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc
+set_property used_in_implementation false [get_files /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/synth_1/top_nexys7.dcp
+read_checkpoint -auto_incremental -incremental /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/synth_1/top_nexys7.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

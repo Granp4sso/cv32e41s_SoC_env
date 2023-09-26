@@ -95,7 +95,8 @@ default_exc_handler:
 
   /* All unimplemented interrupts/exceptions go to the default_exc_handler. */
   .org 0x00
-  jal x0, reset_handler
+  # jal x0, reset_handler
   .rept 32
   jal x0, default_exc_handler
   .endr
+  jal x0, reset_handler

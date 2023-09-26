@@ -88,7 +88,7 @@ module cv32e41s_demo_system #(
   parameter logic [31:0] SIM_CTRL_MASK  = ~(SIM_CTRL_SIZE-1);
 
   // debug functionality is optional
-  localparam bit DBG = 1;
+  localparam bit DBG = 0;
   localparam int unsigned DbgHwBreakNum = (DBG == 1) ?    2 :    0;
   localparam bit          DbgTriggerEn  = (DBG == 1) ? 1'b1 : 1'b0;
 
@@ -230,8 +230,9 @@ module cv32e41s_demo_system #(
   assign mem_instr_req =
       core_instr_req & ((core_instr_addr & cfg_device_addr_mask[Ram]) == cfg_device_addr_base[Ram]);
 
-  assign dbg_instr_req =
-      core_instr_req & ((core_instr_addr & cfg_device_addr_mask[DbgDev]) == cfg_device_addr_base[DbgDev]);
+  assign dbg_instr_req = (DBG) ?
+      core_instr_req & ((core_instr_addr & cfg_device_addr_mask[DbgDev]) == cfg_device_addr_base[DbgDev]) :
+      1'b0;
 
   assign core_instr_gnt = mem_instr_req | (dbg_instr_req & ~device_req[DbgDev]);
 
@@ -323,7 +324,7 @@ module cv32e41s_demo_system #(
     .mcycle_o (),                 // TO SUPPORT
 
     // Basic interrupt architecture
-    .irq_i ({6'b0, timer_irq, 8'b0, uart_irq, 16'b0}),
+    .irq_i ({15'b0, uart_irq, 8'b0, timer_irq,7'b0}),
 
     // Event wakeup signals
     .wu_wfe_i ('0),   // Wait-for-event wakeup

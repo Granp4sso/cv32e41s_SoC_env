@@ -7,7 +7,7 @@ GDB        = $(PREFIX)-gdb
 
 ###############################################################################
 
-TARGET_PATH = 	../bootloader/rom-bootloader/bin/
+TARGET_PATH = 	../code/projects/E41S_DS_bootloader_new/bin/
 TARGET_NAME = 	bootloader
 SRECFLAGS = 	-offset 0x0000 -byte-swap 4			
 

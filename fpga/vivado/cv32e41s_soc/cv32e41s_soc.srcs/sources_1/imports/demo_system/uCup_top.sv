@@ -57,7 +57,7 @@ module uCup_top #(
 			.CoreDbgNumTriggers		( 1 				),
 			.CorePmaNumRegions		( 0 				),
 			.CorePmpGranularity 	( 0 				),
-			.CorePmpNumRegions		( 8 				),
+			.CorePmpNumRegions		( 0 				),
 			.CoreClicEn         	( 0 				),
 			.CoreClicIdWidth    	( 5 				),
 			.CoreClicIntthreshbits	( 8					)
@@ -99,7 +99,7 @@ module uCup_top #(
 			.CoreDbgNumTriggers		( 1 				),
 			.CorePmaNumRegions		( 0 				),
 			.CorePmpGranularity 	( 0 				),
-			.CorePmpNumRegions		( 64				),
+			.CorePmpNumRegions		( 8				    ),
 			.CoreClicEn         	( 0 				),
 			.CoreClicIdWidth    	( 5 				),
 			.CoreClicIntthreshbits	( 8					)

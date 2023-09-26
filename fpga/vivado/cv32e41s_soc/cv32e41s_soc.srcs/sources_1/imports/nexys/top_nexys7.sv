@@ -13,7 +13,7 @@ module top_nexys7 (
   input               UART_RX,
   output              UART_TX
 );
- parameter SRAMInitFile =  "/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vmem/bootloader.vmem"; //"blank.vmem";
+ parameter SRAMInitFile =  "/home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vmem/bootloader.vmem"; //"blank.vmem";
 
   logic clk_sys, rst_sys_n;
   logic [ 15:0]  led_int;

@@ -20,18 +20,23 @@ module clkgen_xil7series (
     .I (IO_CLK),
     .O (io_clk_buf)
   );
+  
+  // CLKOUT0 is computedd as 
+  //    CLKTMP = CLKFBOUT * 1000 / (DIVCLK_DIVIDE * CLKIN_PERIOD ) [ >= 800 && <= 1600 ]
+  //    CLKOUT0 = CLKTMP / CLKOUT0_DIVIDE
+  //    clk_50_unbuf must be 50% of the IO_CLOCK
 
   PLLE2_ADV #(
     .BANDWIDTH            ("OPTIMIZED"),
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (2),
-    .CLKFBOUT_MULT        (20),
+    .DIVCLK_DIVIDE        (1),
+    .CLKFBOUT_MULT        (13), 
     .CLKFBOUT_PHASE       (0.000),
-    .CLKOUT0_DIVIDE       (24),
+    .CLKOUT0_DIVIDE       (26),     
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
-    .CLKIN1_PERIOD        (10)
+    .CLKIN1_PERIOD        (12.5)
   ) pll (
     .CLKFBOUT            (clk_fb_unbuf),
     .CLKOUT0             (clk_50_unbuf),

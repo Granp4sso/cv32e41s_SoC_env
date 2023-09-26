@@ -2315,7 +2315,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_MSTATEEN0_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (MSTATEEN0_RESET_VAL)
   )
   mstateen0_csr_i
@@ -2334,7 +2334,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_JVT_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (JVT_RESET_VAL)
   )
   jvt_csr_i
@@ -2393,7 +2393,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
         .LIB        (LIB),
         .WIDTH      (32),
         .MASK       (CSR_DCSR_MASK),
-        .SHADOWCOPY (SECURE),
+        .SHADOWCOPY (0),
         .RESETVALUE (DCSR_RESET_VAL)
       )
       dcsr_csr_i
@@ -2442,7 +2442,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_MEPC_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (MEPC_RESET_VAL)
   )
   mepc_csr_i
@@ -2461,7 +2461,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_MSCRATCH_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (MSCRATCH_RESET_VAL)
   )
   mscratch_csr_i
@@ -2480,7 +2480,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_MSTATUS_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (MSTATUS_RESET_VAL)
   )
   mstatus_csr_i
@@ -2505,7 +2505,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
       #(
         .LIB        (LIB                  ),
         .WIDTH      (32                   ),
-        .SHADOWCOPY (SECURE               ),
+        .SHADOWCOPY (0               ),
         .MASK       (CSR_CLIC_MCAUSE_MASK ),
         .RESETVALUE (MCAUSE_CLIC_RESET_VAL)
       )
@@ -2525,7 +2525,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
         .WIDTH      (32),
         .MASK       (CSR_CLIC_MTVEC_MASK),
         .RESETVALUE (MTVEC_CLIC_RESET_VAL),
-        .SHADOWCOPY (SECURE)
+        .SHADOWCOPY (0)
       )
       mtvec_csr_i
       (
@@ -2543,7 +2543,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
         .LIB        (LIB),
         .WIDTH      (32),
         .MASK       (CSR_MTVT_MASK),
-        .SHADOWCOPY (SECURE),
+        .SHADOWCOPY (0),
         .RESETVALUE (MTVT_RESET_VAL)
       )
       mtvt_csr_i
@@ -2562,7 +2562,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
         .LIB        (LIB),
         .WIDTH      (32),
         .MASK       (CSR_MINTSTATUS_MASK),
-        .SHADOWCOPY (SECURE),
+        .SHADOWCOPY (0),
         .RESETVALUE (MINTSTATUS_RESET_VAL)
       )
       mintstatus_csr_i
@@ -2581,7 +2581,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
         .LIB        (LIB),
         .WIDTH      (32),
         .MASK       (CSR_MINTTHRESH_MASK),
-        .SHADOWCOPY (SECURE),
+        .SHADOWCOPY (0),
         .RESETVALUE (MINTTHRESH_RESET_VAL)
       )
       mintthresh_csr_i
@@ -2602,7 +2602,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
       #(
         .LIB        (LIB                   ),
         .WIDTH      (32                    ),
-        .SHADOWCOPY (SECURE                ),
+        .SHADOWCOPY (0                ),
         .MASK       (CSR_BASIC_MCAUSE_MASK ),
         .RESETVALUE (MCAUSE_BASIC_RESET_VAL)
       )
@@ -2621,7 +2621,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
         .LIB        (LIB),
         .WIDTH      (32),
         .MASK       (CSR_BASIC_MTVEC_MASK),
-        .SHADOWCOPY (SECURE),
+        .SHADOWCOPY (0),
         .RESETVALUE (MTVEC_BASIC_RESET_VAL)
       )
       mtvec_csr_i
@@ -2643,7 +2643,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
         .LIB        (LIB),
         .WIDTH      (32),
         .MASK       (IRQ_MASK),
-        .SHADOWCOPY (SECURE),
+        .SHADOWCOPY (0),
         .RESETVALUE (MIE_BASIC_RESET_VAL)
       )
       mie_csr_i
@@ -2681,7 +2681,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
         .LIB        (LIB),
         .WIDTH      (32),
         .MASK       (CSR_CPUCTRL_MASK),
-        .SHADOWCOPY (SECURE),
+        .SHADOWCOPY (0),
         .RESETVALUE (CPUCTRL_RESET_VAL)
       )
       cpuctrl_csr_i
@@ -2803,7 +2803,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      ($bits(privlvl_t)),
     .MASK       (CSR_PRV_LVL_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (PRIV_LVL_M)
   )
   priv_lvl_i
@@ -2955,7 +2955,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
             .LIB        (LIB),
             .WIDTH      ($bits(pmpncfg_t)),
             .MASK       (CSR_PMPNCFG_MASK),
-            .SHADOWCOPY (SECURE),
+            .SHADOWCOPY (0),
             .RESETVALUE (PMP_PMPNCFG_RV[i])
           )
           pmpncfg_csr_i
@@ -2994,7 +2994,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
             .LIB        (LIB),
             .WIDTH      (PMP_ADDR_WIDTH),
             .MASK       (CSR_PMPADDR_MASK[31-:PMP_ADDR_WIDTH]),
-            .SHADOWCOPY (SECURE),
+            .SHADOWCOPY (0),
             .RESETVALUE (PMP_PMPADDR_RV[i][31-:PMP_ADDR_WIDTH])
           )
           pmp_addr_csr_i
@@ -3095,7 +3095,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
         .LIB        (LIB),
         .WIDTH      ($bits(mseccfg_t)),
         .MASK       (CSR_MSECCFG_MASK),
-        .SHADOWCOPY (SECURE),
+        .SHADOWCOPY (0),
         .RESETVALUE (PMP_MSECCFG_RV)
       )
       pmp_mseccfg_csr_i
@@ -3129,7 +3129,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
                   .LIB        (LIB),
                   .WIDTH      ($bits(xpmpcfg_t)),
                   .MASK       (CSR_XPMPCFG_MASK),
-                  .SHADOWCOPY (SECURE),
+                  .SHADOWCOPY (0),
                   .RESETVALUE (XPMPCFG_RESET)
                  )
                  xpmpcfg_csr_i
@@ -3206,7 +3206,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
       .LIB        (LIB),
       .WIDTH      (32),
       .MASK       (CSR_MEDELEG_MASK),
-      .SHADOWCOPY (SECURE),
+      .SHADOWCOPY (0),
       .RESETVALUE (MEDELEG_RESET_VAL)
     )
     medeleg_csr_i
@@ -3225,7 +3225,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
       .LIB        (LIB),
       .WIDTH      (32),
       .MASK       (CSR_MIDELEG_MASK),
-      .SHADOWCOPY (SECURE),
+      .SHADOWCOPY (0),
       .RESETVALUE (MIDELEG_RESET_VAL)
     )
     mideleg_csr_i
@@ -3244,7 +3244,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
       .LIB        (LIB),
       .WIDTH      ($bits(sstatus_t)),
       .MASK       (CSR_SSTATUS_MASK),
-      .SHADOWCOPY (SECURE),
+      .SHADOWCOPY (0),
       .RESETVALUE (SSTATUS_RESET_VAL)
     )
     sstatus_csr_i
@@ -3263,7 +3263,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_STVEC_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (STVEC_RESET_VAL)
   )
   stvec_csr_i
@@ -3283,7 +3283,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_SCOUNTEREN_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (SCOUNTEREN_RESET_VAL)
   )
   scounteren_csr_i
@@ -3302,7 +3302,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_SENVCFG_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (SENVCFG_RESET_VAL)
   )
   senvcfg_csr_i
@@ -3322,7 +3322,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_SSCRATCH_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (SSCRATCH_RESET_VAL)
   )
   sscratch_csr_i
@@ -3341,7 +3341,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_SEPC_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (SEPC_RESET_VAL)
   )
   sepc_csr_i
@@ -3360,7 +3360,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      ($bits(scause_t)),
     .MASK       (CSR_BASIC_SCAUSE_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (SCAUSE_BASIC_RESET_VAL)
   )
   scause_csr_i
@@ -3379,7 +3379,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_SATP_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (SATP_RESET_VAL)
   )
   satp_csr_i
@@ -3398,7 +3398,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
     .LIB        (LIB),
     .WIDTH      (32),
     .MASK       (CSR_SCONTEXT_MASK),
-    .SHADOWCOPY (SECURE),
+    .SHADOWCOPY (0),
     .RESETVALUE (SCONTEXT_RESET_VAL)
   )
   scontext_csr_i
@@ -3653,7 +3653,7 @@ module cv32e41s_cs_registers import cv32e41s_pkg::*;
 
   logic                 debug_stopcount;
 
-  // dcsr.stopcount == 1: Don’t increment any counters while in Debug Mode.
+  // dcsr.stopcount == 1: Don't increment any counters while in Debug Mode.
   // The debug spec states that we should also not increment counters "on ebreak instructions that cause entry into debug mode",
   // but this implementation does not take ebreak instructions into account.
   // This is considered OK since most counter events (except wb_invalid and cycle) will be suppressed (in ctrl_fsm_i.mhpmevent) when we

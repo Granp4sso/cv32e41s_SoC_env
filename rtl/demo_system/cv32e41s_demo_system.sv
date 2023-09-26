@@ -332,7 +332,7 @@ module cv32e41s_demo_system #(
     .mcycle_o (),                 // TO SUPPORT
 
     // Basic interrupt architecture
-    .irq_i ({6'b0, timer_irq, 8'b0, uart_irq, 16'b0}),
+    .irq_i ({15'b0, uart_irq, 8'b0, timer_irq,7'b0}),
 
     // Event wakeup signals
     .wu_wfe_i ('0),   // Wait-for-event wakeup

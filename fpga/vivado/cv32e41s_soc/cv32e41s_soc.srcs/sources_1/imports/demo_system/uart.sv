@@ -3,8 +3,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 module uart #(
-  parameter int unsigned ClockFrequency = 35_000_000,
-  parameter int unsigned BaudRate = 9600,
+  parameter int unsigned ClockFrequency = 40_000_000,
+  parameter int unsigned BaudRate = 38_400,
   parameter int unsigned RxFifoDepth = 128,
   parameter int unsigned TxFifoDepth = 128
 ) (

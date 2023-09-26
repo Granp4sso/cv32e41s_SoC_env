@@ -1,7 +1,14 @@
 
-file=code/projects/E41S_DS_prova/bin/prova.bin
 dev=/dev/ttyUSB1
-entry=00100080
+ram_file=code/projects/E41S_DS_uartdemo/bin/uart_demo.bin
+tcm_file=
+
+mode=00000001
+ram_entry=00100080
+ram_baddr=00100000
+tcm_entry=70002080
+tcm_baddr=70002000
+
 
 # Start
 
@@ -90,25 +97,41 @@ string_to_hex(){
 	esac
 }
 
+# Load Mode
+string_to_hex "${mode:6:2}"
+string_to_hex "${mode:4:2}"
+string_to_hex "${mode:2:2}"
+string_to_hex "${mode:0:2}"
+echo "[flasher] Mode selected is ${mode:0:2} ${mode:2:2} ${mode:4:2} ${mode:6:2}"
+
+# RAM flashing
+
+# Load Mem Base Address
+string_to_hex "${ram_baddr:6:2}"
+string_to_hex "${ram_baddr:4:2}"
+string_to_hex "${ram_baddr:2:2}"
+string_to_hex "${ram_baddr:0:2}"
+echo "[flasher] RAM base address is ${ram_baddr:0:2} ${ram_baddr:2:2} ${ram_baddr:4:2} ${ram_baddr:6:2}"
+
 # Load Size
-size=$(printf '%08x\n' $(wc -c < $file))
-string_to_hex "${size:6:2}"
-string_to_hex "${size:4:2}"
-string_to_hex "${size:2:2}"
-string_to_hex "${size:0:2}"
-echo "[flasher] file $file size is ${size:0:2} ${size:2:2} ${size:4:2} ${size:6:2}"
+ram_size=$(printf '%08x\n' $(wc -c < $ram_file))
+string_to_hex "${ram_size:6:2}"
+string_to_hex "${ram_size:4:2}"
+string_to_hex "${ram_size:2:2}"
+string_to_hex "${ram_size:0:2}"
+echo "[flasher] file $ram_file size is ${ram_size:0:2} ${ram_size:2:2} ${ram_size:4:2} ${ram_size:6:2}"
 
 # Load Entry
-string_to_hex "${entry:6:2}"
-string_to_hex "${entry:4:2}"
-string_to_hex "${entry:2:2}"
-string_to_hex "${entry:0:2}"
-echo "[flasher] Entry point is ${entry:0:2} ${entry:2:2} ${entry:4:2} ${entry:6:2}"
+string_to_hex "${ram_entry:6:2}"
+string_to_hex "${ram_entry:4:2}"
+string_to_hex "${ram_entry:2:2}"
+string_to_hex "${ram_entry:0:2}"
+echo "[flasher] Entry point is ${ram_entry:0:2} ${ram_entry:2:2} ${ram_entry:4:2} ${ram_entry:6:2}"
 
 # Load Binary
-bin=$(hexdump -e '16/1 "%02x " "\n"' $file)
+ram_bin=$(hexdump -e '16/1 "%02x " "\n"' $ram_file)
 
-for i in $bin
+for i in $ram_bin
 do	
 	string_to_hex "$i"
 done

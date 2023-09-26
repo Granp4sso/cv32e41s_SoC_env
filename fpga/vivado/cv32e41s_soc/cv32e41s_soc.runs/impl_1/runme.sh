@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/stefano/Desktop/PhD/Lavori/InProgress/uVTx/implementation/platform/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/impl_1'
+HD_PWD='/home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
