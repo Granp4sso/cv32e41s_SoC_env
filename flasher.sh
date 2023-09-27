@@ -3,7 +3,7 @@ dev=/dev/ttyUSB1
 ram_file=code/projects/E41S_DS_uartdemo/bin/uart_demo.bin
 tcm_file=
 
-mode=00000001
+mode=00010001
 ram_entry=00100080
 ram_baddr=00100000
 tcm_entry=70002080
