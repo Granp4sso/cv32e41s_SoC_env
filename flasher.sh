@@ -1,13 +1,26 @@
 
 dev=/dev/ttyUSB1
-ram_file=code/projects/E41S_DS_uartdemo/bin/uart_demo.bin
-tcm_file=
+ram_file=code/projects/E41S_DS_tcm2ram/ram/bin/ram.bin
+tcm_file=code/projects/E41S_DS_tcm2ram/tcm/bin/tcm.bin
 
-mode=00010001
+mode=00010103
 ram_entry=00100080
 ram_baddr=00100000
-tcm_entry=70002080
-tcm_baddr=70002000
+tcm_entry=70000080
+tcm_baddr=70000000
+
+# Mode usage
+##	Byte 0: memdev		# Active Memories (e.g. 0x03 means both RAM and TCM)
+###		BIT 0 - RAM
+###		BIT 1 - TCM
+###		BITS 7:2 - reserved
+##	Byte 1: Boot from
+###		0x00 - RAM
+###		0x01 - TCM
+###		reserved
+##	Byte 2: Debug Show
+###		0x00 - No debug
+###		0x01 - Show Memory Dump
 
 
 # Start
@@ -132,6 +145,38 @@ echo "[flasher] Entry point is ${ram_entry:0:2} ${ram_entry:2:2} ${ram_entry:4:2
 ram_bin=$(hexdump -e '16/1 "%02x " "\n"' $ram_file)
 
 for i in $ram_bin
+do	
+	string_to_hex "$i"
+done
+
+# TCM flashing
+
+# Load Mem Base Address
+string_to_hex "${tcm_baddr:6:2}"
+string_to_hex "${tcm_baddr:4:2}"
+string_to_hex "${tcm_baddr:2:2}"
+string_to_hex "${tcm_baddr:0:2}"
+echo "[flasher] TCM base address is ${tcm_baddr:0:2} ${tcm_baddr:2:2} ${tcm_baddr:4:2} ${tcm_baddr:6:2}"
+
+# Load Size
+tcm_size=$(printf '%08x\n' $(wc -c < $tcm_file))
+string_to_hex "${tcm_size:6:2}"
+string_to_hex "${tcm_size:4:2}"
+string_to_hex "${tcm_size:2:2}"
+string_to_hex "${tcm_size:0:2}"
+echo "[flasher] file $tcm_file size is ${tcm_size:0:2} ${tcm_size:2:2} ${tcm_size:4:2} ${tcm_size:6:2}"
+
+# Load Entry
+string_to_hex "${tcm_entry:6:2}"
+string_to_hex "${tcm_entry:4:2}"
+string_to_hex "${tcm_entry:2:2}"
+string_to_hex "${tcm_entry:0:2}"
+echo "[flasher] Entry point is ${tcm_entry:0:2} ${tcm_entry:2:2} ${tcm_entry:4:2} ${tcm_entry:6:2}"
+
+# Load Binary
+tcm_bin=$(hexdump -e '16/1 "%02x " "\n"' $tcm_file)
+
+for i in $tcm_bin
 do	
 	string_to_hex "$i"
 done

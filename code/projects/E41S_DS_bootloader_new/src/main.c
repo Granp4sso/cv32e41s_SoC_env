@@ -159,7 +159,7 @@ void putmemid(uint32_t memid){
 
 void putmem(uint8_t * baddr, uint32_t size){
     for(int i = 0; i < size; i++){    
-        if(i % 16 == 0) { puthex((uint32_t)baddr + 16*i); puts("\t"); }
+        if(i % 16 == 0) { puthex((uint32_t)(baddr) + 16*i); puts("\t"); }
         putbyte(*(baddr + i)); 
         if(i % 16 == 7) puts("    ");
         else if(i % 16 == 15) puts("\n");

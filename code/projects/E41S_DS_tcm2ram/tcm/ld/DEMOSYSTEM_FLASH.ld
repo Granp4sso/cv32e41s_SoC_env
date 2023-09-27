@@ -6,7 +6,7 @@ ENTRY(reset_handler)
 /* Memories definition */
 MEMORY
 {
-  DDR	(xrw)	: ORIGIN = 0x00100000,	LENGTH = 128K
+  TCM	(xrw)	: ORIGIN = 0x70000000,	LENGTH = 4K
 }
 
 /* Sections */
@@ -17,7 +17,7 @@ SECTIONS
   {
     KEEP(*(.isr_vector))  
     . = ALIGN(32);
-  } >DDR
+  } >TCM
 
   .text :
   { 
@@ -29,14 +29,14 @@ SECTIONS
 	  *(.rodata.*)
 	  . = ALIGN(32);
 	  _etext = .;
-  }> DDR
+  }> TCM
   
   .data :
   {
     *(.data)
     *(.data.*)
     . = ALIGN(32);
-  }> DDR
+  }> TCM
   
   .bss :
   {
@@ -46,12 +46,12 @@ SECTIONS
 	  . = ALIGN(32);
 	  end = .;
 	  __end__ = .;
-  }> DDR 
+  }> TCM 
 
   PROVIDE( _vectors_start = ADDR(.isr_vector));  
-  PROVIDE( _start_of_ddr = ORIGIN(DDR) );
-  PROVIDE( _stack_start = ORIGIN(DDR) + LENGTH(DDR) );
-  PROVIDE( _estack = ORIGIN(DDR) + LENGTH(DDR) );    /* TO CHECK*/
+  PROVIDE( _start_of_tcm = ORIGIN(TCM) );
+  PROVIDE( _stack_start = ORIGIN(TCM) + LENGTH(TCM) );
+  PROVIDE( _estack = ORIGIN(TCM) + LENGTH(TCM) );    /* TO CHECK*/
   PROVIDE( _bss_start = ADDR(.bss) );
   PROVIDE( _bss_end = ADDR(.bss) + SIZEOF(.bss) );
   PROVIDE( _data_start = ADDR(.data) );

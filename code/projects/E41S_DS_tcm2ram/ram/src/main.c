@@ -4,6 +4,8 @@
 int main(){
 
     /* Insert your code here */
+    
+    puts("[RAM] Hello world, I am in ram!\n");
 
     return 0;
 }

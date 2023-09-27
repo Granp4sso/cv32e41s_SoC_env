@@ -1,17 +1,24 @@
 # Copyright lowRISC contributors.
 # Licensed under the Apache License, Version 2.0, see LICENSE for details.
 # SPDX-License-Identifier: Apache-2.0
-#include "demo_system_regs.h"
 
 .section .text
 
 reset_handler:
+
+  li x30, 0x00000001
+  la x31, 0x80000000
+  sw x30, 0(x31)
 
   /* Set CSRs init values  */
   li x10, 0x1800
   csrs mstatus, x10
   # Set vectored mode
   csrsi mtvec, 0x1
+
+  li x30, 0x00000002
+  la x31, 0x80000000
+  sw x30, 0(x31)
 
   /* set all registers to zero */
   mv  x1, x0
@@ -68,13 +75,23 @@ zero_loop_end:
   addi x10, x0, 0
   addi x11, x0, 0
 
-  jal x1, main
+  li x30, 0x00000003
+  la x31, 0x80000000
+  sw x30, 0(x31)
+  # jal x1, main
+
+  # Let's jump to reset handler in RAM 
+  li  ra, 0x00100080
+  jalr zero, ra, 0
 
 sleep_loop:
   wfi
   j sleep_loop
 
 default_exc_handler:
+  li x30, 0x000000ff
+  la x31, 0x80000000
+  sw x30, 0(x31)
   jal x0, sleep_loop
 
 /* =================================================== [ exceptions ] === */
@@ -85,8 +102,8 @@ default_exc_handler:
 
   /* All unimplemented interrupts/exceptions go to the default_exc_handler. */
   .org 0x00
-  jal x0, reset_handler       # For simulation the reset_handler must be the first entry in the vector table
+  # jal x0, reset_handler       # For simulation the reset_handler must be the first entry in the vector table
   .rept 32
   jal x0, default_exc_handler
   .endr
-  # jal x0, reset_handler         # For syntesis the reset_handler must be the last entry in the vector table (correct behaviour)
+  jal x0, reset_handler         # For syntesis the reset_handler must be the last entry in the vector table (correct behaviour)

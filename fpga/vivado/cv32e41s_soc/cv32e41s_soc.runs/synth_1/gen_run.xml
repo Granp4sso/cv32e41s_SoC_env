@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1695737087" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_nexys7.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="top_nexys7_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top_nexys7.dcp"/>
   <File Type="RDS-UTIL-PB" Name="top_nexys7_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="top_nexys7_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_nexys7_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="top_nexys7.vds"/>
-  <File Type="REPORTS-TCL" Name="top_nexys7_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="top_nexys7_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="top_nexys7.tcl"/>
+  <File Type="RDS-UTIL" Name="top_nexys7_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="top_nexys7_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top_nexys7.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/demo_system/bus.sv">
