@@ -133,8 +133,8 @@ int main(){
     puts("\n\n");
     //Jump to entry point according to Mode byte 1 (Stack will not be cleaned)
     //__asm__ volatile("li x1, 0x00100080");
-    __asm__ volatile("lw x1, %0" : : "m"(mem_entry_point[mode[1]]));
-    __asm__ volatile("jalr x0, x1, 0");
+    __asm__ volatile("lw ra, %0" : : "m"(mem_entry_point[mode[1]]));
+    __asm__ volatile("jalr zero, 0(ra)");
 
 }
 
@@ -159,7 +159,7 @@ void putmemid(uint32_t memid){
 
 void putmem(uint8_t * baddr, uint32_t size){
     for(int i = 0; i < size; i++){    
-        if(i % 16 == 0) { puthex((uint32_t)(baddr) + 16*i); puts("\t"); }
+        if(i % 16 == 0) { puthex((uint32_t)baddr + i); puts("\t"); }
         putbyte(*(baddr + i)); 
         if(i % 16 == 7) puts("    ");
         else if(i % 16 == 15) puts("\n");

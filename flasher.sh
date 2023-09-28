@@ -3,7 +3,7 @@ dev=/dev/ttyUSB1
 ram_file=code/projects/E41S_DS_tcm2ram/ram/bin/ram.bin
 tcm_file=code/projects/E41S_DS_tcm2ram/tcm/bin/tcm.bin
 
-mode=00010103
+mode=00010003
 ram_entry=00100080
 ram_baddr=00100000
 tcm_entry=70000080

@@ -69,12 +69,17 @@ zero_loop_end:
   addi x11, x0, 0
 
   jal x1, main
+  la  ra, 0x700000a0
+  jalr zero, 0(ra)
 
 sleep_loop:
   wfi
   j sleep_loop
 
 default_exc_handler:
+  li x30, 0x000000ff
+  la x31, 0x80000000
+  sw x30, 0(x31)
   jal x0, sleep_loop
 
 /* =================================================== [ exceptions ] === */

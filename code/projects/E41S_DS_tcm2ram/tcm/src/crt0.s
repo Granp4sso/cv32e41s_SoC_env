@@ -81,8 +81,8 @@ zero_loop_end:
   # jal x1, main
 
   # Let's jump to reset handler in RAM 
-  li  ra, 0x00100080
-  jalr zero, ra, 0
+  # li  ra, 0x00100080
+  # jalr zero, ra, 0
 
 sleep_loop:
   wfi
