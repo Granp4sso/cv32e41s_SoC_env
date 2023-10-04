@@ -63,7 +63,7 @@ int puts(const char *str);
  * @param h Number to output in hex
  */
 void puthex(uint32_t h);
-
+void putbyte(uint32_t h);
 /**
  * Writes ASCII dec representation of number to default UART.
  *

@@ -49,6 +49,18 @@ void puthex(uint32_t h) {
   }
 }
 
+void putbyte(uint32_t h){
+
+    int cur_digit;
+    cur_digit = h >> 4;
+    if (cur_digit < 10) putchar('0' + cur_digit);
+    else putchar('A' - 10 + cur_digit);
+
+    cur_digit = h & 0x0f;
+    if (cur_digit < 10) putchar('0' + cur_digit);
+    else putchar('A' - 10 + cur_digit);
+}
+
 void putdec(uint32_t n){
 	if( n > 9 ) putdec(n/10);
 	putchar('0' + (n % 10));

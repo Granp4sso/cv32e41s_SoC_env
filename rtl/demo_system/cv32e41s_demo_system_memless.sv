@@ -113,7 +113,7 @@ module cv32e41s_demo_system_memless #(
   localparam bit          DbgTriggerEn  = (DBG == 1) ? 1'b1 : 1'b0;
 
   // Optional Memory and peripherals delay
-  localparam int unsigned Delay = 5;
+  localparam int unsigned Delay = 0;
 
   logic         delayed_core_instr_req;
   logic         delayed_device_dbg_req;

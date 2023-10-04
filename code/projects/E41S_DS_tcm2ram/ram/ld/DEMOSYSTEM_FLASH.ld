@@ -6,7 +6,7 @@ ENTRY(reset_handler)
 /* Memories definition */
 MEMORY
 {
-  DDR	(xrw)	: ORIGIN = 0x00100000,	LENGTH = 128K
+  DDR	(xrw)	: ORIGIN = 0x00100000,	LENGTH = 64K
 }
 
 /* Sections */

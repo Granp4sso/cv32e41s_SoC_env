@@ -69,7 +69,7 @@ zero_loop_end:
   addi x11, x0, 0
 
   jal x1, main
-  la  ra, 0x700000a0
+  la  ra, 0x70000000
   jalr zero, 0(ra)
 
 sleep_loop:
@@ -90,8 +90,8 @@ default_exc_handler:
 
   /* All unimplemented interrupts/exceptions go to the default_exc_handler. */
   .org 0x00
-  # jal x0, reset_handler       # For simulation the reset_handler must be the first entry in the vector table
-  .rept 32
+  jal x0, reset_handler       # For simulation the reset_handler must be the first entry in the vector table
+  .rept 31
   jal x0, default_exc_handler
   .endr
   jal x0, reset_handler         # For syntesis the reset_handler must be the last entry in the vector table (correct behaviour)
