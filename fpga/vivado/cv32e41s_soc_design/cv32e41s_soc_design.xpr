@@ -28,14 +28,14 @@
     <Option Name="SimulatorGccInstallDirVCS" Val=""/>
     <Option Name="SimulatorGccInstallDirRiviera" Val=""/>
     <Option Name="SimulatorGccInstallDirActiveHdl" Val=""/>
-    <Option Name="SimulatorVersionXsim" Val="2023.1"/>
-    <Option Name="SimulatorVersionModelSim" Val="2022.3"/>
-    <Option Name="SimulatorVersionQuesta" Val="2022.3"/>
-    <Option Name="SimulatorVersionXcelium" Val="22.09.001"/>
-    <Option Name="SimulatorVersionVCS" Val="T-2022.06-SP1"/>
+    <Option Name="SimulatorVersionXsim" Val="2022.2"/>
+    <Option Name="SimulatorVersionModelSim" Val="2022.2"/>
+    <Option Name="SimulatorVersionQuesta" Val="2022.2"/>
+    <Option Name="SimulatorVersionXcelium" Val="21.09.009"/>
+    <Option Name="SimulatorVersionVCS" Val="S-2021.09"/>
     <Option Name="SimulatorVersionRiviera" Val="2022.04"/>
     <Option Name="SimulatorVersionActiveHdl" Val="13.0"/>
-    <Option Name="SimulatorGccVersionXsim" Val="9.3.0"/>
+    <Option Name="SimulatorGccVersionXsim" Val="6.2.0"/>
     <Option Name="SimulatorGccVersionModelSim" Val="7.4.0"/>
     <Option Name="SimulatorGccVersionQuesta" Val="7.4.0"/>
     <Option Name="SimulatorGccVersionXcelium" Val="9.3.0"/>
@@ -46,6 +46,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -709,6 +710,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/prim/prim_flop_macros.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_flop_macros.sv"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert_sec_cm.svh">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_assert_sec_cm.svh"/>
@@ -725,15 +735,6 @@
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
           <Attr Name="IsVisible" Val="1"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim/prim_flop_macros.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_flop_macros.sv"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert.sv">

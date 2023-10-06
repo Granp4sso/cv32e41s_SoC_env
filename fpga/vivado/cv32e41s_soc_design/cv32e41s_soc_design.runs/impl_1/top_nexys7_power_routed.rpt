@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Tue Sep 26 16:11:30 2023
+| Date             : Fri Oct  6 15:48:06 2023
 | Host             : stefano-Victus-by-HP-Laptop-16-e0xxx running 64-bit Ubuntu 22.04.2 LTS
 | Command          : report_power -file top_nexys7_power_routed.rpt -pb top_nexys7_power_summary_routed.pb -rpx top_nexys7_power_routed.rpx
 | Design           : top_nexys7
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.220        |
+| Total On-Chip Power (W)  | 0.224        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.158        |
-| Device Static (W)        | 0.063        |
+| Dynamic (W)              | 0.161        |
+| Device Static (W)        | 0.062        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 98.9         |
 | Junction Temperature (C) | 26.1         |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.005 |        5 |       --- |             --- |
-| Slice Logic    |     0.005 |    16414 |       --- |             --- |
-|   LUT as Logic |     0.005 |     8342 |     32600 |           25.59 |
-|   CARRY4       |    <0.001 |      381 |      8150 |            4.67 |
-|   Register     |    <0.001 |     5414 |     65200 |            8.30 |
+| Clocks         |     0.006 |        5 |       --- |             --- |
+| Slice Logic    |     0.006 |    16573 |       --- |             --- |
+|   LUT as Logic |     0.005 |     8486 |     32600 |           26.03 |
+|   CARRY4       |    <0.001 |      389 |      8150 |            4.77 |
+|   Register     |    <0.001 |     5512 |     65200 |            8.45 |
 |   F7/F8 Muxes  |    <0.001 |      609 |     32600 |            1.87 |
-|   Others       |     0.000 |       77 |       --- |             --- |
-| Signals        |     0.010 |    13150 |       --- |             --- |
-| Block RAM      |     0.026 |       24 |        75 |           32.00 |
+|   Others       |     0.000 |       76 |       --- |             --- |
+| Signals        |     0.011 |    13275 |       --- |             --- |
+| Block RAM      |     0.027 |       18 |        75 |           24.00 |
 | PLL            |     0.110 |        1 |         5 |           20.00 |
 | DSPs           |    <0.001 |        3 |       120 |            2.50 |
-| I/O            |    <0.001 |       28 |       210 |           13.33 |
-| Static Power   |     0.063 |          |           |                 |
-| Total          |     0.220 |          |           |                 |
+| I/O            |     0.001 |       28 |       210 |           13.33 |
+| Static Power   |     0.062 |          |           |                 |
+| Total          |     0.224 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.065 |       0.058 |      0.006 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.067 |       0.061 |      0.006 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.067 |       0.056 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -146,11 +146,11 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| top_nexys7   |     0.158 |
+| top_nexys7   |     0.161 |
 |   clkgen     |     0.111 |
-|   u_ucup_top |     0.047 |
-|     u_soc    |     0.047 |
-|       u_core |     0.018 |
+|   u_ucup_top |     0.049 |
+|     u_soc    |     0.049 |
+|       u_core |     0.021 |
 |       u_ram  |     0.026 |
 |       u_uart |     0.002 |
 +--------------+-----------+

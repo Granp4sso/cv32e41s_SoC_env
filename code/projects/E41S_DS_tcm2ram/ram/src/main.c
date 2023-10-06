@@ -3,8 +3,7 @@
 
 int main(){
 
-    /* Insert your code here */
-    uint8_t * tcm_ptr = (uint8_t *) 0x70000000;
+    /*uint8_t * tcm_ptr = (uint8_t *) 0x70000000;
     puts("[RAM] Writing dummy program to TCM\n");
 
     tcm_ptr[0x00] = 0x13;  tcm_ptr[0x01] = 0x0F;  tcm_ptr[0x02] = 0xF0;  tcm_ptr[0x03] = 0x0F;
@@ -16,16 +15,14 @@ int main(){
     puts("[RAM] reading dummy program from TCM\n");
     for(int i = 0; i < 0x80; i++){
         putbyte(tcm_ptr[i]); puts(" "); if(i % 16 == 15) puts("\n");
-    }
+    }*/
 
     puts("\n[RAM] Hello world, I am in ram! going to TCM\n");
 
     //Jump to entry point according to Mode byte 1 (Stack will not be cleaned)
-    __asm__ volatile("li x1, 0x70000000");
-    __asm__ volatile("nop");
-    __asm__ volatile("nop");
+    /*__asm__ volatile("li x1, 0x70000000");
     //__asm__ volatile("lw ra, %0" : : "m"(mem_entry_point[mode[1]]));
-    __asm__ volatile("jalr zero, 0(ra)");
+    __asm__ volatile("jalr zero, 0(ra)");*/
 
     return 0;
 }

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/impl_1/top_nexys7.tcl"
+  variable script "/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.runs/impl_1/top_nexys7.tcl"
   variable category "vivado_impl"
 }
 
@@ -125,20 +125,19 @@ set rc [catch {
   set_param chipscope.maxJobs 4
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a50ticsg324-1L
-  set_property board_part digilentinc.com:nexys-a7-50t:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.cache/wt [current_project]
-  set_property parent.project_path /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.xpr [current_project]
-  set_property ip_output_repo /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.cache/wt [current_project]
+  set_property parent.project_path /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.xpr [current_project]
+  set_property ip_output_repo /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.runs/synth_1/top_nexys7.dcp
+  add_files -quiet /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.runs/synth_1/top_nexys7.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/stefano/Desktop/PhD/Lavori/InProgress/uGuard/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc/cv32e41s_soc.srcs/constrs_1/imports/constraints/pins_nexys7.xdc
+  read_xdc /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/constrs_1/imports/constraints/pins_nexys7.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

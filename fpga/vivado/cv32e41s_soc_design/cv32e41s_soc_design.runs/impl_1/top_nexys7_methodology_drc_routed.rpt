@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Tue Sep 26 16:11:28 2023
+| Date         : Fri Oct  6 15:48:04 2023
 | Host         : stefano-Victus-by-HP-Laptop-16-e0xxx running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_methodology -file top_nexys7_methodology_drc_routed.rpt -pb top_nexys7_methodology_drc_routed.pb -rpx top_nexys7_methodology_drc_routed.rpx
 | Design       : top_nexys7
@@ -51,7 +51,7 @@ u_ucup_top/u_soc/u_gpio/gp_o_reg[8]_lopt_replica/CLR,
 u_ucup_top/u_soc/u_gpio/gp_o_reg[9]_lopt_replica/CLR,
 u_ucup_top/u_soc/u_uart/tx_state_q_reg[0]/CLR,
 u_ucup_top/u_soc/u_uart/tx_state_q_reg[1]/CLR
- (the first 15 of 3264 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+ (the first 15 of 3263 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 SYNTH-10#1 Warning
