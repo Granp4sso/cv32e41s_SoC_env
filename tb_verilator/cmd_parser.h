@@ -7,7 +7,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#define CMD_LIST_LENGTH     11
+#define CMD_LIST_LENGTH     128
 #define MEM_SHOW            0
 #define MEM_CSIZE           1
 #define MEM_DATA_BADDR      2
@@ -19,6 +19,8 @@
 #define HALT_ADDR           8
 #define LOG                 9
 #define TRACE               10
+#define TWO_DEV             11
+#define BIN_PATH_2          12
 
 
 struct conf_t{
@@ -33,8 +35,10 @@ struct conf_t{
     uint32_t    HaltAddr;    
     uint8_t     Log;
     uint8_t     Trace;
+    uint8_t     TwoDev;
 
     char        BinPath[512];
+    char        BinPath2[512];
 };
 
 

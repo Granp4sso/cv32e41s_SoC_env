@@ -11,7 +11,9 @@ char cmd_list[CMD_LIST_LENGTH][64] = {
     "sim_cycles",
     "halt_addr",
     "log",
-    "trace"
+    "trace",
+    "two_dev",
+    "bin_path_2"
 };
 
 void parse_cmd(int argc, char **argv, struct conf_t * cfg){
@@ -82,6 +84,14 @@ void parse_cmd(int argc, char **argv, struct conf_t * cfg){
             case TRACE:
                 printf("[Parser\t] VCD Trace generation enabled\n");
                 cfg->Trace = 1;
+            break;
+            case TWO_DEV:
+                printf("[Parser\t] Two devices required, connection on SPI\n");
+                cfg->TwoDev = 1;
+            break;
+            case BIN_PATH_2:
+                strcpy(cfg->BinPath2, argv[++i]);
+                printf("[Parser\t] Second binary file located at %s\n", cfg->BinPath);
             break;
         }
 

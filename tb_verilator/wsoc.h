@@ -19,7 +19,7 @@ struct wsoc_t{
     uint64_t        clkcnt;
 };
 
-void wsoc_init(wsoc_t * wsoc, conf_t * cfg);
+void wsoc_init(wsoc_t * wsoc, conf_t * cfg, uint8_t is_slave);
 void wsoc_eval(wsoc_t * wsoc, conf_t * cfg);
 void wsoc_cycle(wsoc_t * wsoc, conf_t * cfg);
 void wsoc_break(wsoc_t * wsoc, conf_t * cfg);

@@ -1,6 +1,6 @@
 #include "wsoc.h"
 
-void wsoc_init(wsoc_t * wsoc, conf_t * cfg){
+void wsoc_init(wsoc_t * wsoc, conf_t * cfg, uint8_t is_slave){
 
     wsoc->tb = new VuCup_top();
     wsoc->trace = new VerilatedVcdC();
@@ -10,7 +10,9 @@ void wsoc_init(wsoc_t * wsoc, conf_t * cfg){
 	trace_init(wsoc->tb, wsoc->trace, cfg);
 	
 	// Initialize Memory
-	vmem_init(&wsoc->vRAM, cfg->BinPath, cfg->MemSize, cfg->MemInstBaddr, cfg->MemDataBaddr, cfg->Log);
+	
+	if(!is_slave) vmem_init(&wsoc->vRAM, cfg->BinPath, cfg->MemSize, cfg->MemInstBaddr, cfg->MemDataBaddr, cfg->Log);
+	else vmem_init(&wsoc->vRAM, cfg->BinPath2, cfg->MemSize, cfg->MemInstBaddr, cfg->MemDataBaddr, cfg->Log);
 
 	// Initialize Terminal
 	vterm_init(&wsoc->vterm, 10000000, 2*CLK_NS);
