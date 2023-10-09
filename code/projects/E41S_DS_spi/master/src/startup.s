@@ -84,7 +84,6 @@ default_exc_handler:
   .option norvc;
 
   /* All unimplemented interrupts/exceptions go to the default_exc_handler. */
-  # Two reset handler jumps to work both in simulation and in syntesis. However the first one is not required in synthesis and can be replaced
   .org 0x00
   jal x0, reset_handler       
   .rept 31

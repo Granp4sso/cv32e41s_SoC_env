@@ -21,6 +21,8 @@ int main(int argc, char **argv){
 		wsoc_init(&wsoc[1], &cfg, 1); // SPI Slave
 		
 		// Connect two devices over SPI
+		wsoc[1].tb->spi_rx_i = wsoc[0].tb->spi_tx_o;
+		wsoc[0].tb->spi_rx_i = wsoc[1].tb->spi_tx_o;
 	}
 
 	printf("[Sim::Cycle::%08d] Starting Simulation for %ld Cycles\n\n", i, cfg.SimCycles);
@@ -29,7 +31,7 @@ int main(int argc, char **argv){
 	while(i < cfg.SimCycles){
 
 		wsoc_eval(&wsoc[0], &cfg);
-		wsoc_eval(&wsoc[1], &cfg);
+		if(cfg.TwoDev) wsoc_eval(&wsoc[1], &cfg);
 		i++;
 	}
 
