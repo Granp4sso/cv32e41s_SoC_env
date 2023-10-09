@@ -85,8 +85,8 @@ default_exc_handler:
 
   /* All unimplemented interrupts/exceptions go to the default_exc_handler. */
   .org 0x00
-  jal x0, reset_handler       # For simulation the reset_handler must be the first entry in the vector table
-  .rept 32
+  jal x0, reset_handler       
+  .rept 31
   jal x0, default_exc_handler
   .endr
-  # jal x0, reset_handler         # For syntesis the reset_handler must be the last entry in the vector table (correct behaviour)
+  jal x0, reset_handler         

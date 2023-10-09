@@ -9,7 +9,12 @@ OLDFILENAME = cv32e41s_demo_system
 TESTBENCH = tb_verilator/$(FILENAME)_tb
 OLDTESTBENCH = tb_verilator/$(OLDFILENAME)_tb
 
-TESTBENCH_SW_ENV = tb_verilator/$(FILENAME)_tb.cpp tb_verilator/vmem_2p.cpp tb_verilator/cmd_parser.cpp tb_verilator/vterm.cpp tb_verilator/logger.cpp
+TESTBENCH_SW_ENV = 	tb_verilator/$(FILENAME)_tb.cpp\
+										tb_verilator/wsoc.cpp\
+			 							tb_verilator/vmem_2p.cpp\
+			 							tb_verilator/cmd_parser.cpp\
+			 							tb_verilator/vterm.cpp\
+			 							tb_verilator/logger.cpp
 
 TRACE_DIR = waves
 

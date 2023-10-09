@@ -21,7 +21,7 @@
 #define VTERM_STATE_TX_PROC     2
 #define VTERM_STATE_TX_STOP     3
 
-struct vterm{
+struct vterm_t{
 
     uint8_t buffer[8];
     uint8_t state;
@@ -32,10 +32,10 @@ struct vterm{
     uint32_t baudlimit;
 };
 
-void vterm_init(vterm * term, uint32_t baudrate, uint32_t clk_period);
-void vterm_rx_protocol(vterm * term, VuCup_top * tb);
-void vterm_tx_protocol(vterm * term, VuCup_top * tb, uint8_t msg, uint8_t start);
-void vterm_tx_bootloader(vterm * term, VuCup_top * tb);
+void vterm_init(vterm_t * term, uint32_t baudrate, uint32_t clk_period);
+void vterm_rx_protocol(vterm_t * term, VuCup_top * tb);
+void vterm_tx_protocol(vterm_t * term, VuCup_top * tb, uint8_t msg, uint8_t start);
+void vterm_tx_bootloader(vterm_t * term, VuCup_top * tb);
 
 
 #endif

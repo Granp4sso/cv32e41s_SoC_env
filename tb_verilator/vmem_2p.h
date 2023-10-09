@@ -30,14 +30,14 @@
 #define VMEM_DATA_B2B_REQUEST	2
 
 
-struct vmem_cell{
+struct vmem_cell_t{
 	uint8_t cell;
 	uint8_t attr;
 };
 
-struct vmem_2p{
+struct vmem_2p_t{
 
-	vmem_cell * mem;
+	vmem_cell_t * mem;
 	uint32_t mem_size;
 	uint32_t mem_baddr[PORT_NUM];
 
@@ -52,12 +52,12 @@ struct vmem_2p{
 
 };
 
-void vmem_init(vmem_2p * Memory, char * path, uint32_t size, uint32_t inst_baddr, uint32_t data_baddr, uint8_t log);
-void vmem_print(vmem_2p * Memory);
+void vmem_init(vmem_2p_t * Memory, char * path, uint32_t size, uint32_t inst_baddr, uint32_t data_baddr, uint8_t log);
+void vmem_print(vmem_2p_t * Memory);
 
-void vmem_protocol(vmem_2p * Memory, VuCup_top *tb, const int port);
-void vmem_inst_protocol(vmem_2p * Memory, VuCup_top *tb);
-void vmem_data_protocol(vmem_2p * Memory, VuCup_top *tb);
-void vmem_print(vmem_2p * Memory, uint32_t base, uint32_t range);
-void vmem_free(vmem_2p * Memory);
+void vmem_protocol(vmem_2p_t * Memory, VuCup_top *tb, const int port);
+void vmem_inst_protocol(vmem_2p_t * Memory, VuCup_top *tb);
+void vmem_data_protocol(vmem_2p_t * Memory, VuCup_top *tb);
+void vmem_print(vmem_2p_t * Memory, uint32_t base, uint32_t range);
+void vmem_free(vmem_2p_t * Memory);
 

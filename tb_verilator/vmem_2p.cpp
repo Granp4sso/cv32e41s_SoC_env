@@ -11,11 +11,11 @@ uint32_t log2u(uint8_t a){
 	}
 }
 
-void vmem_init(vmem_2p * Memory, char * path, uint32_t size, uint32_t inst_baddr, uint32_t data_baddr, uint8_t log){
+void vmem_init(vmem_2p_t * Memory, char * path, uint32_t size, uint32_t inst_baddr, uint32_t data_baddr, uint8_t log){
 
 	printf("[VMemory\t] Initializing Memory - Creating memory of size %08d Bytes\n", size);
 
-	Memory->mem = (vmem_cell *) malloc(sizeof(vmem_cell)*size);
+	Memory->mem = (vmem_cell_t *) malloc(sizeof(vmem_cell_t)*size);
 	Memory->mem_size = size; 
 	Memory->mem_baddr[INST_PORT] = inst_baddr;
 	Memory->mem_baddr[DATA_PORT] = data_baddr;
@@ -74,7 +74,7 @@ void vmem_init(vmem_2p * Memory, char * path, uint32_t size, uint32_t inst_baddr
 
 }
 
-void vmem_print(vmem_2p * Memory, uint32_t base, uint32_t range){
+void vmem_print(vmem_2p_t * Memory, uint32_t base, uint32_t range){
 
 	// Align base to 32 bits if it is not, and then relocate it to the baddr
 	base &= 0xfffffffc; 
@@ -99,7 +99,7 @@ void vmem_print(vmem_2p * Memory, uint32_t base, uint32_t range){
 	}
 }
 
-void vmem_protocol(vmem_2p * Memory, VuCup_top *tb, const int port){
+void vmem_protocol(vmem_2p_t * Memory, VuCup_top *tb, const int port){
 
 	if(tb->mem_addr_o[INST_PORT] - Memory->mem_baddr[INST_PORT] >= Memory->mem_size && tb->mem_req_o[INST_PORT]){
 		printf("[VMemory\t] ERROR: Requesting out of range memory location <0x%08x> on instruction port\n", tb->mem_addr_o[INST_PORT]);
@@ -118,7 +118,7 @@ void vmem_protocol(vmem_2p * Memory, VuCup_top *tb, const int port){
 }
 
 
-void vmem_inst_protocol(vmem_2p * Memory, VuCup_top *tb){
+void vmem_inst_protocol(vmem_2p_t * Memory, VuCup_top *tb){
 
 	// Supporting the instruction OBI memory protocol for openHW cv32e40 family (p,s,x). WHAT ABOUT COMPRESSED INSTRUCTIONS?
 
@@ -168,7 +168,7 @@ void vmem_inst_protocol(vmem_2p * Memory, VuCup_top *tb){
 }
 
 
-void vmem_data_protocol(vmem_2p * Memory, VuCup_top *tb){
+void vmem_data_protocol(vmem_2p_t * Memory, VuCup_top *tb){
 
 	// Supporting the instruction OBI memory protocol for openHW cv32e40 family (p,s,x)
 
@@ -292,7 +292,7 @@ void vmem_data_protocol(vmem_2p * Memory, VuCup_top *tb){
 	}
 }
 
-void vmem_free(vmem_2p * Memory){
+void vmem_free(vmem_2p_t * Memory){
 	if(Memory->log) fclose(Memory->log);
 	free(Memory->mem);
 }

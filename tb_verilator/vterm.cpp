@@ -1,6 +1,6 @@
 #include "vterm.h"
 
-void vterm_init(vterm * term, uint32_t baudrate, uint32_t clk_period){
+void vterm_init(vterm_t * term, uint32_t baudrate, uint32_t clk_period){
 
     printf("[VTerm\t] Initializing virtual terminal\n"); 
 
@@ -17,7 +17,7 @@ void vterm_init(vterm * term, uint32_t baudrate, uint32_t clk_period){
 }
 
 // 1/baudrate 
-void vterm_rx_protocol(vterm * term, VuCup_top * tb){
+void vterm_rx_protocol(vterm_t * term, VuCup_top * tb){
 
     switch(term->state){
         case VTERM_STATE_RX_IDLE:
@@ -67,7 +67,7 @@ void vterm_rx_protocol(vterm * term, VuCup_top * tb){
 
 }
 
-void vterm_tx_protocol(vterm * term, VuCup_top * tb, uint8_t msg, uint8_t start){
+void vterm_tx_protocol(vterm_t * term, VuCup_top * tb, uint8_t msg, uint8_t start){
 
     
 
@@ -116,7 +116,7 @@ void vterm_tx_protocol(vterm * term, VuCup_top * tb, uint8_t msg, uint8_t start)
 
 uint8_t start = 1;
 
-void vterm_tx_bootloader(vterm * term, VuCup_top * tb){
+void vterm_tx_bootloader(vterm_t * term, VuCup_top * tb){
 
     uint8_t msg = 0xf2;
 

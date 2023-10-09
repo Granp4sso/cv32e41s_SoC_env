@@ -14,7 +14,7 @@ OBJ = 		obj/
 OBJS = 		$(addprefix $(OBJ), $(notdir $(SRCS:.c=.o)))
 LD_SCRIPT = ld/$(MCU)_FLASH.ld
 INC = 		-Iinc
-STARTUP = 	crt0
+STARTUP = 	startup
 
 ###############################################################################
 # Toolchain
