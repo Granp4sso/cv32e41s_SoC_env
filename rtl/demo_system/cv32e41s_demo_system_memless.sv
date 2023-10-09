@@ -478,10 +478,10 @@ module cv32e41s_demo_system_memless #(
     .uart_tx_o
   );
 
-  spi_top #(
+    spi_top #(
     .ClockFrequency(50_000_000),
     .CPOL(0),
-    .CPHA(1)
+    .CPHA(0)
   ) u_spi (
     .clk_i (clk_sys_i),
     .rst_ni(rst_sys_ni),
@@ -494,29 +494,19 @@ module cv32e41s_demo_system_memless #(
     .device_rvalid_o(device_rvalid[Spi]),
     .device_rdata_o (device_rdata[Spi]),
 
-    .spi_rx_i(spi_rx_i), // Data received from SPI device
-    .spi_tx_o(spi_tx_o), // Data transmitted to SPI device
-    .sck_o(spi_sck_o), // Serial clock pin
+    // Master interface
+    .spi_master_miso_i ('0),
+    .spi_master_mosi_o (),
+    .spi_master_clk_o (),
+    .spi_master_cs_o (),
 
-    .byte_data_o() // unused
+    // Slave Interface
+    .spi_slave_miso_o (),
+    .spi_slave_mosi_i ('0),
+    .spi_slave_clk_i ('0),
+    .spi_slave_cs_i ('0)
+
   );
-
-  /*`ifdef VERILATOR
-    simulator_ctrl #(
-      .LogName("cv32e40p_demo_system.log")
-    ) u_simulator_ctrl (
-      .clk_i     (clk_sys_i),
-      .rst_ni    (rst_sys_ni),
-
-      .req_i     (device_req[SimCtrl]),
-      .we_i      (device_we[SimCtrl]),
-      .be_i      (device_be[SimCtrl]),
-      .addr_i    (device_addr[SimCtrl]),
-      .wdata_i   (device_wdata[SimCtrl]),
-      .rvalid_o  (device_rvalid[SimCtrl]),
-      .rdata_o   (device_rdata[SimCtrl])
-    );
-  `endif*/
 
   timer #(
     .DataWidth    ( 32 ),
