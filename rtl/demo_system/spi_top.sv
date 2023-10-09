@@ -243,7 +243,7 @@ module spi_top #(
   );
 
   spi_master #(
-    .ClockFrequency(ClockFrequency),
+    .SPIClockScale(8),
     .CPOL(CPOL),
     .CPHA(CPHA)
   ) u_spi_master (

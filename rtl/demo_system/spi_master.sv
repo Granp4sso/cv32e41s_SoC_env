@@ -16,8 +16,7 @@
 
 
 module spi_master #(
-  parameter int unsigned ClockFrequency = 50_000_000,
-  parameter int unsigned SPIClockFrequency = ClockFrequency/4,
+  parameter int unsigned SPIClockScale = 8,
   parameter bit CPOL = 0,
   parameter bit CPHA = 0
 )(
@@ -35,7 +34,7 @@ module spi_master #(
   );
 
   // ClocksPerBaud: Clock cycles in between two SPI SCLK cycles (DEFAULT:4)
-  localparam int unsigned ClocksPerBaud = ClockFrequency / SPIClockFrequency;
+  localparam int unsigned ClocksPerBaud = SPIClockScale;
   // ToggleCount: The point which SCK would toggle (DEFAULT:2)
   localparam int unsigned ToggleCount = ClocksPerBaud / 2;
   // CountWidth: Width of the implemented counter for generating SCK (DEFAULT:1)
