@@ -61,8 +61,8 @@ module spi_top #(
   //////////////////////////
 
   localparam logic [11:0] SPI_MASTER_TX_REG   = 12'h00;
-  localparam logic [11:0] SPI_MASTER_RX_REG   = 12'h04;
-  localparam logic [11:0] SPI_SLAVE_TX_REG    = 12'h08;
+  localparam logic [11:0] SPI_MASTER_RX_REG   = 12'h04; // Unused
+  localparam logic [11:0] SPI_SLAVE_TX_REG    = 12'h08; // Unused
   localparam logic [11:0] SPI_SLAVE_RX_REG    = 12'h0c;
   localparam logic [11:0] SPI_STATUS_REG      = 12'h10;
 
@@ -74,7 +74,6 @@ module spi_top #(
   // They are just flags because registers behaviour is directly
   // abstraced by FIFOs
 
-  logic spi_master_rx_q,  spi_master_rx_d;
   logic spi_slave_rx_q,   spi_slave_rx_d;
   logic spi_status_q,     spi_status_d;
 
@@ -83,23 +82,24 @@ module spi_top #(
 
   // Master FIFO signals
 
-  logic       master_tx_fifo_wvalid,  master_rx_fifo_wvalid;
-  logic       master_tx_fifo_rvalid,  master_rx_fifo_rvalid;
-  logic       master_tx_fifo_rready,  master_rx_fifo_rready;
-  logic [7:0] master_tx_fifo_rdata,   master_rx_fifo_rdata;
-  logic       master_tx_fifo_full,    master_rx_fifo_full;
-  logic       master_tx_fifo_empty,   master_rx_fifo_empty;
-  logic [6:0] master_tx_fifo_depth,   master_rx_fifo_depth;
+  logic       master_tx_fifo_wvalid;
+  logic       master_tx_fifo_rvalid;
+  logic       master_tx_fifo_rready;
+  logic [7:0] master_tx_fifo_rdata;
+  logic       master_tx_fifo_full;
+  logic       master_tx_fifo_empty;
+  logic [6:0] master_tx_fifo_depth;
 
   // Slave FIFO signals
 
-  logic       slave_tx_fifo_wvalid,  slave_rx_fifo_wvalid;
-  logic       slave_tx_fifo_rvalid,  slave_rx_fifo_rvalid;
-  logic       slave_tx_fifo_rready,  slave_rx_fifo_rready;
-  logic [7:0] slave_tx_fifo_rdata,   slave_rx_fifo_rdata;
-  logic       slave_tx_fifo_full,    slave_rx_fifo_full;
-  logic       slave_tx_fifo_empty,   slave_rx_fifo_empty;
-  logic [6:0] slave_tx_fifo_depth,   slave_rx_fifo_depth;
+  logic       slave_rx_fifo_wvalid;
+  logic       slave_rx_fifo_rvalid;
+  logic       slave_rx_fifo_rready;
+  logic [7:0] slave_rx_fifo_wdata;
+  logic [7:0] slave_rx_fifo_rdata;
+  logic       slave_rx_fifo_full;
+  logic       slave_rx_fifo_empty;
+  logic [6:0] slave_rx_fifo_depth;
 
   // Status register read enable
   logic        read_status_q, read_status_d;
@@ -127,8 +127,6 @@ module spi_top #(
   // FIFO depth signal gives the current valid elements in the FIFO, zero means it's empty.
 
   assign master_tx_fifo_empty = (master_tx_fifo_depth == 0);
-  assign master_rx_fifo_empty = (master_rx_fifo_depth == 0);
-  assign slave_rx_fifo_empty = (slave_tx_fifo_depth == 0);
   assign slave_rx_fifo_empty = (slave_rx_fifo_depth == 0);
 
   //////////////////////
@@ -136,9 +134,10 @@ module spi_top #(
   //////////////////////
 
   // FIFO push happens when software writes to SPI_MASTER_TX_REG or SPI_SLAVE_TX_REG
-
   assign master_tx_fifo_wvalid  = (device_req_i & (spi_addr_int == SPI_MASTER_TX_REG) & device_we_i);
-  assign slave_tx_fifo_wvalid   = (device_req_i & (spi_addr_int == SPI_MASTER_TX_REG) & device_we_i);
+
+  // FIFO pop happens when software reads from RX registers
+  assign slave_rx_fifo_rready = spi_slave_rx_d;
 
   // This is needed because signal arrives in a slower clock.
   assign master_tx_fifo_rready = next_tx_byte_d && ~next_tx_byte_q; // ???
@@ -148,18 +147,15 @@ module spi_top #(
   ////////////////////
 
   assign spi_status_d     = (device_req_i & (spi_addr_int == SPI_STATUS_REG) & ~device_we_i);
-  assign spi_master_rx_d  = (device_req_i & (spi_addr_int == SPI_MASTER_RX_REG) & ~device_we_i);
   assign spi_slave_rx_d   = (device_req_i & (spi_addr_int == SPI_SLAVE_RX_REG) & ~device_we_i);
     
   always_ff @(posedge clk_i or negedge rst_ni) begin
     if (!rst_ni) begin
       spi_status_q    <= 0;
       spi_slave_rx_q  <= '0;
-      spi_master_rx_q <= '0;
     end else begin
       spi_status_q    <= spi_status_d;
       spi_slave_rx_q  <= spi_slave_rx_d;
-      spi_master_rx_q <= spi_master_rx_d;
     end
   end
 
@@ -168,14 +164,12 @@ module spi_top #(
     if(spi_status_q) begin    
                                       assign device_rdata_o = {
                                         24'b0,
-                                        slave_tx_fifo_full,   slave_rx_fifo_full,
-                                        slave_tx_fifo_empty,  slave_tx_fifo_empty, 
-                                        master_tx_fifo_full,  master_rx_fifo_full,
-                                        master_tx_fifo_empty, master_tx_fifo_empty };
+                                        slave_rx_fifo_full,   slave_rx_fifo_empty,      // Slave RX bits
+                                        1'b0,                 1'b0,                     // Slave TX bits
+                                        1'b0,                 1'b0,                     // Master RX bits
+                                        master_tx_fifo_full, master_tx_fifo_empty };    // Master TX bits
     end else if(spi_slave_rx_q) begin
-                                      assign device_rdata_o = '0;
-    end else if(spi_master_rx_q) begin
-                                      assign device_rdata_o = '0;
+                                      assign device_rdata_o = slave_rx_fifo_rdata;
     end else begin
                                       assign device_rdata_o = '0;
     end
@@ -191,6 +185,9 @@ module spi_top #(
   //  \__/\/   \____/   \/    \/\__,_|___/\__\___|_|    //
   //                                                    //
   ////////////////////////////////////////////////////////
+
+  // The master only has a TX fifo. If you want to extend the protocol to allow answers from the slave,
+  // you can add another identical queue. Of course you will need to implement the extended protocol 
 
   prim_fifo_sync #(
     .Width  ( 8     ),
@@ -217,31 +214,6 @@ module spi_top #(
     .err_o    () // Unused
   );
 
-  prim_fifo_sync #(
-    .Width  ( 8     ),
-    .Pass   ( 1'b0  ),
-    .Depth  ( 127   )
-  ) u_master_rx_fifo (
-    .clk_i    (clk_i),
-    .rst_ni,
-    .clr_i    (1'b0),
-
-    // SPI Master RX interface
-    .wvalid_i (master_rx_fifo_wvalid), // FIFO Push
-    .wready_o (),
-    .wdata_i  (device_wdata_i[7:0]),
-
-    // Memory mapped interface
-    .rvalid_o (master_rx_fifo_rvalid),
-    .rready_i (master_rx_fifo_rready), // FIFO Pop
-    .rdata_o  (master_rx_fifo_rdata),
-
-    // FIFO state info
-    .full_o   (master_rx_fifo_full),
-    .depth_o  (master_rx_fifo_depth),
-    .err_o    () // Unused
-  );
-
   spi_master #(
     .SPIClockScale(8),
     .CPOL(CPOL),
@@ -260,25 +232,6 @@ module spi_top #(
     .fifo_next_req_o    (next_tx_byte_d)
   );
 
-  /*spi_host #(
-    .ClockFrequency(ClockFrequency),
-    .BaudRate(BaudRate),
-    .CPOL(CPOL),
-    .CPHA(CPHA)
-  ) u_spi_host (
-    .clk_i (clk_i),
-    .rst_ni(rst_ni),
-
-    .spi_rx_i(spi_rx_i), // Data received from SPI device
-    .spi_tx_o(spi_tx_o), // Data transmitted to SPI device
-    .sck_o(sck_o), // Serial clock output
-
-    .start_i(tx_fifo_rvalid), // Starts SPI as long as we have a valid FIFO data.
-    .byte_data_i(tx_fifo_rdata), // 8-bit data, from FIFO possibly
-    .byte_data_o(byte_data_o),
-    .next_tx_byte_o(next_tx_byte_d) // requests new byte
-  );*/
-
   ////////////////////////////////////////////////
   //   __    ___ _____   __ _                   //
   //  / _\  / _ \\_   \ / _\ | __ ___   _____   //
@@ -287,5 +240,47 @@ module spi_top #(
   //  \__/\/   \____/   \__/_|\__,_| \_/ \___|  //  
   //                                            //                                          
   ////////////////////////////////////////////////
+
+  prim_fifo_sync #(
+    .Width  ( 8     ),
+    .Pass   ( 1'b0  ),
+    .Depth  ( 127   )
+    ) u_slave_rx_fifo (
+    .clk_i    (clk_i),
+    .rst_ni,
+    .clr_i    (1'b0),
+
+    // Memory mapped interface
+    .wvalid_i (slave_rx_fifo_wvalid), // FIFO Push
+    .wready_o (),
+    .wdata_i  (slave_rx_fifo_wdata), // Data coming from slave
+
+    // SPI Master TX interface
+    .rvalid_o (slave_rx_fifo_rvalid),
+    .rready_i (slave_rx_fifo_rready), // FIFO Pop
+    .rdata_o  (slave_rx_fifo_rdata),
+
+    // FIFO state info
+    .full_o   (slave_rx_fifo_full),
+    .depth_o  (slave_rx_fifo_depth),
+    .err_o    () // Unused
+  );
+
+  spi_slave #(
+    .SPIClockScale(8),
+    .CPOL(CPOL),
+    .CPHA(CPHA)
+  ) u_spi_slave (
+      .clk_i              (clk_i),
+      .rst_ni             (rst_ni),
+
+      // This simple slave only recieves over MOSI
+      .spi_slave_mosi_i   (spi_master_mosi_o),//(spi_slave_mosi_i),
+      .spi_slave_clk_i    (spi_master_clk_o),//(spi_slave_clk_i),
+      .spi_slave_cs_i     (spi_master_cs_o),//(spi_slave_cs_i),
+
+      .fifo_data_o        (slave_rx_fifo_wdata),
+      .fifo_push_o        (slave_rx_fifo_wvalid)
+    );
 
 endmodule

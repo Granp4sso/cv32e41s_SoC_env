@@ -105,7 +105,7 @@ module spi_master #(
     spi_master_cs_o   = ~start_i;
     fifo_next_req_o   = 1'b0;
 
-    bit_counter_d  = bit_counter_q;
+    bit_counter_d  = 3'b111; //bit_counter_q;
     current_byte_d = current_byte_q;
     state_d        = state_q;
 
@@ -140,7 +140,8 @@ module spi_master #(
           current_byte_q  <= '0;
           bit_counter_q   <= 3'b111;
           state_q         <= IDLE;
-        end else if (sck_pos || state_q == IDLE) begin
+          // Internal data must be update every clock cycles or every SPI clock in SEND state
+        end else if (sck_pos || state_q == IDLE || state_q == STOP) begin
           bit_counter_q   <= bit_counter_d;
           state_q         <= state_d;
           current_byte_q <= (state_q == IDLE) ? fifo_data_i : current_byte_d;
@@ -155,7 +156,7 @@ module spi_master #(
           bit_counter_q   <= 3'b111;
           state_q         <= IDLE;
         // Set current byte half a cycle before transmitting it.
-        end else if (sck_neg || state_q == IDLE) begin
+        end else if (sck_neg || state_q == IDLE || state_q == STOP) begin
           current_byte_q <= (state_q == IDLE) ? fifo_data_i : current_byte_d;
           bit_counter_q   <= bit_counter_d;
           state_q         <= state_d;
