@@ -1,4 +1,4 @@
-// Copyright lowRISC contributors.
+// Copyright lowRISC contributors & University of Naples, Federico II
 // Licensed under the Apache License, Version 2.0, see LICENSE for details.
 // SPDX-License-Identifier: Apache-2.0
 
@@ -12,10 +12,19 @@ void spi_init(spi_t *spi, spi_reg_t spi_reg, uint32_t speed) {
 }
 
 void spi_send_byte_blocking(spi_t *spi, char c) {
-  while(DEV_READ(spi->reg + SPI_STATUS_REG) & SPI_STATUS_TX_FULL);
-  DEV_WRITE(spi->reg + SPI_TX_REG, c);
+  // Wait untill the SPI fifo is not full
+  while(DEV_READ(spi->reg + SPI_STATUS_REG) & SPI_MASTER_TX_FULL);
+  // Send a byte
+  DEV_WRITE(spi->reg + SPI_MASTER_TX_REG, c);
 }
 
-spi_status_t spi_get_status(spi_t *spi) {
-   return (spi_status_t) DEV_READ(spi->reg + SPI_STATUS_REG);
+char spi_recv_byte_blocking(spi_t *spi){
+  // Wait untill the SPI fifo does not has a message
+  while(DEV_READ(spi->reg + SPI_STATUS_REG) & SPI_SLAVE_RX_EMPTY);
+  // Read the byte
+  return DEV_READ(spi->reg + SPI_MASTER_TX_REG);
+}
+
+uint32_t spi_get_status(spi_t *spi){
+   return (uint32_t) DEV_READ(spi->reg + SPI_STATUS_REG);
 }

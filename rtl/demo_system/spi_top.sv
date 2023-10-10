@@ -101,6 +101,8 @@ module spi_top #(
   logic       slave_rx_fifo_empty;
   logic [6:0] slave_rx_fifo_depth;
 
+  logic [31:0] spi_slave_rx_data_q;
+
   // Status register read enable
   logic        read_status_q, read_status_d;
 
@@ -153,9 +155,11 @@ module spi_top #(
     if (!rst_ni) begin
       spi_status_q    <= 0;
       spi_slave_rx_q  <= '0;
+      spi_slave_rx_data_q <= '0;
     end else begin
       spi_status_q    <= spi_status_d;
       spi_slave_rx_q  <= spi_slave_rx_d;
+      spi_slave_rx_data_q <= slave_rx_fifo_rdata;
     end
   end
 
@@ -169,7 +173,7 @@ module spi_top #(
                                         1'b0,                 1'b0,                     // Master RX bits
                                         master_tx_fifo_full, master_tx_fifo_empty };    // Master TX bits
     end else if(spi_slave_rx_q) begin
-                                      assign device_rdata_o = slave_rx_fifo_rdata;
+                                      assign device_rdata_o = spi_slave_rx_data_q;
     end else begin
                                       assign device_rdata_o = '0;
     end

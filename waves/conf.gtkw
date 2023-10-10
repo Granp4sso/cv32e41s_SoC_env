@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Tue Oct 10 16:11:28 2023
+[*] Tue Oct 10 16:43:18 2023
 [*]
 [dumpfile] "/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/waves/trace.vcd"
-[dumpfile_mtime] "Tue Oct 10 16:06:30 2023"
-[dumpfile_size] 154639425
+[dumpfile_mtime] "Tue Oct 10 16:37:22 2023"
+[dumpfile_size] 196168562
 [savefile] "/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/waves/conf.gtkw"
-[timestart] 8
+[timestart] 102755
 [size] 1846 1016
 [pos] 1846 0
-*-5.567416 20 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-4.567416 102810 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [treeopen] TOP.uCup_top.
 [treeopen] TOP.uCup_top.genblk1.
@@ -112,6 +112,18 @@ TOP.uCup_top.genblk1.u_soc.u_spi.u_spi_slave.fifo_data_o[7:0]
 @28
 [color] 6
 TOP.uCup_top.genblk1.u_soc.u_spi.u_spi_slave.fifo_push_o
+@22
+TOP.uCup_top.genblk1.u_soc.u_spi.u_slave_rx_fifo.wdata_i[7:0]
+@28
+TOP.uCup_top.genblk1.u_soc.u_spi.u_slave_rx_fifo.wvalid_i
+@22
+TOP.uCup_top.genblk1.u_soc.u_spi.u_slave_rx_fifo.rdata_o[7:0]
+@28
+TOP.uCup_top.genblk1.u_soc.u_spi.u_slave_rx_fifo.rvalid_o
+TOP.uCup_top.genblk1.u_soc.u_spi.device_req_i
+@23
+TOP.uCup_top.genblk1.u_soc.u_spi.device_rdata_o[31:0]
+@28
 TOP.uCup_top.genblk1.u_soc.u_core.u_incore.data_req_o
 @22
 TOP.uCup_top.genblk1.u_soc.u_core.u_incore.register_file_wrapper_i.register_file_i.mem(30)[37:0]

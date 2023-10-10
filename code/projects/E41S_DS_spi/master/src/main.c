@@ -21,7 +21,12 @@ int main(){
     spi_send_byte_blocking(&spi, 'D');
     spi_send_byte_blocking(&spi, 'E');
 
-    puthex(spi_reg[0x10]);
+    puts("[SPI Slave] Let's read from SPI Master\n");
+    putchar(spi_recv_byte_blocking(&spi));
+    putchar(spi_recv_byte_blocking(&spi));
+    putchar(spi_recv_byte_blocking(&spi));
+    putchar(spi_recv_byte_blocking(&spi));
+    putchar(spi_recv_byte_blocking(&spi));
 
 
     return 0;
