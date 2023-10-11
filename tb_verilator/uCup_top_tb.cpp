@@ -20,9 +20,10 @@ int main(int argc, char **argv){
 	if(cfg.TwoDev) {
 		wsoc_init(&wsoc[1], &cfg, 1); // SPI Slave
 		
-		// Connect two devices over SPI
-		wsoc[1].tb->spi_rx_i = wsoc[0].tb->spi_tx_o;
-		wsoc[0].tb->spi_rx_i = wsoc[1].tb->spi_tx_o;
+		// Connect two devices over SPI (Device 0 is master, 1 is slave)
+		wsoc[1].tb->spi_slave_mosi_i = wsoc[0].tb->spi_master_mosi_o; 
+		wsoc[1].tb->spi_slave_clk_i = wsoc[0].tb->spi_master_clk_o; 
+		wsoc[1].tb->spi_slave_cs_i = wsoc[0].tb->spi_master_cs_o; 
 	}
 
 	printf("[Sim::Cycle::%08d] Starting Simulation for %ld Cycles\n\n", i, cfg.SimCycles);
@@ -31,7 +32,12 @@ int main(int argc, char **argv){
 	while(i < cfg.SimCycles){
 
 		wsoc_eval(&wsoc[0], &cfg);
-		if(cfg.TwoDev) wsoc_eval(&wsoc[1], &cfg);
+		if(cfg.TwoDev){
+			wsoc_eval(&wsoc[1], &cfg);
+			wsoc[1].tb->spi_slave_mosi_i = wsoc[0].tb->spi_master_mosi_o; 
+			wsoc[1].tb->spi_slave_clk_i = wsoc[0].tb->spi_master_clk_o; 
+			wsoc[1].tb->spi_slave_cs_i = wsoc[0].tb->spi_master_cs_o; 
+		}
 		i++;
 	}
 

@@ -7,7 +7,7 @@ void wsoc_init(wsoc_t * wsoc, conf_t * cfg, uint8_t is_slave){
     wsoc->clkcnt = 0;
 
 	// Generate trace.vcd file
-	trace_init(wsoc->tb, wsoc->trace, cfg);
+	trace_init(wsoc->tb, wsoc->trace, cfg, is_slave);
 	
 	// Initialize Memory
 	
@@ -69,7 +69,7 @@ void wsoc_eval(wsoc_t * wsoc, conf_t * cfg){
     wsoc_tick(++wsoc->clkcnt,wsoc->tb,wsoc->trace);
 }
 
-void trace_init(VuCup_top *tb, VerilatedVcdC * tfp, conf_t * cfg){
+void trace_init(VuCup_top *tb, VerilatedVcdC * tfp, conf_t * cfg, uint8_t is_slave){
 
 	if(cfg->Trace){
 		Verilated::traceEverOn(true);
@@ -77,7 +77,8 @@ void trace_init(VuCup_top *tb, VerilatedVcdC * tfp, conf_t * cfg){
 		printf("[tb\t] Trace generation ON\n");
 
 		tb->trace(tfp,99);
-		tfp->open("waves/trace.vcd");
+		if(is_slave) tfp->open("waves/trace_slave.vcd");
+		else tfp->open("waves/trace.vcd");
 	}
 
 }

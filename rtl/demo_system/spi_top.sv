@@ -44,13 +44,11 @@ module spi_top #(
     output logic [31:0] device_rdata_o,
 
     // Master interface
-    input  logic spi_master_miso_i,
     output logic spi_master_mosi_o,
     output logic spi_master_clk_o,
     output logic spi_master_cs_o,
 
     // Slave Interface
-    output logic spi_slave_miso_o,
     input  logic spi_slave_mosi_i,
     input  logic spi_slave_clk_i,
     input  logic spi_slave_cs_i
@@ -279,9 +277,9 @@ module spi_top #(
       .rst_ni             (rst_ni),
 
       // This simple slave only recieves over MOSI
-      .spi_slave_mosi_i   (spi_master_mosi_o),//(spi_slave_mosi_i),
-      .spi_slave_clk_i    (spi_master_clk_o),//(spi_slave_clk_i),
-      .spi_slave_cs_i     (spi_master_cs_o),//(spi_slave_cs_i),
+      .spi_slave_mosi_i   (spi_slave_mosi_i),
+      .spi_slave_clk_i    (spi_slave_clk_i),
+      .spi_slave_cs_i     (spi_slave_cs_i),
 
       .fifo_data_o        (slave_rx_fifo_wdata),
       .fifo_push_o        (slave_rx_fifo_wvalid)
