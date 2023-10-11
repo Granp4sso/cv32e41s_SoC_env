@@ -57,13 +57,15 @@ List of line arguments
     mem_size 0d...          # Specifies the DRAM size for the SoC simulation                            (default is 64KiB)
     mem_data_baddr 0x...    # Specifies DRAM data port base address (probably the same as inst port)    (default is 0x00100000)
     mem_inst_baddr 0x...    # Specifies DRAM inst port base address                                     (default is 0x00100000)
-    bin_path "path/to/bin"  # Specifies the path to the compiled binary to run                          (default is /code/bin/out.bin)
+    bin_path "path/to/bin"  # Specifies the path to the compiled binary to run                          (always specify!)
     terminal_show           # Show the SerialView via UART                                              (default is unset)
     lcd_show                # Show the LCDView via SPI (not supported atm)
     sim_cycles 0d...        # Specify the number of clock cycles for the entire simulation              (default is 200000)
     halt_addr 0x...         # Set a breakpoint and allow for MemView to show                            (default is unset)
     log                     # Enable the file logger                                                    (default is unset)
     trace                   # Enable VCD trace                                                          (default is unset)
+    two_dev					# Instantiate a second instance (the slave). PS: all previous parameters applies to the slaves as well
+    bin_path_2				# Specifies slave binary path
 ```
 
 Enabling the MemView allows for memory inspection when the simulation ends or when a halt address is found. MemView only supports two arguments
