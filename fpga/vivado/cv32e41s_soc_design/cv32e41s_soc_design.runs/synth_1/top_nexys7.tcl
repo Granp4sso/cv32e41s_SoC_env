@@ -86,14 +86,21 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog {
-  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_assert_sec_cm.svh
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_assert_dummy_macros.svh
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_assert_sec_cm.svh
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_util_memload.svh
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/new/assertions.svh
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/bhv/include/cv32e41s_wrapper.vh
 }
-set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_assert_sec_cm.svh]
 set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_assert_dummy_macros.svh]
+set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_assert_sec_cm.svh]
 set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_util_memload.svh]
+set_property file_type "Verilog Header" [get_files /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/new/assertions.svh]
 read_verilog -library xil_defaultlib -sv {
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_assert.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_util_pkg.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_flop_macros.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_fifo_sync.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/bus.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/nexys/clkgen_xil7series.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e40p_clock_gate.sv
@@ -140,6 +147,7 @@ read_verilog -library xil_defaultlib -sv {
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pma.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_pmp_walker_64.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_popcnt.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_prefetch_unit.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_prefetcher.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_ram_struct.sv
@@ -163,32 +171,35 @@ read_verilog -library xil_defaultlib -sv {
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/dm/dm_csrs.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/dm/dm_mem.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/dm/dm_sba.sv
-  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_flop_macros.sv
-  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_assert.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/dm_top.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/new/dmi_bscane_tap.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/dm/dmi_cdc.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/dm/dmi_jtag.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/gpio.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/instr_delay_filter.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_count.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_fifo_async.sv
-  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_util_pkg.sv
-  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_fifo_sync.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_fifo_sync_cnt.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_flop.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_flop_2sync.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim_generic/prim_generic_clock_inv.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim_generic/prim_generic_clock_mux2.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim_generic/prim_generic_flop.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_ram_2p_pkg.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim_generic/prim_generic_ram_2p.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/pwm.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/pwm_wrapper.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/ram_2p.sv
-  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_host.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_master.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_slave.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_top.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/timer.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/uCup_top.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/uart.sv
   /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/nexys/top_nexys7.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/bhv/include/cv32e41s_rvfi_pkg.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_ram_1p_pkg.sv
+  /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_secded_pkg.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

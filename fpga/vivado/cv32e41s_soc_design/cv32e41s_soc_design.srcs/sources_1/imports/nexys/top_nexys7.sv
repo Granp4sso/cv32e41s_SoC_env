@@ -9,9 +9,17 @@ module top_nexys7 (
   input               IO_RST_N,
   input  [ 3:0]       SW,
   input  [ 3:0]       BTN,
-  output [ 15:0]       LED,
+  output [ 15:0]      LED,
   input               UART_RX,
-  output              UART_TX
+  output              UART_TX,
+  
+  output              SPI_MASTER_MOSI,
+  output              SPI_MASTER_CLK,
+  output              SPI_MASTER_CS,
+  input               SPI_SLAVE_MOSI,
+  input               SPI_SLAVE_CLK,
+  input               SPI_SLAVE_CS
+  
 );
  parameter SRAMInitFile =  "/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vmem/bootloader.vmem"; //"blank.vmem";
 
@@ -35,7 +43,15 @@ module top_nexys7 (
 
     //output
     .gp_o(led_int),
-    .uart_tx_o(UART_TX)
+    .uart_tx_o(UART_TX),
+    
+    //SPI signals
+    .spi_master_mosi_o (SPI_MASTER_MOSI),
+    .spi_master_clk_o (SPI_MASTER_CLK),
+    .spi_master_cs_o (SPI_MASTER_CS),
+    .spi_slave_mosi_i (SPI_SLAVE_MOSI),
+    .spi_slave_clk_i (SPI_SLAVE_CLK),
+    .spi_slave_cs_i (SPI_SLAVE_CS)
   );
 
   // Generating the system clock and reset for the FPGA.

@@ -25,11 +25,14 @@ module uCup_top #(
   input  logic [GpiWidth-1:0] gp_i,
   output logic [GpoWidth-1:0] gp_o,
   output logic [PwmWidth-1:0] pwm_o,
-  input  logic                uart_rx_i,
+	input  logic                uart_rx_i,
   output logic                uart_tx_o,
-  input  logic                spi_rx_i,
-  output logic                spi_tx_o,
-  output logic                spi_sck_o,
+  output logic                spi_master_mosi_o,
+  output logic                spi_master_clk_o,
+  output logic                spi_master_cs_o,
+  input  logic                spi_slave_mosi_i,
+  input  logic                spi_slave_clk_i,
+  input  logic                spi_slave_cs_i,
 
 	// Memory Interfaces for uCup Verilated TB
   output logic        mem_req_o 		[ExtMemPorts-1:0],
@@ -44,7 +47,7 @@ module uCup_top #(
 
 	if(Verilated) begin
 
-		cv32e41s_demo_system_memless #(
+		/*cv32e41s_demo_system_memless #(
 			.GpiWidth 				( GpiWidth 			),
 			.GpoWidth 				( GpoWidth 			),
 			.PwmWidth 				( PwmWidth 			),
@@ -57,32 +60,35 @@ module uCup_top #(
 			.CoreDbgNumTriggers		( 1 				),
 			.CorePmaNumRegions		( 0 				),
 			.CorePmpGranularity 	( 0 				),
-			.CorePmpNumRegions		( 0 				),
+			.CorePmpNumRegions		( 16 				),
 			.CoreClicEn         	( 0 				),
 			.CoreClicIdWidth    	( 5 				),
 			.CoreClicIntthreshbits	( 8					)
 
 		) u_soc (
-			.clk_sys_i		( clk_sys_i 		),
-			.rst_sys_ni		( rst_sys_ni 		),
+			.clk_sys_i			( clk_sys_i 		),
+			.rst_sys_ni			( rst_sys_ni 		),
 
-			.gp_i			( gp_i 				),
-			.gp_o			( gp_o 				),
-			.pwm_o			( pwm_o 			),
-			.uart_rx_i		( uart_rx_i 		),
-			.uart_tx_o		( uart_tx_o 		),
-			.spi_rx_i		( spi_rx_i 			),
-			.spi_tx_o		( spi_tx_o 			),
-			.spi_sck_o		( spi_sck_o 		),
-			.mem_req_o 		( mem_req_o 		),
-  			.mem_we_o 		( mem_we_o 			),
-  			.mem_be_o 		( mem_be_o 			),
-  			.mem_addr_o 	( mem_addr_o		),
-  			.mem_wdata_o 	( mem_wdata_o 		),
-  			.mem_rvalid_i 	( mem_rvalid_i 		),
-  			.mem_rdata_i 	( mem_rdata_i 		)
+			.gp_i				( gp_i 				),
+			.gp_o				( gp_o 				),
+			.pwm_o				( pwm_o 			),
+			.uart_rx_i			( uart_rx_i 		),
+			.uart_tx_o			( uart_tx_o 		),
+			.spi_master_mosi_o	( spi_master_mosi_o	),
+  			.spi_master_clk_o	( spi_master_clk_o	),
+  			.spi_master_cs_o	( spi_master_cs_o	),
+  			.spi_slave_mosi_i	( spi_slave_mosi_i	),
+  			.spi_slave_clk_i	( spi_slave_clk_i	),
+  			.spi_slave_cs_i		( spi_slave_cs_i	),
+			.mem_req_o 			( mem_req_o 		),
+  			.mem_we_o 			( mem_we_o 			),
+  			.mem_be_o 			( mem_be_o 			),
+  			.mem_addr_o 		( mem_addr_o		),
+  			.mem_wdata_o 		( mem_wdata_o 		),
+  			.mem_rvalid_i 		( mem_rvalid_i 		),
+  			.mem_rdata_i 		( mem_rdata_i 		)
 
-	);
+	);*/
 
 	end else begin
 
@@ -99,23 +105,26 @@ module uCup_top #(
 			.CoreDbgNumTriggers		( 1 				),
 			.CorePmaNumRegions		( 0 				),
 			.CorePmpGranularity 	( 0 				),
-			.CorePmpNumRegions		( 8				    ),
+			.CorePmpNumRegions		( 8 				),
 			.CoreClicEn         	( 0 				),
 			.CoreClicIdWidth    	( 5 				),
 			.CoreClicIntthreshbits	( 8					)
 
 		) u_soc (
-			.clk_sys_i		( clk_sys_i 		),
-			.rst_sys_ni		( rst_sys_ni 		),
+			.clk_sys_i			( clk_sys_i 		),
+			.rst_sys_ni			( rst_sys_ni 		),
 
-			.gp_i			( gp_i 				),
-			.gp_o			( gp_o 				),
-			.pwm_o			( pwm_o 			),
-			.uart_rx_i		( uart_rx_i 		),
-			.uart_tx_o		( uart_tx_o 		),
-			.spi_rx_i		( spi_rx_i 			),
-			.spi_tx_o		( spi_tx_o 			),
-			.spi_sck_o		( spi_sck_o 		)
+			.gp_i				( gp_i 				),
+			.gp_o				( gp_o 				),
+			.pwm_o				( pwm_o 			),
+			.uart_rx_i			( uart_rx_i 		),
+			.uart_tx_o			( uart_tx_o 		),
+			.spi_master_mosi_o	( spi_master_mosi_o	),
+  			.spi_master_clk_o	( spi_master_clk_o	),
+  			.spi_master_cs_o	( spi_master_cs_o	),
+  			.spi_slave_mosi_i	( spi_slave_mosi_i	),
+  			.spi_slave_clk_i	( spi_slave_clk_i	),
+  			.spi_slave_cs_i		( spi_slave_cs_i	)
 		);
 
 		for(genvar i = 0; i < ExtMemPorts; i++ ) begin

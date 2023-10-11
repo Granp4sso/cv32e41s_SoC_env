@@ -43,6 +43,7 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="BoardPart" Val=""/>
+    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -89,6 +90,60 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_assert.sv"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert_dummy_macros.svh">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_assert_dummy_macros.svh"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="IsVisible" Val="1"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/prim/prim_util_pkg.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_util_pkg.sv"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert_sec_cm.svh">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_assert_sec_cm.svh"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="IsVisible" Val="1"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/prim/prim_flop_macros.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_flop_macros.sv"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/prim/prim_fifo_sync.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_fifo_sync.sv"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/demo_system/bus.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/demo_system/bus.sv"/>
@@ -503,6 +558,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/cv32e41s_core/cv32e41s_popcnt.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/cv32e41s_core/cv32e41s_popcnt.sv"/>
+          <Attr Name="ImportTime" Val="1687337156"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/cv32e41s_core/cv32e41s_prefetch_unit.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/cv32e41s_core/cv32e41s_prefetch_unit.sv"/>
@@ -710,42 +774,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim/prim_flop_macros.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_flop_macros.sv"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert_sec_cm.svh">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_assert_sec_cm.svh"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-          <Attr Name="IsVisible" Val="1"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert_dummy_macros.svh">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_assert_dummy_macros.svh"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-          <Attr Name="IsVisible" Val="1"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim/prim_assert.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_assert.sv"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/demo_system/dm_top.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/demo_system/dm_top.sv"/>
@@ -791,6 +819,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/demo_system/instr_delay_filter.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/demo_system/instr_delay_filter.sv"/>
+          <Attr Name="ImportTime" Val="1696405443"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_count.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_count.sv"/>
@@ -803,24 +840,6 @@
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_fifo_async.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_fifo_async.sv"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim/prim_util_pkg.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_util_pkg.sv"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim/prim_fifo_sync.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_fifo_sync.sv"/>
           <Attr Name="ImportTime" Val="1687337053"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -848,6 +867,24 @@
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_flop_2sync.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_flop_2sync.sv"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/prim_generic/prim_generic_clock_inv.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim_generic/prim_generic_clock_inv.sv"/>
+          <Attr Name="ImportTime" Val="1687337053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/prim_generic/prim_generic_clock_mux2.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim_generic/prim_generic_clock_mux2.sv"/>
           <Attr Name="ImportTime" Val="1687337053"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -917,10 +954,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/demo_system/spi_host.sv">
+      <File Path="$PSRCDIR/sources_1/imports/demo_system/spi_master.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/demo_system/spi_host.sv"/>
-          <Attr Name="ImportTime" Val="1687337216"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/demo_system/spi_master.sv"/>
+          <Attr Name="ImportTime" Val="1696941955"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/demo_system/spi_slave.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/demo_system/spi_slave.sv"/>
+          <Attr Name="ImportTime" Val="1696954753"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -973,7 +1019,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/assertions.svh">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../cv32e41s_soc/cv32e41s_soc.srcs/sources_1/new/assertions.svh"/>
           <Attr Name="ImportTime" Val="1696405443"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -981,29 +1026,8 @@
           <Attr Name="IsVisible" Val="1"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim_generic/prim_generic_clock_inv.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim_generic/prim_generic_clock_inv.sv"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim_generic/prim_generic_clock_mux2.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim_generic/prim_generic_clock_mux2.sv"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/bhv/include/cv32e41s_rvfi_pkg.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/bhv/include/cv32e41s_rvfi_pkg.sv"/>
           <Attr Name="ImportTime" Val="1687337202"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -1013,7 +1037,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/bhv/include/cv32e41s_wrapper.vh">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/bhv/include/cv32e41s_wrapper.vh"/>
           <Attr Name="ImportTime" Val="1687337202"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -1023,7 +1046,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_ram_1p_pkg.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_ram_1p_pkg.sv"/>
           <Attr Name="ImportTime" Val="1687337053"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -1033,19 +1055,8 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_secded_pkg.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_secded_pkg.sv"/>
           <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/cv32e41s_core/cv32e41s_popcnt.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/cv32e41s_core/cv32e41s_popcnt.sv"/>
-          <Attr Name="ImportTime" Val="1687337156"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -1080,7 +1091,7 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="top_nexys7"/>
+        <Option Name="TopModule" Val="cv32e41s_demo_system_memless"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>

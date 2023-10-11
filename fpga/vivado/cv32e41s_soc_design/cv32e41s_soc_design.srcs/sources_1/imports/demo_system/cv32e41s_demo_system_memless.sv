@@ -47,9 +47,12 @@ module cv32e41s_demo_system_memless #(
   output logic [PwmWidth-1:0] pwm_o,
   input  logic                uart_rx_i,
   output logic                uart_tx_o,
-  input  logic                spi_rx_i,
-  output logic                spi_tx_o,
-  output logic                spi_sck_o,
+  output logic                spi_master_mosi_o,
+  output logic                spi_master_clk_o,
+  output logic                spi_master_cs_o,
+  input  logic                spi_slave_mosi_i,
+  input  logic                spi_slave_clk_i,
+  input  logic                spi_slave_cs_i,
 
   // Memory Interfaces for uCup Verilated TB
   output logic        mem_req_o     [ExtMemPorts-1:0],
@@ -103,6 +106,13 @@ module cv32e41s_demo_system_memless #(
   localparam bit DBG = 1;
   localparam int unsigned DbgHwBreakNum = (DBG == 1) ?    2 :    0;
   localparam bit          DbgTriggerEn  = (DBG == 1) ? 1'b1 : 1'b0;
+
+  // Optional Memory and peripherals delay
+  localparam int unsigned Delay = 0;
+
+  logic         delayed_core_instr_req;
+  logic         delayed_device_dbg_req;
+  logic [31:0]  delayed_core_instr_addr;
 
   typedef enum int {
     CoreD,
@@ -208,6 +218,7 @@ module cv32e41s_demo_system_memless #(
   assign device_err[SimCtrl] = 1'b0;
 
   bus #(
+    .DelayRam     ( Delay ),
     .NrDevices    ( NrDevices ),
     .NrHosts      ( NrHosts   ),
     .DataWidth    ( 32        ),
@@ -239,13 +250,34 @@ module cv32e41s_demo_system_memless #(
     .cfg_device_addr_mask
   );
 
+  instr_delay_filter #(
+
+    .Delay        ( Delay ),
+    .DataWidth    ( 32 ),
+    .AddressWidth ( 32 )
+
+  ) u_instr_delay_filter (
+    .clk_i              ( clk_sys_i ),
+    .rst_ni             ( rst_sys_ni ),
+
+    .core_instr_req_i   ( core_instr_req ),
+    .core_instr_addr_i  ( core_instr_addr ),
+    .device_dbg_req_i   ( device_req[DbgDev] ),
+
+    .core_instr_req_o   ( delayed_core_instr_req ),
+    .core_instr_addr_o  ( delayed_core_instr_addr ),
+    .device_dbg_req_o   ( delayed_device_dbg_req )
+  
+  );
+
   assign mem_instr_req =
-      core_instr_req & ((core_instr_addr & cfg_device_addr_mask[Ram]) == cfg_device_addr_base[Ram]);
+      delayed_core_instr_req & ((delayed_core_instr_addr & cfg_device_addr_mask[Ram]) == cfg_device_addr_base[Ram]);
 
   assign dbg_instr_req =
-      core_instr_req & ((core_instr_addr & cfg_device_addr_mask[DbgDev]) == cfg_device_addr_base[DbgDev]);
+      delayed_core_instr_req & ((delayed_core_instr_addr & cfg_device_addr_mask[DbgDev]) == cfg_device_addr_base[DbgDev]);
 
-  assign core_instr_gnt = mem_instr_req | (dbg_instr_req & ~device_req[DbgDev]);
+  assign core_instr_gnt = mem_instr_req | (dbg_instr_req & ~delayed_device_dbg_req);
+
 
   always @(posedge clk_sys_i or negedge rst_sys_ni) begin
     if (!rst_sys_ni) begin
@@ -272,7 +304,7 @@ module cv32e41s_demo_system_memless #(
   assign device_rdata[Ram] = mem_rdata_i[0];
 
   assign mem_req_o[1] = mem_instr_req;
-  assign mem_addr_o[1] = core_instr_addr;
+  assign mem_addr_o[1] = delayed_core_instr_addr;
   assign mem_instr_rdata = mem_rdata_i[1];
 
   // Instantiate Components
@@ -313,7 +345,7 @@ module cv32e41s_demo_system_memless #(
     // Instruction memory interface
     .instr_req_o (core_instr_req),
     .instr_gnt_i (core_instr_gnt),
-    .instr_rvalid_i (core_instr_rvalid),
+    .instr_rvalid_i (core_instr_rvalid),//(core_instr_rvalid),
     .instr_addr_o (core_instr_addr),
     .instr_memtype_o (),
     .instr_prot_o (),
@@ -351,7 +383,7 @@ module cv32e41s_demo_system_memless #(
     .mcycle_o (),                 // TO SUPPORT
 
     // Basic interrupt architecture
-    .irq_i ({6'b0, timer_irq, 8'b0, uart_irq, 16'b0}),
+    .irq_i ({15'b0, uart_irq, 8'b0, timer_irq,7'b0}),
 
     // Event wakeup signals
     .wu_wfe_i ('0),   // Wait-for-event wakeup
@@ -365,7 +397,7 @@ module cv32e41s_demo_system_memless #(
 
     // Fence.i flush handshake
     .fencei_flush_req_o (),
-    .fencei_flush_ack_i ('0),
+    .fencei_flush_ack_i (1),
 
     // Security Alerts
     .alert_minor_o (),          // secure
@@ -441,10 +473,10 @@ module cv32e41s_demo_system_memless #(
     .uart_tx_o
   );
 
-  spi_top #(
+    spi_top #(
     .ClockFrequency(50_000_000),
     .CPOL(0),
-    .CPHA(1)
+    .CPHA(0)
   ) u_spi (
     .clk_i (clk_sys_i),
     .rst_ni(rst_sys_ni),
@@ -457,29 +489,17 @@ module cv32e41s_demo_system_memless #(
     .device_rvalid_o(device_rvalid[Spi]),
     .device_rdata_o (device_rdata[Spi]),
 
-    .spi_rx_i(spi_rx_i), // Data received from SPI device
-    .spi_tx_o(spi_tx_o), // Data transmitted to SPI device
-    .sck_o(spi_sck_o), // Serial clock pin
+    // Master interface
+    .spi_master_mosi_o (spi_master_mosi_o),
+    .spi_master_clk_o (spi_master_clk_o),
+    .spi_master_cs_o (spi_master_cs_o),
 
-    .byte_data_o() // unused
+    // Slave Interface
+    .spi_slave_mosi_i (spi_slave_mosi_i),
+    .spi_slave_clk_i (spi_slave_clk_i),
+    .spi_slave_cs_i (spi_slave_cs_i)
+
   );
-
-  /*`ifdef VERILATOR
-    simulator_ctrl #(
-      .LogName("cv32e40p_demo_system.log")
-    ) u_simulator_ctrl (
-      .clk_i     (clk_sys_i),
-      .rst_ni    (rst_sys_ni),
-
-      .req_i     (device_req[SimCtrl]),
-      .we_i      (device_we[SimCtrl]),
-      .be_i      (device_be[SimCtrl]),
-      .addr_i    (device_addr[SimCtrl]),
-      .wdata_i   (device_wdata[SimCtrl]),
-      .rvalid_o  (device_rvalid[SimCtrl]),
-      .rdata_o   (device_rdata[SimCtrl])
-    );
-  `endif*/
 
   timer #(
     .DataWidth    ( 32 ),

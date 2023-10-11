@@ -45,9 +45,12 @@ module cv32e41s_demo_system #(
   output logic [PwmWidth-1:0] pwm_o,
   input  logic                uart_rx_i,
   output logic                uart_tx_o,
-  input  logic                spi_rx_i,
-  output logic                spi_tx_o,
-  output logic                spi_sck_o
+  output logic                spi_master_mosi_o,
+  output logic                spi_master_clk_o,
+  output logic                spi_master_cs_o,
+  input  logic                spi_slave_mosi_i,
+  input  logic                spi_slave_clk_i,
+  input  logic                spi_slave_cs_i
 );
 
   import dm_pkg::*;
@@ -454,11 +457,16 @@ module cv32e41s_demo_system #(
     .device_rvalid_o(device_rvalid[Spi]),
     .device_rdata_o (device_rdata[Spi]),
 
-    .spi_rx_i(spi_rx_i), // Data received from SPI device
-    .spi_tx_o(spi_tx_o), // Data transmitted to SPI device
-    .sck_o(spi_sck_o), // Serial clock pin
+    // Master interface
+    .spi_master_mosi_o (spi_master_mosi_o),
+    .spi_master_clk_o (spi_master_clk_o),
+    .spi_master_cs_o (spi_master_cs_o),
 
-    .byte_data_o() // unused
+    // Slave Interface
+    .spi_slave_mosi_i (spi_slave_mosi_i),
+    .spi_slave_clk_i (spi_slave_clk_i),
+    .spi_slave_cs_i (spi_slave_cs_i)
+
   );
 
   `ifdef VERILATOR

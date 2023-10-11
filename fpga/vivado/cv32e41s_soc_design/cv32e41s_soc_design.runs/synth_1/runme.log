@@ -21,8 +21,10 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 62475
+INFO: [Synth 8-7075] Helper process launched with PID 62755
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+CRITICAL WARNING: [Synth 8-10644] design element 'prim_util_pkg' is previously defined; ignoring this definition [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_util_pkg.sv:98]
+INFO: [Synth 8-9937] previous definition of design element 'prim_util_pkg' is here [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_util_pkg.sv:98]
 WARNING: [Synth 8-11067] parameter 'ALU_OP_WIDTH' declared inside package 'cv32e41s_pkg' shall be treated as localparam [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv:64]
 WARNING: [Synth 8-11067] parameter 'MUL_OP_WIDTH' declared inside package 'cv32e41s_pkg' shall be treated as localparam [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv:152]
 WARNING: [Synth 8-11067] parameter 'DIV_OP_WIDTH' declared inside package 'cv32e41s_pkg' shall be treated as localparam [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/include/cv32e41s_pkg.sv:160]
@@ -128,26 +130,25 @@ WARNING: [Synth 8-11065] parameter 'XPMPCFG_RESET' becomes localparam in 'cv32e4
 INFO: [Synth 8-11241] undeclared symbol 'tdata1_n', assumed default net type 'wire' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_debug_triggers.sv:527]
 WARNING: [Synth 8-6901] identifier 'DEBUG_START' is used before its declaration [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:25]
 WARNING: [Synth 8-6901] identifier 'DEBUG_START' is used before its declaration [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:26]
-WARNING: [Synth 8-11065] parameter 'SPI_SIZE' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:82]
-WARNING: [Synth 8-11065] parameter 'SPI_START' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:83]
-WARNING: [Synth 8-11065] parameter 'SPI_MASK' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:84]
-WARNING: [Synth 8-11065] parameter 'SIM_CTRL_SIZE' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:86]
-WARNING: [Synth 8-11065] parameter 'SIM_CTRL_START' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:87]
-WARNING: [Synth 8-11065] parameter 'SIM_CTRL_MASK' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:88]
+WARNING: [Synth 8-11065] parameter 'SPI_SIZE' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:85]
+WARNING: [Synth 8-11065] parameter 'SPI_START' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:86]
+WARNING: [Synth 8-11065] parameter 'SPI_MASK' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:87]
+WARNING: [Synth 8-11065] parameter 'SIM_CTRL_SIZE' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:89]
+WARNING: [Synth 8-11065] parameter 'SIM_CTRL_START' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:90]
+WARNING: [Synth 8-11065] parameter 'SIM_CTRL_MASK' becomes localparam in 'cv32e41s_demo_system' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:91]
 WARNING: [Synth 8-6901] identifier 'DEBUG_START' is used before its declaration [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:27]
 WARNING: [Synth 8-6901] identifier 'DEBUG_START' is used before its declaration [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:28]
-WARNING: [Synth 8-11065] parameter 'SPI_SIZE' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:94]
-WARNING: [Synth 8-11065] parameter 'SPI_START' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:95]
-WARNING: [Synth 8-11065] parameter 'SPI_MASK' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:96]
-WARNING: [Synth 8-11065] parameter 'SIM_CTRL_SIZE' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:98]
-WARNING: [Synth 8-11065] parameter 'SIM_CTRL_START' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:99]
-WARNING: [Synth 8-11065] parameter 'SIM_CTRL_MASK' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:100]
-CRITICAL WARNING: [Synth 8-10644] design element 'prim_util_pkg' is previously defined; ignoring this definition [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_util_pkg.sv:98]
-INFO: [Synth 8-9937] previous definition of design element 'prim_util_pkg' is here [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_util_pkg.sv:98]
+WARNING: [Synth 8-11065] parameter 'SPI_SIZE' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:97]
+WARNING: [Synth 8-11065] parameter 'SPI_START' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:98]
+WARNING: [Synth 8-11065] parameter 'SPI_MASK' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:99]
+WARNING: [Synth 8-11065] parameter 'SIM_CTRL_SIZE' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:101]
+WARNING: [Synth 8-11065] parameter 'SIM_CTRL_START' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:102]
+WARNING: [Synth 8-11065] parameter 'SIM_CTRL_MASK' becomes localparam in 'cv32e41s_demo_system_memless' with formal parameter declaration list [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv:103]
+WARNING: [Synth 8-6901] identifier 'bit_counter_q' is used before its declaration [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_slave.sv:84]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2440.152 ; gain = 372.738 ; free physical = 357 ; free virtual = 9290
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1873.168; parent = 1667.613; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3426.113; parent = 2447.094; children = 979.020
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2440.184 ; gain = 372.738 ; free physical = 208 ; free virtual = 7942
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1874.325; parent = 1668.894; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.004; parent = 2448.125; children = 974.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_nexys7' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/nexys/top_nexys7.sv:6]
 INFO: [Synth 8-6157] synthesizing module 'uCup_top' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/uCup_top.sv:12]
@@ -178,7 +179,7 @@ INFO: [Synth 8-6157] synthesizing module 'bus' [/home/stefano/Desktop/RISC-V/MCU
 	Parameter DataWidth bound to: 32'sb00000000000000000000000000100000 
 	Parameter AddressWidth bound to: 32'sb00000000000000000000000000100000 
 INFO: [Synth 8-6155] done synthesizing module 'bus' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/bus.sv:17]
-WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:237]
+WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:240]
 INFO: [Synth 8-6157] synthesizing module 'cv32e41s_core' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_core.sv:18]
 	Parameter LIB bound to: 0 - type: integer 
 	Parameter RV32 bound to: 1'b0 
@@ -753,7 +754,7 @@ INFO: [Synth 8-6157] synthesizing module 'prim_fifo_sync_cnt' [/home/stefano/Des
 INFO: [Synth 8-6155] done synthesizing module 'prim_fifo_sync_cnt' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_fifo_sync_cnt.sv:9]
 INFO: [Synth 8-6155] done synthesizing module 'prim_fifo_sync' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_fifo_sync.sv:10]
 INFO: [Synth 8-6155] done synthesizing module 'uart' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/uart.sv:5]
-INFO: [Synth 8-6157] synthesizing module 'spi_top' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_top.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'spi_top' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_top.sv:26]
 	Parameter ClockFrequency bound to: 32'b00000010111110101111000010000000 
 	Parameter CPOL bound to: 0 - type: integer 
 	Parameter CPHA bound to: 1 - type: integer 
@@ -767,27 +768,31 @@ INFO: [Synth 8-6157] synthesizing module 'prim_fifo_sync_cnt__parameterized0' [/
 	Parameter Secure bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'prim_fifo_sync_cnt__parameterized0' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_fifo_sync_cnt.sv:9]
 INFO: [Synth 8-6155] done synthesizing module 'prim_fifo_sync__parameterized0' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/prim/prim_fifo_sync.sv:10]
-INFO: [Synth 8-6157] synthesizing module 'spi_host' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_host.sv:5]
-	Parameter ClockFrequency bound to: 32'b00000010111110101111000010000000 
-	Parameter BaudRate bound to: 32'b00000000101111101011110000100000 
+INFO: [Synth 8-6157] synthesizing module 'spi_master' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_master.sv:18]
+	Parameter SPIClockScale bound to: 32'b00000000000000000000000000001000 
 	Parameter CPOL bound to: 0 - type: integer 
 	Parameter CPHA bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'spi_host' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_host.sv:5]
-INFO: [Synth 8-6155] done synthesizing module 'spi_top' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_top.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'spi_master' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_master.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'spi_slave' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_slave.sv:16]
+	Parameter SPIClockScale bound to: 32'b00000000000000000000000000001000 
+	Parameter CPOL bound to: 0 - type: integer 
+	Parameter CPHA bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spi_slave' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_slave.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'spi_top' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_top.sv:26]
 INFO: [Synth 8-6157] synthesizing module 'timer' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/timer.sv:9]
 	Parameter DataWidth bound to: 32'b00000000000000000000000000100000 
 	Parameter AddressWidth bound to: 32'b00000000000000000000000000100000 
 INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/timer.sv:117]
 INFO: [Synth 8-6155] done synthesizing module 'timer' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/timer.sv:9]
-WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:499]
-WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:500]
-WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:500]
-WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:501]
-WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:502]
-WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:503]
-WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:504]
-WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:505]
+WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:507]
+WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:508]
+WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:508]
+WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:509]
+WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:510]
 WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:511]
+WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:512]
+WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:513]
+WARNING: [Synth 8-324] index 7 out of range [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:519]
 INFO: [Synth 8-6155] done synthesizing module 'cv32e41s_demo_system' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:16]
 INFO: [Synth 8-6155] done synthesizing module 'uCup_top' (0#1) [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/uCup_top.sv:12]
 INFO: [Synth 8-6157] synthesizing module 'clkgen_xil7series' [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/nexys/clkgen_xil7series.sv:5]
@@ -908,11 +913,10 @@ WARNING: [Synth 8-3848] Net pmp_if_rvalid in module/entity cv32e41s_core does no
 WARNING: [Synth 8-3848] Net pmp_if_rdata_b0 in module/entity cv32e41s_core does not have driver. [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_core.sv:255]
 WARNING: [Synth 8-3848] Net pmp_if_rdata_b1 in module/entity cv32e41s_core does not have driver. [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/cv32e41s_core/cv32e41s_core.sv:256]
 WARNING: [Synth 8-3848] Net pwm_o in module/entity pwm_wrapper does not have driver. [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/pwm_wrapper.sv:24]
-WARNING: [Synth 8-7137] Register recieved_byte_d_reg in module spi_host has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/spi_host.sv:126]
-WARNING: [Synth 8-6014] Unused sequential element dbg_slave_rvalid_reg was removed.  [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:504]
-WARNING: [Synth 8-3848] Net device_rvalid[6] in module/entity cv32e41s_demo_system does not have driver. [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:135]
-WARNING: [Synth 8-3848] Net device_rdata[6] in module/entity cv32e41s_demo_system does not have driver. [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:136]
-WARNING: [Synth 8-3848] Net dbg_slave_rdata in module/entity cv32e41s_demo_system does not have driver. [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element dbg_slave_rvalid_reg was removed.  [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:512]
+WARNING: [Synth 8-3848] Net device_rvalid[6] in module/entity cv32e41s_demo_system does not have driver. [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:138]
+WARNING: [Synth 8-3848] Net device_rdata[6] in module/entity cv32e41s_demo_system does not have driver. [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:139]
+WARNING: [Synth 8-3848] Net dbg_slave_rdata in module/entity cv32e41s_demo_system does not have driver. [/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.srcs/sources_1/imports/demo_system/cv32e41s_demo_system.sv:160]
 INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3917] design top_nexys7 has port LED[15] driven by constant 1
 WARNING: [Synth 8-7129] Port timer_addr_i[31] in module timer is either unconnected or has no load
@@ -1017,24 +1021,24 @@ WARNING: [Synth 8-7129] Port device_wdata_i[26] in module uart is either unconne
 WARNING: [Synth 8-7129] Port device_wdata_i[25] in module uart is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2680.629 ; gain = 613.215 ; free physical = 365 ; free virtual = 9252
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.188; parent = 1711.633; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3659.652; parent = 2680.633; children = 979.020
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2681.660 ; gain = 614.215 ; free physical = 348 ; free virtual = 7978
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1916.661; parent = 1711.229; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3656.543; parent = 2681.664; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2698.441 ; gain = 631.027 ; free physical = 365 ; free virtual = 9252
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1918.430; parent = 1712.875; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3677.465; parent = 2698.445; children = 979.020
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2696.504 ; gain = 629.059 ; free physical = 348 ; free virtual = 7977
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.946; parent = 1712.515; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3671.387; parent = 2696.508; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2698.441 ; gain = 631.027 ; free physical = 365 ; free virtual = 9252
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1918.430; parent = 1712.875; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3677.465; parent = 2698.445; children = 979.020
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2696.504 ; gain = 629.059 ; free physical = 374 ; free virtual = 8004
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.946; parent = 1712.515; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3671.387; parent = 2696.508; children = 974.879
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2704.379 ; gain = 0.000 ; free physical = 345 ; free virtual = 9232
+Netlist sorting complete. Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2702.441 ; gain = 0.000 ; free physical = 340 ; free virtual = 7970
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1048,35 +1052,35 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/top_nexys7_p
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2854.191 ; gain = 0.000 ; free physical = 231 ; free virtual = 9117
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2853.254 ; gain = 0.000 ; free physical = 227 ; free virtual = 7856
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2854.191 ; gain = 0.000 ; free physical = 231 ; free virtual = 9117
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2853.254 ; gain = 0.000 ; free physical = 226 ; free virtual = 7856
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2854.191 ; gain = 786.777 ; free physical = 393 ; free virtual = 9280
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.102; parent = 1786.558; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3801.199; parent = 2822.180; children = 979.020
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2853.254 ; gain = 785.809 ; free physical = 384 ; free virtual = 8009
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2052.438; parent = 1847.018; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3828.137; parent = 2853.258; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a50ticsg324-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2854.191 ; gain = 786.777 ; free physical = 393 ; free virtual = 9280
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.102; parent = 1786.558; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3801.199; parent = 2822.180; children = 979.020
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2853.254 ; gain = 785.809 ; free physical = 384 ; free virtual = 8009
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2052.438; parent = 1847.018; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3828.137; parent = 2853.258; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2854.191 ; gain = 786.777 ; free physical = 392 ; free virtual = 9279
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.102; parent = 1786.558; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3801.199; parent = 2822.180; children = 979.020
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2853.254 ; gain = 785.809 ; free physical = 384 ; free virtual = 8009
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2052.438; parent = 1847.018; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3828.137; parent = 2853.258; children = 974.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'seq_state_q_reg' in module 'cv32e41s_sequencer'
 INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'cv32e41s_mpu_test'
@@ -1086,7 +1090,9 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'cv3
 INFO: [Synth 8-802] inferred FSM for state register 'ctrl_fsm_cs_reg' in module 'cv32e41s_controller_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'debug_fsm_cs_reg' in module 'cv32e41s_controller_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_q_reg' in module 'uart'
-INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'spi_host'
+INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'spi_master'
+INFO: [Synth 8-802] inferred FSM for state register 'spi_state_q_reg' in module 'spi_slave'
+INFO: [Synth 8-802] inferred FSM for state register 'ed_state_q_reg' in module 'spi_slave'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1166,16 +1172,31 @@ INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_q_reg' using enco
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    IDLE |                             0001 |                               00
-                   START |                             0010 |                               01
-                    SEND |                             0100 |                               10
-                    STOP |                             1000 |                               11
+                    IDLE |                              001 |                               00
+                    SEND |                              010 |                               10
+                    STOP |                              100 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_q_reg' using encoding 'one-hot' in module 'spi_host'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_q_reg' using encoding 'one-hot' in module 'spi_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ED_IDLE |                               00 |                               00
+     ED_WAIT_FOR_LEADING |                               01 |                               01
+    ED_WAIT_FOR_TRAILING |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ed_state_q_reg' using encoding 'sequential' in module 'spi_slave'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                SPI_IDLE |                              001 |                               00
+                SPI_RECV |                              010 |                               01
+                SPI_STOP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'spi_state_q_reg' using encoding 'one-hot' in module 'spi_slave'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2854.191 ; gain = 786.777 ; free physical = 331 ; free virtual = 9232
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.102; parent = 1786.558; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3801.199; parent = 2822.180; children = 979.020
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2853.254 ; gain = 785.809 ; free physical = 357 ; free virtual = 7985
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2052.438; parent = 1847.018; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3828.137; parent = 2853.258; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1190,10 +1211,10 @@ Detailed RTL Component Info :
 	   3 Input   12 Bit       Adders := 1     
 	   2 Input   11 Bit       Adders := 2     
 	   2 Input    9 Bit       Adders := 8     
-	   2 Input    8 Bit       Adders := 7     
+	   2 Input    8 Bit       Adders := 9     
 	   3 Input    8 Bit       Adders := 4     
 	   2 Input    7 Bit       Adders := 1     
-	   3 Input    7 Bit       Adders := 1     
+	   3 Input    7 Bit       Adders := 2     
 	   2 Input    6 Bit       Adders := 3     
 	  32 Input    6 Bit       Adders := 1     
 	   3 Input    5 Bit       Adders := 1     
@@ -1201,13 +1222,12 @@ Detailed RTL Component Info :
 	   2 Input    4 Bit       Adders := 1     
 	   3 Input    4 Bit       Adders := 2     
 	   4 Input    3 Bit       Adders := 1     
-	   2 Input    3 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 4     
 	   3 Input    2 Bit       Adders := 2     
-	   2 Input    2 Bit       Adders := 11    
-	   2 Input    1 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 12    
 +---XORs : 
 	   2 Input     32 Bit         XORs := 2     
-	   2 Input      8 Bit         XORs := 3     
+	   2 Input      8 Bit         XORs := 4     
 	   2 Input      6 Bit         XORs := 3     
 	   2 Input      1 Bit         XORs := 2     
 +---XORs : 
@@ -1220,20 +1240,20 @@ Detailed RTL Component Info :
 	               64 Bit    Registers := 4     
 	               38 Bit    Registers := 32    
 	               33 Bit    Registers := 1     
-	               32 Bit    Registers := 46    
+	               32 Bit    Registers := 47    
 	               16 Bit    Registers := 2     
 	               13 Bit    Registers := 2     
 	               12 Bit    Registers := 1     
 	               11 Bit    Registers := 2     
 	                9 Bit    Registers := 8     
-	                8 Bit    Registers := 397   
+	                8 Bit    Registers := 525   
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 2     
 	                5 Bit    Registers := 8     
 	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 10    
-	                2 Bit    Registers := 34    
-	                1 Bit    Registers := 901   
+	                3 Bit    Registers := 11    
+	                2 Bit    Registers := 35    
+	                1 Bit    Registers := 902   
 +---Multipliers : 
 	              32x32  Multipliers := 1     
 +---RAMs : 
@@ -1245,7 +1265,7 @@ Detailed RTL Component Info :
 	   2 Input   34 Bit        Muxes := 16    
 	   2 Input   33 Bit        Muxes := 2     
 	   4 Input   33 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 192   
+	   2 Input   32 Bit        Muxes := 193   
 	   4 Input   32 Bit        Muxes := 31    
 	  31 Input   32 Bit        Muxes := 1     
 	   5 Input   32 Bit        Muxes := 2     
@@ -1268,11 +1288,11 @@ Detailed RTL Component Info :
 	   4 Input   10 Bit        Muxes := 2     
 	   2 Input    9 Bit        Muxes := 8     
 	   5 Input    8 Bit        Muxes := 3     
-	   2 Input    8 Bit        Muxes := 29    
-	   3 Input    8 Bit        Muxes := 1     
-	   4 Input    8 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 36    
+	   3 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 2     
 	   5 Input    7 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 4     
 	   4 Input    7 Bit        Muxes := 1     
 	   3 Input    6 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 7     
@@ -1295,17 +1315,17 @@ Detailed RTL Component Info :
 	   9 Input    4 Bit        Muxes := 1     
 	   8 Input    4 Bit        Muxes := 1     
 	   5 Input    3 Bit        Muxes := 3     
-	   2 Input    3 Bit        Muxes := 23    
+	   2 Input    3 Bit        Muxes := 27    
 	  66 Input    3 Bit        Muxes := 1     
-	   3 Input    3 Bit        Muxes := 5     
-	   4 Input    3 Bit        Muxes := 10    
+	   3 Input    3 Bit        Muxes := 9     
+	   4 Input    3 Bit        Muxes := 9     
 	  18 Input    3 Bit        Muxes := 1     
 	  12 Input    3 Bit        Muxes := 1     
 	   6 Input    3 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 166   
+	   2 Input    2 Bit        Muxes := 172   
 	   5 Input    2 Bit        Muxes := 10    
 	   4 Input    2 Bit        Muxes := 16    
-	   3 Input    2 Bit        Muxes := 10    
+	   3 Input    2 Bit        Muxes := 11    
 	   8 Input    2 Bit        Muxes := 4     
 	   7 Input    2 Bit        Muxes := 5     
 	  10 Input    2 Bit        Muxes := 2     
@@ -1313,9 +1333,9 @@ Detailed RTL Component Info :
 	   6 Input    2 Bit        Muxes := 1     
 	  11 Input    2 Bit        Muxes := 1     
 	  14 Input    2 Bit        Muxes := 1     
-	   3 Input    1 Bit        Muxes := 47    
-	   2 Input    1 Bit        Muxes := 878   
-	   4 Input    1 Bit        Muxes := 110   
+	   3 Input    1 Bit        Muxes := 52    
+	   2 Input    1 Bit        Muxes := 1011  
+	   4 Input    1 Bit        Muxes := 107   
 	   5 Input    1 Bit        Muxes := 45    
 	  76 Input    1 Bit        Muxes := 2     
 	  66 Input    1 Bit        Muxes := 1     
@@ -1357,26 +1377,26 @@ DSP Report: operator int_result is absorbed into DSP int_result.
 WARNING: [Synth 8-3917] design top_nexys7 has port LED[15] driven by constant 1
 INFO: [Synth 8-3971] The signal "top_nexys7/inst_tcm/u_ram/mem_reg" was recognized as a true dual port RAM template.
 INFO: [Synth 8-3971] The signal "top_nexys7/data_tcm/u_ram/mem_reg" was recognized as a true dual port RAM template.
-WARNING: [Synth 8-6841] Block RAM (u_ram/mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+WARNING: [Synth 8-6841] Block RAM (u_ram/u_ram/mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
 (address width (14) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
-INFO: [Synth 8-3971] The signal "u_soci_3/u_ram/u_ram/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "top_nexys7/u_ram/u_ram/mem_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:35 ; elapsed = 00:03:46 . Memory (MB): peak = 3131.488 ; gain = 1064.074 ; free physical = 700 ; free virtual = 9226
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4110.512; parent = 3131.492; children = 979.020
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:32 ; elapsed = 00:03:45 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 690 ; free virtual = 8005
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Preliminary Mapping Report (see note below)
-+---------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name    | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+---------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|top_nexys7     | inst_tcm/u_ram/mem_reg | 1 K x 32(READ_FIRST)   | W | R | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
-|top_nexys7     | data_tcm/u_ram/mem_reg | 1 K x 32(WRITE_FIRST)  | W |   | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
-|u_soci_3/u_ram | u_ram/mem_reg          | 16 K x 32(READ_FIRST)  | W | R | 16 K x 32(READ_FIRST)  | W | R | Port A and B     | 0      | 16     | 
-+---------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top_nexys7  | inst_tcm/u_ram/mem_reg | 1 K x 32(READ_FIRST)   | W | R | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|top_nexys7  | data_tcm/u_ram/mem_reg | 1 K x 32(WRITE_FIRST)  | W |   | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|top_nexys7  | u_ram/u_ram/mem_reg    | 16 K x 32(READ_FIRST)  | W | R | 16 K x 32(READ_FIRST)  | W | R | Port A and B     | 0      | 16     | 
++------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
@@ -1398,30 +1418,30 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:40 ; elapsed = 00:03:51 . Memory (MB): peak = 3131.488 ; gain = 1064.074 ; free physical = 572 ; free virtual = 9098
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4110.512; parent = 3131.492; children = 979.020
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:36 ; elapsed = 00:03:49 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 560 ; free virtual = 7875
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:15 ; elapsed = 00:04:27 . Memory (MB): peak = 3147.496 ; gain = 1080.082 ; free physical = 365 ; free virtual = 8892
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4126.520; parent = 3147.500; children = 979.020
+Finished Timing Optimization : Time (s): cpu = 00:04:12 ; elapsed = 00:04:26 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 366 ; free virtual = 7683
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping Report
-+---------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name    | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+---------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|top_nexys7     | inst_tcm/u_ram/mem_reg | 1 K x 32(READ_FIRST)   | W | R | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
-|top_nexys7     | data_tcm/u_ram/mem_reg | 1 K x 32(WRITE_FIRST)  | W |   | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
-|u_soci_3/u_ram | u_ram/mem_reg          | 16 K x 32(READ_FIRST)  | W | R | 16 K x 32(READ_FIRST)  | W | R | Port A and B     | 0      | 16     | 
-+---------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top_nexys7  | inst_tcm/u_ram/mem_reg | 1 K x 32(READ_FIRST)   | W | R | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|top_nexys7  | data_tcm/u_ram/mem_reg | 1 K x 32(WRITE_FIRST)  | W |   | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|top_nexys7  | u_ram/u_ram/mem_reg    | 16 K x 32(READ_FIRST)  | W | R | 16 K x 32(READ_FIRST)  | W | R | Port A and B     | 0      | 16     | 
++------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1465,9 +1485,9 @@ INFO: [Synth 8-7052] The timing for the instance u_ucup_top/u_soc/u_ram/u_ram/me
 INFO: [Synth 8-7052] The timing for the instance u_ucup_top/u_soc/u_ram/u_ram/mem_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance u_ucup_top/u_soc/u_ram/u_ram/mem_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:20 ; elapsed = 00:04:32 . Memory (MB): peak = 3147.496 ; gain = 1080.082 ; free physical = 544 ; free virtual = 9067
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4126.520; parent = 3147.500; children = 979.020
+Finished Technology Mapping : Time (s): cpu = 00:04:18 ; elapsed = 00:04:33 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 530 ; free virtual = 7847
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1485,49 +1505,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:23 ; elapsed = 00:04:35 . Memory (MB): peak = 3147.496 ; gain = 1080.082 ; free physical = 528 ; free virtual = 9052
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4126.520; parent = 3147.500; children = 979.020
+Finished IO Insertion : Time (s): cpu = 00:04:21 ; elapsed = 00:04:36 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 533 ; free virtual = 7850
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:23 ; elapsed = 00:04:35 . Memory (MB): peak = 3147.496 ; gain = 1080.082 ; free physical = 523 ; free virtual = 9046
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4126.520; parent = 3147.500; children = 979.020
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:21 ; elapsed = 00:04:36 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 533 ; free virtual = 7850
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:24 ; elapsed = 00:04:37 . Memory (MB): peak = 3147.496 ; gain = 1080.082 ; free physical = 550 ; free virtual = 9073
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4126.520; parent = 3147.500; children = 979.020
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:23 ; elapsed = 00:04:38 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 533 ; free virtual = 7850
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:24 ; elapsed = 00:04:37 . Memory (MB): peak = 3147.496 ; gain = 1080.082 ; free physical = 550 ; free virtual = 9072
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4126.520; parent = 3147.500; children = 979.020
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:23 ; elapsed = 00:04:38 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 533 ; free virtual = 7850
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:25 ; elapsed = 00:04:37 . Memory (MB): peak = 3147.496 ; gain = 1080.082 ; free physical = 550 ; free virtual = 9073
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4126.520; parent = 3147.500; children = 979.020
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:23 ; elapsed = 00:04:38 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 532 ; free virtual = 7849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:25 ; elapsed = 00:04:37 . Memory (MB): peak = 3147.496 ; gain = 1080.082 ; free physical = 550 ; free virtual = 9073
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4126.520; parent = 3147.500; children = 979.020
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:23 ; elapsed = 00:04:38 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 532 ; free virtual = 7849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1554,48 +1574,48 @@ Report Cell Usage:
 |      |Cell      |Count |
 +------+----------+------+
 |1     |BUFG      |     2|
-|2     |CARRY4    |   389|
+|2     |CARRY4    |   391|
 |3     |DSP48E1   |     3|
-|4     |LUT1      |    25|
-|5     |LUT2      |   694|
-|6     |LUT3      |  1115|
-|7     |LUT4      |  1293|
-|8     |LUT5      |  1670|
-|9     |LUT6      |  5201|
-|10    |MUXF7     |   479|
-|11    |MUXF8     |   130|
+|4     |LUT1      |    28|
+|5     |LUT2      |   914|
+|6     |LUT3      |  1153|
+|7     |LUT4      |  1365|
+|8     |LUT5      |  1733|
+|9     |LUT6      |  6131|
+|10    |MUXF7     |   735|
+|11    |MUXF8     |   240|
 |12    |PLLE2_ADV |     1|
 |13    |RAMB36E1  |    18|
-|31    |FDCE      |  3213|
-|32    |FDPE      |    39|
-|33    |FDRE      |  2245|
-|34    |IBUF      |    11|
-|35    |OBUF      |    17|
+|31    |FDCE      |  3259|
+|32    |FDPE      |    46|
+|33    |FDRE      |  4277|
+|34    |IBUF      |    14|
+|35    |OBUF      |    20|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:25 ; elapsed = 00:04:38 . Memory (MB): peak = 3147.496 ; gain = 1080.082 ; free physical = 550 ; free virtual = 9073
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2501.604; parent = 2296.092; children = 205.555
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4126.520; parent = 3147.500; children = 979.020
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:23 ; elapsed = 00:04:38 . Memory (MB): peak = 3161.668 ; gain = 1094.223 ; free physical = 532 ; free virtual = 7849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2563.295; parent = 2358.109; children = 205.432
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4136.551; parent = 3161.672; children = 974.879
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:21 ; elapsed = 00:04:34 . Memory (MB): peak = 3147.496 ; gain = 924.332 ; free physical = 612 ; free virtual = 9135
-Synthesis Optimization Complete : Time (s): cpu = 00:04:25 ; elapsed = 00:04:38 . Memory (MB): peak = 3147.504 ; gain = 1080.082 ; free physical = 612 ; free virtual = 9135
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:20 ; elapsed = 00:04:35 . Memory (MB): peak = 3161.668 ; gain = 937.473 ; free physical = 619 ; free virtual = 7936
+Synthesis Optimization Complete : Time (s): cpu = 00:04:23 ; elapsed = 00:04:39 . Memory (MB): peak = 3161.676 ; gain = 1094.223 ; free physical = 619 ; free virtual = 7935
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3147.504 ; gain = 0.000 ; free physical = 725 ; free virtual = 9248
-INFO: [Netlist 29-17] Analyzing 1020 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3161.676 ; gain = 0.000 ; free physical = 724 ; free virtual = 8042
+INFO: [Netlist 29-17] Analyzing 1388 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3171.508 ; gain = 0.000 ; free physical = 674 ; free virtual = 9197
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3185.680 ; gain = 0.000 ; free physical = 647 ; free virtual = 7966
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 8b8576e2
+Synth Design complete, checksum: d08a78ba
 INFO: [Common 17-83] Releasing license: Synthesis
-376 Infos, 338 Warnings, 1 Critical Warnings and 0 Errors encountered.
+382 Infos, 338 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:31 ; elapsed = 00:04:42 . Memory (MB): peak = 3171.508 ; gain = 1417.227 ; free physical = 924 ; free virtual = 9446
+synth_design: Time (s): cpu = 00:04:30 ; elapsed = 00:04:43 . Memory (MB): peak = 3185.680 ; gain = 1431.367 ; free physical = 896 ; free virtual = 8215
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.runs/synth_1/top_nexys7.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_nexys7_utilization_synth.rpt -pb top_nexys7_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct  6 15:46:34 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 11 11:05:11 2023...

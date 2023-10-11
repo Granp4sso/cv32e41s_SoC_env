@@ -164,16 +164,16 @@ module spi_top #(
   always_comb begin: select_output_data
 
     if(spi_status_q) begin    
-                                      assign device_rdata_o = {
+                                      device_rdata_o = {
                                         24'b0,
                                         slave_rx_fifo_full,   slave_rx_fifo_empty,      // Slave RX bits
                                         1'b0,                 1'b0,                     // Slave TX bits
                                         1'b0,                 1'b0,                     // Master RX bits
                                         master_tx_fifo_full, master_tx_fifo_empty };    // Master TX bits
     end else if(spi_slave_rx_q) begin
-                                      assign device_rdata_o = spi_slave_rx_data_q;
+                                      device_rdata_o = spi_slave_rx_data_q;
     end else begin
-                                      assign device_rdata_o = '0;
+                                      device_rdata_o = '0;
     end
 
   end
