@@ -24,8 +24,8 @@
 
 
 module spi_top #(
-  parameter int unsigned ClockFrequency = 50_000_000,
-  parameter int unsigned BaudRate = 12_500_000,
+  parameter int unsigned ClockFrequency = 40_000_000,
+  parameter int unsigned BaudRate = 2_000_000,
   parameter CPOL = 0,
   parameter CPHA = 0
 ) (
@@ -217,7 +217,7 @@ module spi_top #(
   );
 
   spi_master #(
-    .SPIClockScale(8),
+    .SPIClockScale(ClockFrequency/BaudRate),
     .CPOL(CPOL),
     .CPHA(CPHA)
   ) u_spi_master (
@@ -269,7 +269,7 @@ module spi_top #(
   );
 
   spi_slave #(
-    .SPIClockScale(8),
+    .SPIClockScale(ClockFrequency/BaudRate),
     .CPOL(CPOL),
     .CPHA(CPHA)
   ) u_spi_slave (

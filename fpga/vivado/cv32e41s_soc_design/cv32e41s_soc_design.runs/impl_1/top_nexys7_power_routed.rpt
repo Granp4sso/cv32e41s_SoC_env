@@ -1,13 +1,13 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Wed Oct 11 11:06:46 2023
+| Date             : Thu Oct 12 13:45:58 2023
 | Host             : stefano-Victus-by-HP-Laptop-16-e0xxx running 64-bit Ubuntu 22.04.2 LTS
 | Command          : report_power -file top_nexys7_power_routed.rpt -pb top_nexys7_power_summary_routed.pb -rpx top_nexys7_power_routed.rpx
 | Design           : top_nexys7
-| Device           : xc7a50ticsg324-1L
+| Device           : xc7a100tcsg324-1
 | Design State     : routed
-| Grade            : industrial
+| Grade            : commercial
 | Process          : typical
 | Characterization : Production
 ----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.225        |
+| Total On-Chip Power (W)  | 0.266        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.163        |
-| Device Static (W)        | 0.062        |
-| Effective TJA (C/W)      | 4.8          |
-| Max Ambient (C)          | 98.9         |
-| Junction Temperature (C) | 26.1         |
+| Dynamic (W)              | 0.168        |
+| Device Static (W)        | 0.098        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.006 |        5 |       --- |             --- |
-| Slice Logic    |     0.006 |    20353 |       --- |             --- |
-|   LUT as Logic |     0.006 |     9552 |     32600 |           29.30 |
-|   CARRY4       |    <0.001 |      391 |      8150 |            4.80 |
-|   Register     |    <0.001 |     7597 |     65200 |           11.65 |
-|   F7/F8 Muxes  |    <0.001 |      975 |     32600 |            2.99 |
+| Clocks         |     0.008 |        5 |       --- |             --- |
+| Slice Logic    |     0.007 |    20366 |       --- |             --- |
+|   LUT as Logic |     0.006 |     9553 |     63400 |           15.07 |
+|   CARRY4       |    <0.001 |      391 |     15850 |            2.47 |
+|   Register     |    <0.001 |     7601 |    126800 |            5.99 |
+|   F7/F8 Muxes  |    <0.001 |      975 |     63400 |            1.54 |
 |   Others       |     0.000 |       78 |       --- |             --- |
-| Signals        |     0.011 |    16298 |       --- |             --- |
-| Block RAM      |     0.027 |       18 |        75 |           24.00 |
-| PLL            |     0.110 |        1 |         5 |           20.00 |
-| DSPs           |    <0.001 |        3 |       120 |            2.50 |
+| Signals        |     0.011 |    16293 |       --- |             --- |
+| Block RAM      |     0.029 |       18 |       135 |           13.33 |
+| PLL            |     0.111 |        1 |         6 |           16.67 |
+| DSPs           |    <0.001 |        3 |       240 |            1.25 |
 | I/O            |     0.001 |       34 |       210 |           16.19 |
-| Static Power   |     0.062 |          |           |                 |
-| Total          |     0.225 |          |           |                 |
+| Static Power   |     0.098 |          |           |                 |
+| Total          |     0.266 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,19 +75,19 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.068 |       0.062 |      0.006 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.067 |       0.056 |      0.011 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.080 |       0.064 |      0.016 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.074 |       0.056 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       0.950 |     0.003 |       0.002 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccadc    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 
 
@@ -115,7 +115,7 @@ Table of Contents
 
 +-----------------------+--------------------------+
 | Ambient Temp (C)      | 25.0                     |
-| ThetaJA (C/W)         | 4.8                      |
+| ThetaJA (C/W)         | 4.6                      |
 | Airflow (LFM)         | 250                      |
 | Heat Sink             | medium (Medium Profile)  |
 | ThetaSA (C/W)         | 4.6                      |
@@ -146,12 +146,12 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| top_nexys7   |     0.163 |
-|   clkgen     |     0.111 |
-|   u_ucup_top |     0.050 |
-|     u_soc    |     0.050 |
-|       u_core |     0.020 |
-|       u_ram  |     0.025 |
+| top_nexys7   |     0.168 |
+|   clkgen     |     0.112 |
+|   u_ucup_top |     0.054 |
+|     u_soc    |     0.054 |
+|       u_core |     0.022 |
+|       u_ram  |     0.027 |
 |       u_spi  |     0.002 |
 |       u_uart |     0.002 |
 +--------------+-----------+
