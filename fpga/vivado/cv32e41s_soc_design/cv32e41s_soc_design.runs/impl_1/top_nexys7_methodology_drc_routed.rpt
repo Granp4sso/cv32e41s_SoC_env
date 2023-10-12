@@ -1,12 +1,12 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Oct 12 13:45:55 2023
+| Date         : Thu Oct 12 16:05:58 2023
 | Host         : stefano-Victus-by-HP-Laptop-16-e0xxx running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_methodology -file top_nexys7_methodology_drc_routed.rpt -pb top_nexys7_methodology_drc_routed.pb -rpx top_nexys7_methodology_drc_routed.rpx
 | Design       : top_nexys7
-| Device       : xc7a100tcsg324-1
-| Speed File   : -1
+| Device       : xc7a50ticsg324-1L
+| Speed File   : -1L
 | Design State : Fully Routed
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -23,14 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 20
-+----------+----------+-------------------------------------+------------+
-| Rule     | Severity | Description                         | Violations |
-+----------+----------+-------------------------------------+------------+
-| LUTAR-1  | Warning  | LUT drives async reset alert        | 1          |
-| SYNTH-10 | Warning  | Wide multiplier                     | 3          |
-| SYNTH-15 | Warning  | Byte wide write enable not inferred | 16         |
-+----------+----------+-------------------------------------+------------+
+             Violations found: 21
++----------+----------+---------------------------------------------+------------+
+| Rule     | Severity | Description                                 | Violations |
++----------+----------+---------------------------------------------+------------+
+| LUTAR-1  | Warning  | LUT drives async reset alert                | 1          |
+| SYNTH-10 | Warning  | Wide multiplier                             | 3          |
+| SYNTH-15 | Warning  | Byte wide write enable not inferred         | 16         |
+| ULMTCS-1 | Warning  | Control Sets use limits recommend reduction | 1          |
++----------+----------+---------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -51,7 +52,7 @@ u_ucup_top/u_soc/u_gpio/gp_o_reg[7]_lopt_replica/CLR,
 u_ucup_top/u_soc/u_gpio/gp_o_reg[8]_lopt_replica/CLR,
 u_ucup_top/u_soc/u_gpio/gp_o_reg[9]_lopt_replica/CLR,
 u_ucup_top/u_soc/u_uart/tx_state_q_reg[1]/CLR
- (the first 15 of 3320 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+ (the first 15 of 3317 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 SYNTH-10#1 Warning
@@ -147,6 +148,11 @@ Related violations: <none>
 SYNTH-15#16 Warning
 Byte wide write enable not inferred  
 Byte wide write enable (BWWE) is not inferred for Block RAM u_ucup_top/u_soc/u_ram/u_ram/mem_reg_3_3 because address width (14) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired..
+Related violations: <none>
+
+ULMTCS-1#1 Warning
+Control Sets use limits recommend reduction  
+This design uses 643 control sets (vs. available limit of 8150, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 

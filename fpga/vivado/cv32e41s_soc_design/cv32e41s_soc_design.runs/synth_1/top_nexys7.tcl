@@ -72,7 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7a100tcsg324-1
+create_project -in_memory -part xc7a50ticsg324-1L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -81,7 +81,7 @@ set_property webtalk.parent_dir /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv
 set_property parent.project_path /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
+set_property board_part digilentinc.com:nexys-a7-50t:part0:1.3 [current_project]
 set_property ip_output_repo /home/stefano/Desktop/RISC-V/MCU/cv32e41s_soc/cv32e41s_SoC_env/fpga/vivado/cv32e41s_soc_design/cv32e41s_soc_design.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -220,7 +220,7 @@ read_checkpoint -auto_incremental -incremental /home/stefano/Desktop/RISC-V/MCU/
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top top_nexys7 -part xc7a100tcsg324-1
+synth_design -top top_nexys7 -part xc7a50ticsg324-1L
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

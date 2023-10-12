@@ -217,7 +217,7 @@ module spi_top #(
   );
 
   spi_master #(
-    .SPIClockScale(ClockFrequency/BaudRate),
+    .SPIClockScale(16),
     .CPOL(CPOL),
     .CPHA(CPHA)
   ) u_spi_master (
@@ -269,7 +269,7 @@ module spi_top #(
   );
 
   spi_slave #(
-    .SPIClockScale(ClockFrequency/BaudRate),
+    .SPIClockScale(16),
     .CPOL(CPOL),
     .CPHA(CPHA)
   ) u_spi_slave (
