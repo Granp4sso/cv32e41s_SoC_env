@@ -29,5 +29,6 @@ void spi_init(spi_t *spi, spi_reg_t reg, uint32_t speed);
 void spi_send_byte_blocking(spi_t *spi, char c);
 char spi_recv_byte_blocking(spi_t *spi);
 uint32_t spi_get_status(spi_t *spi);
+void spi_slave_interrupt_enable();
 
-#endif // SPI_H__
+#endif 

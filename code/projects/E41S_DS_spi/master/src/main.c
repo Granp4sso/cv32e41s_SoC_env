@@ -13,9 +13,6 @@ int main(){
     spi_send_byte_blocking(&spi, 'A');
     spi_send_byte_blocking(&spi, 'B');
     spi_send_byte_blocking(&spi, 'C');
-    spi_send_byte_blocking(&spi, 'D');
-    spi_send_byte_blocking(&spi, 'E');
-
 
     return 0;
 }

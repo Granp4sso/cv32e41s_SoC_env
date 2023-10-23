@@ -26,6 +26,7 @@ module cv32e41s_demo_system #(
   parameter int GpiWidth     = 8,
   parameter int GpoWidth     = 16,
   parameter int PwmWidth     = 12,
+  parameter int ClockFrequency = 40_000_000,
   parameter     SRAMInitFile = "",
 
   // Core related Parameters
@@ -100,7 +101,7 @@ module cv32e41s_demo_system #(
   parameter logic [31:0] SIM_CTRL_MASK  = ~(SIM_CTRL_SIZE-1);
 
   // debug functionality is optional
-  localparam bit DBG = 1;
+  localparam bit DBG = 0;
   localparam int unsigned DbgHwBreakNum = (DBG == 1) ?    2 :    0;
   localparam bit          DbgTriggerEn  = (DBG == 1) ? 1'b1 : 1'b0;
 
@@ -126,6 +127,7 @@ module cv32e41s_demo_system #(
   // interrupts
   logic timer_irq;
   logic uart_irq;
+  logic spi_irq;
 
   // host and device signals
   logic           host_req      [NrHosts];
@@ -242,8 +244,9 @@ module cv32e41s_demo_system #(
   assign mem_instr_req =
       core_instr_req & ((core_instr_addr & cfg_device_addr_mask[Ram]) == cfg_device_addr_base[Ram]);
 
-  assign dbg_instr_req =
-      core_instr_req & ((core_instr_addr & cfg_device_addr_mask[DbgDev]) == cfg_device_addr_base[DbgDev]);
+  assign dbg_instr_req = (DBG) ?
+      core_instr_req & ((core_instr_addr & cfg_device_addr_mask[DbgDev]) == cfg_device_addr_base[DbgDev]) :
+      1'b0;
 
   assign core_instr_gnt = mem_instr_req | (dbg_instr_req & ~device_req[DbgDev]);
 
@@ -335,7 +338,7 @@ module cv32e41s_demo_system #(
     .mcycle_o (),                 // TO SUPPORT
 
     // Basic interrupt architecture
-    .irq_i ({15'b0, uart_irq, 8'b0, timer_irq,7'b0}),
+    .irq_i ({14'b0, spi_irq, uart_irq, 8'b0, timer_irq,7'b0}),
 
     // Event wakeup signals
     .wu_wfe_i ('0),   // Wait-for-event wakeup
@@ -431,7 +434,7 @@ module cv32e41s_demo_system #(
   );
 
   uart #(
-    .ClockFrequency ( 50_000_000 )
+    .ClockFrequency ( ClockFrequency )
   ) u_uart (
     .clk_i          (clk_sys_i),
     .rst_ni         (rst_sys_ni),
@@ -450,9 +453,10 @@ module cv32e41s_demo_system #(
   );
 
   spi_top #(
-    .ClockFrequency(50_000_000),
+    .ClockFrequency(ClockFrequency),
+    .BaudRate(2_000_000),
     .CPOL(0),
-    .CPHA(1)
+    .CPHA(0)
   ) u_spi (
     .clk_i (clk_sys_i),
     .rst_ni(rst_sys_ni),
@@ -473,9 +477,27 @@ module cv32e41s_demo_system #(
     // Slave Interface
     .spi_slave_mosi_i (spi_slave_mosi_i),
     .spi_slave_clk_i (spi_slave_clk_i),
-    .spi_slave_cs_i (spi_slave_cs_i)
+    .spi_slave_cs_i (spi_slave_cs_i),
+    .spi_irq_o (spi_irq)
 
   );
+
+  `ifdef VERILATOR
+    simulator_ctrl #(
+      .LogName("cv32e40p_demo_system.log")
+    ) u_simulator_ctrl (
+      .clk_i     (clk_sys_i),
+      .rst_ni    (rst_sys_ni),
+
+      .req_i     (device_req[SimCtrl]),
+      .we_i      (device_we[SimCtrl]),
+      .be_i      (device_be[SimCtrl]),
+      .addr_i    (device_addr[SimCtrl]),
+      .wdata_i   (device_wdata[SimCtrl]),
+      .rvalid_o  (device_rvalid[SimCtrl]),
+      .rdata_o   (device_rdata[SimCtrl])
+    );
+  `endif
 
   timer #(
     .DataWidth    ( 32 ),
@@ -545,13 +567,5 @@ module cv32e41s_demo_system #(
     assign dm_debug_req = 1'b0;
     assign ndmreset_req = 1'b0;
   end
-	/*
-  `ifdef VERILATOR
-    export "DPI-C" function mhpmcounter_get;
 
-    function automatic longint unsigned mhpmcounter_get(int index);
-     // return u_top.u_ibex_core.cs_registers_i.mhpmcounter[index];
-        return u_core.cs_registers_i.mhpmcounter_q[index];
-    endfunction
-  `endif*/
 endmodule

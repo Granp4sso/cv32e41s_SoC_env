@@ -12,10 +12,6 @@ int main(){
 
     puts("[Slave] reading bytes from the master\n");
     putchar(spi_recv_byte_blocking(&spi));
-    putchar(spi_recv_byte_blocking(&spi));
-    putchar(spi_recv_byte_blocking(&spi));
-    putchar(spi_recv_byte_blocking(&spi));
-    putchar(spi_recv_byte_blocking(&spi));
 
     return 0;
 }

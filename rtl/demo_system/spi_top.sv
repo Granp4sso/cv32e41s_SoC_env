@@ -1,5 +1,5 @@
 // Copyright 2023 University of Naples, Federico II
-// Date: 09 October 2023
+// Date: 20 October 2023
 
 ////////////////////////////////////////////////////////////////////////////////
 //                                                                            //
@@ -51,7 +51,8 @@ module spi_top #(
     // Slave Interface
     input  logic spi_slave_mosi_i,
     input  logic spi_slave_clk_i,
-    input  logic spi_slave_cs_i
+    input  logic spi_slave_cs_i,
+    output logic spi_irq_o
   );
 
   //////////////////////////
@@ -141,6 +142,9 @@ module spi_top #(
 
   // This is needed because signal arrives in a slower clock.
   assign master_tx_fifo_rready = next_tx_byte_d && ~next_tx_byte_q; // ???
+
+  // If a message is received on the SPI slave, generate an interrupt
+  assign spi_irq_o = !slave_rx_fifo_empty;
 
   ////////////////////
   // Read registers //

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Oct 12 16:04:21 2023
+| Date         : Mon Oct 23 13:17:17 2023
 | Host         : stefano-Victus-by-HP-Laptop-16-e0xxx running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_utilization -file top_nexys7_utilization_synth.rpt -pb top_nexys7_utilization_synth.pb
 | Design       : top_nexys7
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 9690 |     0 |          0 |     32600 | 29.72 |
-|   LUT as Logic          | 9690 |     0 |          0 |     32600 | 29.72 |
+| Slice LUTs*             | 9560 |     0 |          0 |     32600 | 29.33 |
+|   LUT as Logic          | 9560 |     0 |          0 |     32600 | 29.33 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         | 7583 |     0 |          0 |     65200 | 11.63 |
-|   Register as Flip Flop | 7583 |     0 |          0 |     65200 | 11.63 |
+| Slice Registers         | 7579 |     0 |          0 |     65200 | 11.62 |
+|   Register as Flip Flop | 7579 |     0 |          0 |     65200 | 11.62 |
 |   Register as Latch     |    0 |     0 |          0 |     65200 |  0.00 |
-| F7 Muxes                |  735 |     0 |          0 |     16300 |  4.51 |
-| F8 Muxes                |  240 |     0 |          0 |      8150 |  2.94 |
+| F7 Muxes                |  742 |     0 |          0 |     16300 |  4.55 |
+| F8 Muxes                |  239 |     0 |          0 |      8150 |  2.93 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -57,7 +57,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 46    |          Yes |           - |          Set |
-| 3260  |          Yes |           - |        Reset |
+| 3256  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 4277  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -150,16 +150,16 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| LUT6      | 6134 |                 LUT |
+| LUT6      | 5935 |                 LUT |
 | FDRE      | 4277 |        Flop & Latch |
-| FDCE      | 3260 |        Flop & Latch |
-| LUT5      | 1735 |                 LUT |
-| LUT4      | 1363 |                 LUT |
-| LUT3      | 1153 |                 LUT |
-| LUT2      |  914 |                 LUT |
-| MUXF7     |  735 |               MuxFx |
+| FDCE      | 3256 |        Flop & Latch |
+| LUT5      | 1756 |                 LUT |
+| LUT4      | 1417 |                 LUT |
+| LUT3      | 1136 |                 LUT |
+| LUT2      |  946 |                 LUT |
+| MUXF7     |  742 |               MuxFx |
 | CARRY4    |  391 |          CarryLogic |
-| MUXF8     |  240 |               MuxFx |
+| MUXF8     |  239 |               MuxFx |
 | FDPE      |   46 |        Flop & Latch |
 | LUT1      |   28 |                 LUT |
 | OBUF      |   20 |                  IO |

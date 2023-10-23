@@ -117,6 +117,7 @@ module cv32e41s_demo_system #(
   // interrupts
   logic timer_irq;
   logic uart_irq;
+  logic spi_irq;
 
   // host and device signals
   logic           host_req      [NrHosts];
@@ -327,7 +328,7 @@ module cv32e41s_demo_system #(
     .mcycle_o (),                 // TO SUPPORT
 
     // Basic interrupt architecture
-    .irq_i ({15'b0, uart_irq, 8'b0, timer_irq,7'b0}),
+    .irq_i ({14'b0, spi_irq, uart_irq, 8'b0, timer_irq,7'b0}),
 
     // Event wakeup signals
     .wu_wfe_i ('0),   // Wait-for-event wakeup
@@ -465,7 +466,8 @@ module cv32e41s_demo_system #(
     // Slave Interface
     .spi_slave_mosi_i (spi_slave_mosi_i),
     .spi_slave_clk_i (spi_slave_clk_i),
-    .spi_slave_cs_i (spi_slave_cs_i)
+    .spi_slave_cs_i (spi_slave_cs_i),
+    .spi_irq_o  (spi_irq)
 
   );
 

@@ -54,8 +54,10 @@ module spi_master #(
   spi_state_e state_q, state_d;
   logic [CountWidth-1:0] limit, count;
   logic sck, count_at_limit, sck_pos, sck_neg;
+  logic leading_edge, trailing_edge;
 
   logic sck_en;
+  logic first_spi_clk;
 
   assign sck_en = (state_q == SEND);
   assign limit = CountWidth'(ToggleCount - 1);
@@ -89,6 +91,9 @@ module spi_master #(
   assign sck_pos = count_at_limit && !sck;
   // Set to HIGH at the negedge of the serial clock, used internally.
   assign sck_neg = count_at_limit && sck;
+
+  assign leading_edge = (CPOL) ? sck_neg : sck_pos;
+  assign trailing_edge = (CPOL) ? sck_pos : sck_neg;
 
   //////////////////
   // FSM process  //
@@ -140,11 +145,16 @@ module spi_master #(
           current_byte_q  <= '0;
           bit_counter_q   <= 3'b111;
           state_q         <= IDLE;
+          first_spi_clk   <= '0;
+        end else if(leading_edge && ~first_spi_clk && bit_counter_q) begin
+          // When CPHA = 1 we need to shift the sent signal -> ignore the first leading edge
+          first_spi_clk <= 1'b1;
+        end else if (leading_edge || state_q == IDLE || state_q == STOP) begin
           // Internal data must be update every clock cycles or every SPI clock in SEND state
-        end else if (sck_pos || state_q == IDLE || state_q == STOP) begin
+          current_byte_q <= (state_q == IDLE) ? fifo_data_i : current_byte_d;
           bit_counter_q   <= bit_counter_d;
           state_q         <= state_d;
-          current_byte_q <= (state_q == IDLE) ? fifo_data_i : current_byte_d;
+          first_spi_clk <= (bit_counter_d) ? first_spi_clk : 1'b0;
         end
       end
     // If CPHA is LOW, incoming data will be sampled on the rising edge while outgoing
@@ -155,8 +165,9 @@ module spi_master #(
           current_byte_q  <= '0;
           bit_counter_q   <= 3'b111;
           state_q         <= IDLE;
+          first_spi_clk   <= '0; // Unused if CPHA = 0
         // Set current byte half a cycle before transmitting it.
-        end else if (sck_neg || state_q == IDLE || state_q == STOP) begin
+        end else if (trailing_edge || state_q == IDLE || state_q == STOP) begin
           current_byte_q <= (state_q == IDLE) ? fifo_data_i : current_byte_d;
           bit_counter_q   <= bit_counter_d;
           state_q         <= state_d;

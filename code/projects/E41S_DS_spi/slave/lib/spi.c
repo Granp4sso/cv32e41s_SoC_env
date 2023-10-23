@@ -5,6 +5,7 @@
 #include <stdint.h>
 #include "spi.h"
 #include "dev_access.h"
+#include "demo_system.h"
 
 void spi_init(spi_t *spi, spi_reg_t spi_reg, uint32_t speed) {
   spi->reg = spi_reg;
@@ -28,3 +29,18 @@ char spi_recv_byte_blocking(spi_t *spi){
 uint32_t spi_get_status(spi_t *spi){
    return (uint32_t) DEV_READ(spi->reg + SPI_STATUS_REG);
 }
+
+void spi_slave_handler(void) __attribute__((interrupt));
+
+void spi_slave_handler(void) {
+  // Read the byte
+  DEV_READ(SPI0_BASE + SPI_SLAVE_RX_REG);
+}
+
+void spi_slave_interrupt_enable() {
+
+  install_exception_handler(17, &spi_slave_handler);
+  enable_interrupts(SPI_IRQ);
+  set_global_interrupt_enable(1);
+}
+

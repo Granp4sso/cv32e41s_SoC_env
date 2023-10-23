@@ -11,16 +11,17 @@
 #include "uart.h"
 #include "gpio.h"
 
-#define UART_IRQ_NUM 16
-#define UART_IRQ (1 << UART_IRQ_NUM)
 #define DEFAULT_UART UART_FROM_BASE_ADDR(UART0_BASE)
-
 #define GPIO_OUT GPIO_FROM_BASE_ADDR(GPIO_BASE + GPIO_OUT_REG)
 #define GPIO_IN GPIO_FROM_BASE_ADDR(GPIO_BASE + GPIO_IN_REG)
 #define GPIO_IN_DBNC GPIO_FROM_BASE_ADDR(GPIO_BASE + GPIO_IN_DBNC_REG)
 #define GPIO_OUT_SHIFT GPIO_FROM_BASE_ADDR(GPIO_BASE + GPIO_OUT_SHIFT_REG)
 
-#define TIMER_IRQ (1 << 7)
+#define TIMER_IRQ   (1 << 7)
+
+// Platform specific interrupts
+#define UART_IRQ    (1 << 16)
+#define SPI_IRQ     (1 << 17)
 
 #define NUM_PWM_MODULES 12
 

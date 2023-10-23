@@ -342,15 +342,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/demo_system/cv32e41s_demo_system_memless.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/demo_system/cv32e41s_demo_system_memless.sv"/>
-          <Attr Name="ImportTime" Val="1687337216"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/cv32e41s_core/cv32e41s_div.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/cv32e41s_core/cv32e41s_div.sv"/>
@@ -819,15 +810,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/demo_system/instr_delay_filter.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/demo_system/instr_delay_filter.sv"/>
-          <Attr Name="ImportTime" Val="1696405443"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_count.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_count.sv"/>
@@ -867,24 +849,6 @@
       <File Path="$PSRCDIR/sources_1/imports/prim/prim_flop_2sync.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim/prim_flop_2sync.sv"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim_generic/prim_generic_clock_inv.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim_generic/prim_generic_clock_inv.sv"/>
-          <Attr Name="ImportTime" Val="1687337053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/prim_generic/prim_generic_clock_mux2.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../rtl/primitives/prim_generic/prim_generic_clock_mux2.sv"/>
           <Attr Name="ImportTime" Val="1687337053"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1178,9 +1142,7 @@
     </Run>
     <Run Id="impl_1_copy_1" Type="Ft2:EntireDesign" Part="xc7a50ticsg324-1L" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/impl_1/impl_1_copy_1" AutoRQSDir="$PPRDIR/../cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/impl_1/impl_1_copy_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1312,9 +1274,7 @@
     </Run>
     <Run Id="impl_1_copy_2" Type="Ft2:EntireDesign" Part="xc7a50ticsg324-1L" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/impl_1/impl_1_copy_2" AutoRQSDir="$PPRDIR/../cv32e41s_soc/cv32e41s_soc.srcs/utils_1/imports/impl_1/impl_1_copy_2">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
