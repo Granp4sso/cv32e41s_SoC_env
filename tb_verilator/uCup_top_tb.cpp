@@ -21,6 +21,7 @@ int main(int argc, char **argv){
 		wsoc_init(&wsoc[1], &cfg, 1); // SPI Slave
 		
 		// Connect two devices over SPI (Device 0 is master, 1 is slave)
+		printf("[TwoDev] SPI interconnection established\n");
 		wsoc[1].tb->spi_slave_mosi_i = wsoc[0].tb->spi_master_mosi_o; 
 		wsoc[1].tb->spi_slave_clk_i = wsoc[0].tb->spi_master_clk_o; 
 		wsoc[1].tb->spi_slave_cs_i = wsoc[0].tb->spi_master_cs_o; 
@@ -41,6 +42,10 @@ int main(int argc, char **argv){
 			wsoc[1].tb->spi_slave_mosi_i = wsoc[0].tb->spi_master_mosi_o; 
 			wsoc[1].tb->spi_slave_clk_i = wsoc[0].tb->spi_master_clk_o; 
 			wsoc[1].tb->spi_slave_cs_i = wsoc[0].tb->spi_master_cs_o; 
+
+			wsoc[0].tb->spi_slave_mosi_i = wsoc[1].tb->spi_master_mosi_o; 
+			wsoc[0].tb->spi_slave_clk_i = wsoc[1].tb->spi_master_clk_o; 
+			wsoc[0].tb->spi_slave_cs_i = wsoc[1].tb->spi_master_cs_o; 
 		}
 		i++;
 	}
