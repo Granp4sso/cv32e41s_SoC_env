@@ -24,6 +24,10 @@ int main(int argc, char **argv){
 		wsoc[1].tb->spi_slave_mosi_i = wsoc[0].tb->spi_master_mosi_o; 
 		wsoc[1].tb->spi_slave_clk_i = wsoc[0].tb->spi_master_clk_o; 
 		wsoc[1].tb->spi_slave_cs_i = wsoc[0].tb->spi_master_cs_o; 
+
+		wsoc[0].tb->spi_slave_mosi_i = wsoc[1].tb->spi_master_mosi_o; 
+		wsoc[0].tb->spi_slave_clk_i = wsoc[1].tb->spi_master_clk_o; 
+		wsoc[0].tb->spi_slave_cs_i = wsoc[1].tb->spi_master_cs_o; 
 	}
 
 	printf("[Sim::Cycle::%08d] Starting Simulation for %ld Cycles\n\n", i, cfg.SimCycles);
