@@ -1,6 +1,6 @@
 # CV32E41S SoC Environment                                           
 
-**This repository is meant to provide a way to simulate or deploy an environment to run the cv32e41s processor**
+**This repository is meant to provide a way to simulate or deploy a secure processing environment based on the cv32e41s processor**
 
 > **Engineers:** 
 > > Stefano Mercogliano ([stefano.mercogliano@unina.it](mailto:stefano.mercogliano@unina.it))
@@ -110,7 +110,23 @@ In order to do so, some steps are required:
 ```
 Remember that using the serial as a programming medium comes with limitations. For simulation the serial baudrate is set to the fictional value 10000000.
 Even using the masimum standard value (921600), would be too high for the nexys. So change the UART parameter clock and baudrate accordingly.
-    
+
+## Security Features
+
+The system supports a certain number of security features such as:
+- Register file ECC
+- Dummy instruction insertion
+- Hardened PC & CSRs
+- Data independent timing
+- Random instruction for hint 
+- TCM
+- Secure Boot from TCM
+    - It is based on DICE standard (it uses an example hash function at the moment)
+    - example binaries available in code/projects/E41S_DS_secure
+- Secure channel communication 
+    - A simple TLC-like protocol is provided in code/projects/E41S_DS_secure
+- Ascon encryption engine
+
 ## Known Bugs:
 ```
 -- PMP-trie still has some minor bugs
