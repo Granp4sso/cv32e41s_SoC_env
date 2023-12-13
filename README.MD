@@ -96,6 +96,9 @@ template
     -obj_dir                # Contains intermediate obj files
     -src                    # Contains user defined c files
 ```
+If you want to use any of the example projects, check the path code/projects/E41S_DS_*
+Each project is structured as depicted above. 
+You can compile them and load them in either the FPGA or the verilator-based simulation.
 
 ## Programming the FPGA-SoC    
 
