@@ -129,7 +129,7 @@ The system supports a certain number of security features such as:
 - Secure channel communication 
     - A simple TLC-like protocol is provided in code/projects/E41S_DS_secure
 - Ascon encryption engine
-    - Only HLS atm
+    - Only HLS in code/extern/Ascon_ME
 
 ## Known Bugs:
 ```
