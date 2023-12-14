@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="app_ascon_uart_zynq7000" location="C:/Users/Pietro/workspace/app_ascon_uart_zynq7000" platform="C:/Users/Pietro/workspace/ascon_uart_zynq7000/export/ascon_uart_zynq7000/ascon_uart_zynq7000.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="ascon_uart_zynq7000_system" sysConfig="ascon_uart_zynq7000" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="d94231c57ef2f5ce3d1fba3520763c3e">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1386551865">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.257518012" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

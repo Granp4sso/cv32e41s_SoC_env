@@ -1,0 +1,46 @@
+{
+  "version": "2023.1",
+  "applications": [],
+  "platforms": [
+    {
+      "name": "ascon_uart_zynq7000"
+    }
+  ],
+  "systems": [
+    {
+      "name": "ascon_uart_zynq7000_receiver_system",
+      "platform": "C:/Users/Pietro/workspace/ascon_uart_zynq7000/export/ascon_uart_zynq7000/ascon_uart_zynq7000.xpfm",
+      "sysConfig": "ascon_uart_zynq7000",
+      "buildConfig": "Debug",
+      "applications": [
+        {
+          "name": "ascon_uart_zynq7000_receiver",
+          "platform": "C:/Users/Pietro/workspace/ascon_uart_zynq7000/export/ascon_uart_zynq7000/ascon_uart_zynq7000.xpfm",
+          "platformPath": "C:\\Users\\Pietro\\workspace\\ascon_uart_zynq7000\\export\\ascon_uart_zynq7000",
+          "sysConfig": "ascon_uart_zynq7000",
+          "domain": "standalone_domain",
+          "system": "ascon_uart_zynq7000_receiver_system"
+        }
+      ],
+      "platformPath": "C:\\Users\\Pietro\\workspace\\ascon_uart_zynq7000\\export\\ascon_uart_zynq7000"
+    },
+    {
+      "name": "ascon_uart_zynq7000_system",
+      "platform": "C:/Users/Pietro/workspace/ascon_uart_zynq7000/export/ascon_uart_zynq7000/ascon_uart_zynq7000.xpfm",
+      "sysConfig": "ascon_uart_zynq7000",
+      "buildConfig": "Debug",
+      "applications": [
+        {
+          "name": "app_ascon_uart_zynq7000",
+          "platform": "C:/Users/Pietro/workspace/ascon_uart_zynq7000/export/ascon_uart_zynq7000/ascon_uart_zynq7000.xpfm",
+          "platformPath": "C:\\Users\\Pietro\\workspace\\ascon_uart_zynq7000\\export\\ascon_uart_zynq7000",
+          "sysConfig": "ascon_uart_zynq7000",
+          "domain": "standalone_domain",
+          "system": "ascon_uart_zynq7000_system"
+        }
+      ],
+      "platformPath": "C:\\Users\\Pietro\\workspace\\ascon_uart_zynq7000\\export\\ascon_uart_zynq7000"
+    }
+  ],
+  "others": []
+}

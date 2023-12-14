@@ -1,0 +1,314 @@
+ECHO disattivato.
+ECHO disattivato.
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Pietro' on host 'laptop-0b7gjltp' (Windows NT_amd64 version 6.2) on Wed Dec 13 21:47:16 +0100 2023
+INFO: [HLS 200-10] In directory 'C:/Users/Pietro/Desktop/ascon_vitis_hls/solution2/csim/build'
+../../../source/wrapper_axi_ascon.c:87:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_1, &ad[0]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:88:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_2, &ad[4]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:89:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_3, &ad[8]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:90:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_4, &ad[12]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:101:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(npub_1, &npub[0]);
+                          ^~~~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:102:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(npub_2, &npub[4]);
+                          ^~~~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:103:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(npub_3, &npub[8]);
+                          ^~~~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:104:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(npub_4, &npub[12]);
+                          ^~~~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:108:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(k_1, &k[0]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:109:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(k_2, &k[4]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:110:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(k_3, &k[8]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:111:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(k_4, &k[12]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:206:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(m_1, &m[0]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:207:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(m_2, &m[4]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:208:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(m_3, &m[8]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:209:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(m_4, &m[12]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:226:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_1, &ad[0]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:227:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_2, &ad[4]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:228:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_3, &ad[8]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:229:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_4, &ad[12]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+20 warnings generated.
+../../../source/wrapper_axi_ascon.c:87:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_1, &ad[0]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:88:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_2, &ad[4]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:89:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_3, &ad[8]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:90:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_4, &ad[12]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:101:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(npub_1, &npub[0]);
+                          ^~~~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:102:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(npub_2, &npub[4]);
+                          ^~~~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:103:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(npub_3, &npub[8]);
+                          ^~~~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:104:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(npub_4, &npub[12]);
+                          ^~~~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:108:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(k_1, &k[0]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:109:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(k_2, &k[4]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:110:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(k_3, &k[8]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:111:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(k_4, &k[12]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:206:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(m_1, &m[0]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:207:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(m_2, &m[4]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:208:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(m_3, &m[8]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:209:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(m_4, &m[12]);
+                          ^~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:226:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_1, &ad[0]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:227:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_2, &ad[4]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:228:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_3, &ad[8]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:229:20: warning: passing 'const uint32_t *' (aka 'const unsigned int *') to parameter of type 'uint32_t *' (aka 'unsigned int *') discards qualifiers [-Wincompatible-pointer-types]
+        uint32ToByteArray(ad_4, &ad[12]);
+                          ^~~~
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+void uint32ToByteArray(uint32_t* value, unsigned char* array) {
+                                 ^
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+../../../source/wrapper_axi_ascon.c:6:34: note: passing argument to parameter 'value' here
+20 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 1 seconds. Total elapsed time: 1.643 seconds; peak allocated memory: 7.453 MB.

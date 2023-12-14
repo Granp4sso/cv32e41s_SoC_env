@@ -1,0 +1,121 @@
+
+Nome host:                            LAPTOP-0B7GJLTP
+Nome SO:                              Microsoft Windows 10 Home
+Versione SO:                          10.0.19045 N/D build 19045
+Produttore SO:                        Microsoft Corporation
+Configurazione SO:                    Workstation autonoma
+Tipo build SO:                        Multiprocessor Free
+Proprietario registrato:              HP
+Organizzazione registrata:            HP
+Numero di serie:                      00325-96323-97396-AAOEM
+Data di installazione originale:      15/09/2020, 12:10:19
+Tempo di avvio sistema:               19/11/2023, 20:46:34
+Produttore sistema:                   HP
+Modello sistema:                      HP Pavilion Laptop 15-ck0xx
+Tipo sistema:                         x64-based PC
+Processore:                           1 processore(i) installati.
+                                      [01]: Intel64 Family 6 Model 142 Stepping 10 GenuineIntel ~1792 Mhz
+Versione BIOS:                        Insyde F.07, 23/02/2018
+Directory Windows:                    C:\WINDOWS
+Directory di sistema:                 C:\WINDOWS\system32
+Dispositivo di avvio:                 \Device\HarddiskVolume1
+Impostazioni locali sistema:          it;Italiano (Italia)
+Impostazioni locali di input:         it;Italiano (Italia)
+Fuso orario:                          (UTC+01:00) Amsterdam, Berlino, Berna, Roma, Stoccolma, Vienna
+Memoria fisica totale:                8.078 MB
+Memoria fisica disponibile:           3.062 MB
+Memoria virtuale: dimensione massima: 10.254 MB
+Memoria virtuale: disponibile:        4.222 MB
+Memoria virtuale: in uso:             6.032 MB
+Posizioni file di paging:             C:\pagefile.sys
+Dominio:                              WORKGROUP
+Server di accesso:                    \\LAPTOP-0B7GJLTP
+Aggiornamenti rapidi:                 38 Aggiornamenti rapidi installati.
+                                      [01]: KB5032005
+                                      [02]: KB5028951
+                                      [03]: KB4561600
+                                      [04]: KB4577266
+                                      [05]: KB4577586
+                                      [06]: KB4580325
+                                      [07]: KB4586864
+                                      [08]: KB4593175
+                                      [09]: KB4598481
+                                      [10]: KB5000736
+                                      [11]: KB5011048
+                                      [12]: KB5011061
+                                      [13]: KB5012170
+                                      [14]: KB5015684
+                                      [15]: KB5008575
+                                      [16]: KB5033372
+                                      [17]: KB5006753
+                                      [18]: KB5007273
+                                      [19]: KB5011352
+                                      [20]: KB5011651
+                                      [21]: KB5014032
+                                      [22]: KB5014035
+                                      [23]: KB5014671
+                                      [24]: KB5015895
+                                      [25]: KB5016705
+                                      [26]: KB5018506
+                                      [27]: KB5020372
+                                      [28]: KB5022924
+                                      [29]: KB5023794
+                                      [30]: KB5025315
+                                      [31]: KB5026879
+                                      [32]: KB5028318
+                                      [33]: KB5028380
+                                      [34]: KB5029709
+                                      [35]: KB5031539
+                                      [36]: KB5032392
+                                      [37]: KB5032907
+                                      [38]: KB5005699
+Schede di rete:                       8 NIC installate.
+                                      [01]: Intel(R) Dual Band Wireless-AC 3168
+                                            Nome connessione: Wi-Fi
+                                            DHCP abilitato:   Sç
+                                            Server DHCP:      192.168.1.254
+                                            Indirizzi IP
+                                            [01]: 192.168.1.57
+                                            [02]: fe80::fbc7:d320:7a4b:edc2
+                                            [03]: 2001:b07:ae5:9e41:6123:69a8:f682:7bc0
+                                            [04]: 2001:b07:ae5:9e41:c7e4:dc16:2d:4007
+                                      [02]: Realtek PCIe GBE Family Controller
+                                            Nome connessione: Ethernet
+                                            Stato:            Supporto disconnesso
+                                      [03]: VMware Virtual Ethernet Adapter for VMnet1
+                                            Nome connessione: VMware Network Adapter VMnet1
+                                            DHCP abilitato:   Sç
+                                            Server DHCP:      192.168.181.254
+                                            Indirizzi IP
+                                            [01]: 192.168.181.1
+                                            [02]: fe80::1ece:bd50:ccd6:e92c
+                                      [04]: VMware Virtual Ethernet Adapter for VMnet8
+                                            Nome connessione: VMware Network Adapter VMnet8
+                                            DHCP abilitato:   Sç
+                                            Server DHCP:      192.168.213.254
+                                            Indirizzi IP
+                                            [01]: 192.168.213.1
+                                            [02]: fe80::40de:4d4a:cf4e:95da
+                                      [05]: Bluetooth Device (Personal Area Network)
+                                            Nome connessione: Connessione di rete Bluetooth
+                                            Stato:            Supporto disconnesso
+                                      [06]: VirtualBox Host-Only Ethernet Adapter
+                                            Nome connessione: VirtualBox Host-Only Network
+                                            DHCP abilitato:   No
+                                            Indirizzi IP
+                                            [01]: 169.254.211.128
+                                            [02]: fe80::554f:cd1:3cda:4ea8
+                                      [07]: VirtualBox Host-Only Ethernet Adapter
+                                            Nome connessione: Ethernet 2
+                                            DHCP abilitato:   Sç
+                                            Server DHCP:      192.168.56.100
+                                            Indirizzi IP
+                                            [01]: 169.254.151.234
+                                            [02]: fe80::6306:f78f:ec9c:88f0
+                                      [08]: Hyper-V Virtual Ethernet Adapter
+                                            Nome connessione: vEthernet (WSL)
+                                            DHCP abilitato:   No
+                                            Indirizzi IP
+                                            [01]: 172.24.192.1
+                                            [02]: fe80::980b:8c86:85c7:a966
+Requisiti Hyper-V:                    Rilevato hypervisor. Le funzionalitÖ necessarie per Hyper-V non verranno visualizzate.

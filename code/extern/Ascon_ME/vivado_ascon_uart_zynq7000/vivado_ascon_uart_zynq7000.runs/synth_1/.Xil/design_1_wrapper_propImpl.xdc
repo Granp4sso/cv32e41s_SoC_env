@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/Pietro/Desktop/Embedded_Systems/ascon_2_boards/vivado_ascon_uart_zynq7000/vivado_ascon_uart_zynq7000.srcs/constrs_1/new/axi_uart_zynq7000.xdc rfile:../../../vivado_ascon_uart_zynq7000.srcs/constrs_1/new/axi_uart_zynq7000.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N15 [get_ports uart_rtl_rxd]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN L14 [get_ports uart_rtl_txd]

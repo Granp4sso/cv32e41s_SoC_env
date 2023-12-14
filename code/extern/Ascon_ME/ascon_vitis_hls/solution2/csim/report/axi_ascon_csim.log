@@ -1,0 +1,55 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make: 'csim.exe' is up to date.
+
+
+----------------------------------------------
+TESTBENCH START
+----------------------------------------------
+
+KEY k 
+ 0b0b0b0b0c050504030201050506020e
+Public Message Number npub 
+ 04070809050604030302050609080604
+Associated Data ad 
+ 0100000001010202030303030709080d
+Plaintext m 
+ 0b0b1603010101010105040304030205
+
+
+----------------------------------------------
+ENCRYPT TEST
+----------------------------------------------
+
+
+CALLING wrapper_axi_encrypt
+ENCRYPT OK
+CIPHERTEXT (wrapped) 
+ 7be93fb709401a97410e29e059cd1277307f7d35bd8c1fd7c8d31a994da468ca
+
+CALLING non-wrapped encrypt
+ENCRYPT OK
+CIPHERTEXT (non-wrapped) 
+ 7be93fb709401a97410e29e059cd1277307f7d35bd8c1fd7c8d31a994da468ca
+
+
+----------------------------------------------
+DECRYPT TEST
+----------------------------------------------
+
+CALLING wrapper_axi_decrypt
+DECRYPT OK
+PLAINTEXT (wrapped) 
+ 0b0b1603010101010105040304030205
+
+CALLING non-wrapped decrypt
+DECRYPT OK
+PLAINTEXT (non-wrapped) 
+ 0b0b1603010101010105040304030205
+
+----------------------------------------------
+TESTBENCH END
+----------------------------------------------
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
